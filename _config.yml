@@ -1,0 +1,39 @@
+# Permalinks
+permalink:           pretty
+
+# Setup
+title:               Aerosailor
+tagline:             
+url:                 http://aerosailor.com
+paginate:            1
+baseurl:             ""
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  load-paths:
+    - _sass
+    - node_modules
+  style:            :compressed
+
+fonts:
+  url: https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900
+
+# About/contact
+author:
+  name:              Meher Ranjan Howji
+  url:               https://aeosailor.com
+  email:             mail@aerosailor.com
+
+# Custom vars
+version:             0.1
+github:
+  repo:              https://github.com/meherranjan
+
+# Gems
+plugins:
+  - jekyll-paginate
+  - jekyll-gist
+
+exclude: []

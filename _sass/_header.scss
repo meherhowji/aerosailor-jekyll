@@ -1,0 +1,148 @@
+// Masthead
+//
+// Super small header above the content for site name and short description.
+
+body {
+	// background: url(./public/topography.png) center repeat;
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 6px;
+		background: #27c4f5 linear-gradient( to right, #27c4f5, #fd8d32, #70c050, #27c4f5);
+		background-size: 500%;
+		animation: 300s linear infinite barprogress, 10s fadein;
+		opacity: 0.7;
+		width: 100%;
+	}
+}
+
+.line-container {
+	width: 100%;
+	height: 200px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	svg {
+		height: 100vh;
+		width: 100vw;
+	}
+	path {
+		fill: none;
+		stroke: #70c050;
+		opacity: 0.5;
+		stroke-width: 0.5px;
+		vector-effect: non-scaling-stroke;
+	}
+}
+
+
+header {
+	padding: 75px 0 0 0;
+	.masthead-title {
+		position: relative;
+		margin-top: 0;
+		margin-bottom: 0;
+		color: $gray-4;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 300;
+
+		// &:before {
+		// 	content: '';
+		// 	position: absolute;
+		// 	left: -35px;
+		// 	top: -20px;
+		// 	width: 160px;
+		// 	height: 75px;
+		// 	background: linear-gradient(90deg, #fff 12px, transparent 1%) center,linear-gradient(#fff 12px, transparent 1%) center,#232323;
+		// 	background-size: 13px 13px;
+		// 	opacity: 0.4;
+		// }
+		a.brand {
+			position: relative;
+			color: inherit;
+			text-transform: uppercase;
+			text-decoration: none;
+			&:after {
+				content: '';
+				background: url(./public/hill.png) center/65% no-repeat;
+				position: absolute;
+				right: -60px;
+				top: -37px;
+				width: 65px;
+				height: 100px;
+				opacity: 0.8;
+			}
+		}
+		> span {
+			margin-left: 15px; 
+		}
+		small {
+			font-size: 75%;
+			font-weight: 400;
+			opacity: .5;
+		}
+	}
+
+	  nav {
+
+		  ul {
+			list-style: none;
+			padding: 0;
+
+			li {
+				position: relative;
+				float: left;
+				margin-left: 60px;
+				height: 36px;
+				a {
+					text-decoration: none;
+					font-size: 60%;
+					text-transform: uppercase;
+					letter-spacing: 4px;
+					color: $gray-4;
+				}
+			}
+		}
+	}
+
+	.localization {
+		float: right;
+		font-size: 55%;
+		font-weight: 400;
+		padding: 11px 0;
+		color: $gray-4;
+		a {
+			text-transform: capitalize;
+			padding: 0 5px;
+			text-decoration: none;
+			color: $gray-4;
+		}
+	}
+
+	.search {
+		font-size: 55%;
+		padding: 11px 0;
+		float:right;
+		margin-left: 10px;
+		a {
+			text-decoration: none;
+			padding: 0 10px;
+			background: url(./public/search-sm.png) center/50% no-repeat;
+		}
+	}
+
+	.vertical-align-one {
+		display: table;
+		table-layout: fixed;
+		.vertical-align-two {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+		}
+
+	}
+
+}
