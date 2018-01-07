@@ -1,69 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+	{% include head.html %}
+	<body>
+		<div class="line-container">
+			<svg class="animated-lines" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120"></svg>
+		</div>
+		<div class="container content">
+			{% include body-header.html %}
+			<!-- {% include body-content.html %} -->
+			{% include body-footer.html %}
+		</div>
 
-{% include head.html %}
+		<script>
+			var b=document.querySelector(".animated-lines");function f(c,d){return~~(Math.random()*(d-c+1))+c}var g=[];function h(){for(var c="",d=0;5>d;d++){var a=g[d],e=50*Math.cos(a.a/a.cos);e="M"+a.i+","+a.j+" Q"+a.h+","+(1.5*e).toFixed(3)+" "+(50*Math.sin(a.a/a.sin)/10+a.b).toFixed(3)+","+(e/5+a.c).toFixed(3)+" T"+a.f+","+a.g;a.a++;c+=e}return c}
+			(function(){function c(){d.setAttribute("d",h());requestAnimationFrame(c)}for(var d=document.createElementNS("http://www.w3.org/2000/svg","path"),a=0;5>a;a++)g.push({a:f(1,500),i:f(-5,-40),j:f(-5,-30),f:f(200,220),g:f(120,140),sin:f(400,600),cos:f(400,600),h:f(30,55),b:f(90,120),c:f(60,70)});b.appendChild(d);c()})();
+		</script>
 
-<body>
-	<div class="line-container">
-		<svg class="animated-lines" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120"></svg>
-	</div>
-	<div class="container content">
-		<header>
-			<div class="row align-items-center">
-				<div class="col">
-					<h5 class="masthead-title"><a class="brand" href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a></h5>
-				</div>
-				<div class="col-6 vertical-align-one">
-					<nav>
-						<ul class="clearfix vertical-align-two hover-saber">
-							<li class="active"><a href="/" data-cont="Home">Home</a></li>
-							<li><a href="/blog/" data-cont="Blog">Blog</a></li>
-							<li><a href="/tutorials/" data-cont="Tutorials">Tutorials</a></li>
-							<li><a href="/lab/" data-cont="Lab">Lab</a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="col">
-					<span class="search"><a href=""></a></span>
-					<span class="localization"><a href="">EN</a>&middot;<a href="">DE</a></span>
-				</div>
-			</div>
-		</header>
-
-		<main>
-			<!-- {{ content }} -->
-		</main>
-
-		<!-- <footer>
-			<small>
-				&copy;
-				<time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. All rights reserved.
-			</small>
-		</footer> -->
-
-	</div>
-	<script>
-	var b=document.querySelector(".animated-lines");function f(c,d){return~~(Math.random()*(d-c+1))+c}var g=[];function h(){for(var c="",d=0;5>d;d++){var a=g[d],e=50*Math.cos(a.a/a.cos);e="M"+a.i+","+a.j+" Q"+a.h+","+(1.5*e).toFixed(3)+" "+(50*Math.sin(a.a/a.sin)/10+a.b).toFixed(3)+","+(e/5+a.c).toFixed(3)+" T"+a.f+","+a.g;a.a++;c+=e}return c}
-(function(){function c(){d.setAttribute("d",h());requestAnimationFrame(c)}for(var d=document.createElementNS("http://www.w3.org/2000/svg","path"),a=0;5>a;a++)g.push({a:f(1,500),i:f(-5,-40),j:f(-5,-30),f:f(200,220),g:f(120,140),sin:f(400,600),cos:f(400,600),h:f(30,55),b:f(90,120),c:f(60,70)});b.appendChild(d);c()})();
-	</script>
-
-	{% if site.analytics_id %}
-	<script>
-		(function (i, s, o, g, r, a, m) {
-		  i['GoogleAnalyticsObject'] = r;
-		  i[r] = i[r] || function () {
-			(i[r].q = i[r].q || []).push(arguments)
-		  }, i[r].l = 1 * new Date();
-		  a = s.createElement(o),
-			m = s.getElementsByTagName(o)[0];
-		  a.async = 1;
-		  a.src = g;
-		  m.parentNode.insertBefore(a, m)
-		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-		ga('create', '{{ site.analytics_id }}', 'auto');
-		ga('send', 'pageview');
-	</script>
-	{% endif %}
-</body>
-
+		{% if site.analytics_id %}
+			<script>
+				(function (i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] || function () {
+					(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date();
+				a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m)
+				})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+				ga('create', '{{ site.analytics_id }}', 'auto');
+				ga('send', 'pageview');
+			</script>
+		{% endif %}
+	</body>
 </html>

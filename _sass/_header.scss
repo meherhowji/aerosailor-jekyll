@@ -1,9 +1,4 @@
-// Masthead
-//
-// Super small header above the content for site name and short description.
-
 body {
-	// background: url(./public/topography.png) center repeat;
 	&:before {
 		content: '';
 		position: absolute;
@@ -38,7 +33,6 @@ body {
 	}
 }
 
-
 header {
 	padding: 75px 0 0 0;
 	.masthead-title {
@@ -49,17 +43,6 @@ header {
 		font-family: 'Montserrat', sans-serif;
 		font-weight: 300;
 
-		// &:before {
-		// 	content: '';
-		// 	position: absolute;
-		// 	left: -35px;
-		// 	top: -20px;
-		// 	width: 160px;
-		// 	height: 75px;
-		// 	background: linear-gradient(90deg, #fff 12px, transparent 1%) center,linear-gradient(#fff 12px, transparent 1%) center,#232323;
-		// 	background-size: 13px 13px;
-		// 	opacity: 0.4;
-		// }
 		a.brand {
 			position: relative;
 			color: inherit;
@@ -70,7 +53,7 @@ header {
 				background: url(./public/hill.png) center/65% no-repeat;
 				position: absolute;
 				right: -60px;
-				top: -37px;
+				top: -40px;
 				width: 65px;
 				height: 100px;
 				opacity: 0.8;
@@ -87,7 +70,6 @@ header {
 	}
 
 	  nav {
-
 		  ul {
 			list-style: none;
 			padding: 0;

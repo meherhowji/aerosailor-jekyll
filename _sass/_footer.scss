@@ -1,0 +1,114 @@
+@mixin beforeafter($img) {
+	content: '';
+	background: url($img) top left/90% no-repeat;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 18px;
+	height: 18px;
+}
+
+footer {
+	font-family: 'Montserrat', sans-serif;
+	margin-top: 500px;
+	div.location {
+		position: relative;
+		background: url(./public/location.png) center no-repeat;
+		span.addr {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			font-weight: 700;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 0.5rem;
+			color: $gray-4;
+			margin-left: -32px;
+			margin-top: -30px;
+			text-transform: uppercase;
+			text-align: center;
+		}
+		span.pin {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			background: url(./public/pin.png) center/100% no-repeat;
+			width: 16px;
+			height: 26px;
+			margin-left: -8px;
+			margin-top: -13px;
+		}
+	}
+	div.profile {
+		height: 250px;
+		background: $gray-5;
+	}
+	div.aboutme {
+		background: #D0DBE2;
+		padding: 25px;
+		h4 {
+			position: relative;
+			font-size: 1.5rem;
+			color: #212121;
+			font-weight: 800 !important;
+			text-transform: lowercase;
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 60%;
+				width: 100px;
+				height: 40%;
+				background: white;
+				opacity: 0.5;
+			}
+		}
+		p {
+			color: #575a5d;
+			font-family: 'Raleway', sans-serif;
+			font-size: 0.65rem;
+			font-weight: 300;
+			line-height: 24px;
+			margin-bottom: 15px;
+		}
+		.socializer {
+			list-style: none;
+			padding-left: 0;
+			margin-bottom: 0;
+			li {
+				position: relative;
+				float: left;
+				width: 24px;
+				height: 18px;
+				margin-left: 10px;
+				filter: gray;
+				-webkit-filter: grayscale(1);
+				filter: grayscale(1);
+				&:first-child {
+					margin-left: 0;
+				}
+				a {
+					&.fb {
+						&:after{
+							@include beforeafter('./public/facebook.png')
+						}
+					}
+					&.sp {
+						&:after{
+							@include beforeafter('./public/spotify.png')
+						}
+					}
+					&.in {
+						&:after{
+							@include beforeafter('./public/instagram.png')
+						}
+					}
+					&.li {
+						&:after{
+							@include beforeafter('./public/linkedin.png')
+						}
+					}
+				}
+			}
+		}
+	}
+}
