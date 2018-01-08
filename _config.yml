@@ -3,7 +3,6 @@ permalink:           pretty
 
 # Setup
 title:               Aerosailor
-tagline:             
 url:                 http://aerosailor.com
 paginate:            1
 baseurl:             ""
@@ -18,13 +17,14 @@ sass:
   style:            :compressed
 
 fonts:
-  url: https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900
+  url: https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,800|Lato:300
 
 # About/contact
 author:
   name:              Meher Ranjan Howji
   url:               https://aeosailor.com
   email:             mail@aerosailor.com
+  aboutme:           I am Meher. I work at PubMatic. I develop scalable & maintainable JavaScript applications using modern design practices and by leveraging various JS frameworks.
 
 # Custom vars
 version:             0.1
