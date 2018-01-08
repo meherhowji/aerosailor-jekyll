@@ -3,7 +3,6 @@ permalink:           pretty
 
 # Setup
 title:               Aerosailor
-tagline:             
 url:                 http://aerosailor.com
 paginate:            1
 baseurl:             ""
@@ -25,6 +24,7 @@ author:
   name:              Meher Ranjan Howji
   url:               https://aeosailor.com
   email:             mail@aerosailor.com
+  aboutme:           I am Meher. I work at PubMatic. I develop scalable & maintainable JavaScript applications using modern design practices and by leveraging various JS frameworks.
 
 # Custom vars
 version:             0.1
