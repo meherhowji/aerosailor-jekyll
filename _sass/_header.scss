@@ -40,22 +40,21 @@ header {
 		margin-top: 0;
 		margin-bottom: 0;
 		color: $gray-4;
-		font-family: 'Montserrat', sans-serif;
+		font-family: 'Deftone-Stylus', 'Montserrat', sans-serif;
 		font-weight: 300;
-
 		a.brand {
 			position: relative;
 			color: inherit;
-			text-transform: uppercase;
+			text-transform: capitalize;
 			text-decoration: none;
 			&:after {
 				content: '';
 				background: url(./public/hill.png) center/65% no-repeat;
 				position: absolute;
-				right: -60px;
-				top: -40px;
+				right: -65px;
+				top: 0;
 				width: 65px;
-				height: 100px;
+				height: 100%;
 				opacity: 0.8;
 			}
 		}
