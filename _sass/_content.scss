@@ -1,0 +1,12 @@
+.instagram-feed {
+	position: relative;
+	height: 100px;
+	&:before {
+		content: '';
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: -15px;
+		margin-left: -15px;
+		background-color: #f2f6f9;
+	}	
+}
