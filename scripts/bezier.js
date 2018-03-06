@@ -4,7 +4,7 @@ var randomRange = function(min, max) {
     return ~~(Math.random() * (max - min + 1)) + min
 };
 
-var numberOfLines = 7,
+var numberOfLines = 9,
     lineDataArr = [];
 
 var createPathString = function() {
@@ -55,8 +55,8 @@ var createPathString = function() {
 var createLines = function() {
 
     var newPathEl = document.createElementNS('http://www.w3.org/2000/svg', 'path'),
-        minSpeed = 700,
-        maxSpeed = 900;
+        minSpeed = 100,
+        maxSpeed = 500;
 
     for (var i = 0; i < numberOfLines; i++) {
 
