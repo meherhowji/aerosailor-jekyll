@@ -48,12 +48,13 @@ body {
 }
 
 header {
+	height: 225px;
 	padding: 75px 0 0 0;
 	.masthead-title {
 		position: relative;
 		margin-top: 0;
 		margin-bottom: 0;
-		color: $gray-4;
+		color: $gray-5;
 		font-family: 'Deftone-Stylus', 'Montserrat', sans-serif;
 		font-weight: 300;
 		a.brand {

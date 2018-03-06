@@ -7,11 +7,11 @@
 		</div>
 		<div class="container content">
 			{% include body-header.html %}
-			<!-- {% include body-content.html %} -->
+			{% include body-content.html %}
 			{% include body-footer.html %}
 		</div>
 
-		<script src="../scripts/bezier.js"></script>
-		{% if site.analytics_id %} <script src="../scripts/analytics.js"></script> {% endif %}
+		<script src="{{ site.baseurl }}/scripts/bezier.js"></script>
+		{% if site.analytics_id %} <script src="{{ site.baseurl }}/scripts/analytics.js"></script> {% endif %}
 	</body>
 </html>
