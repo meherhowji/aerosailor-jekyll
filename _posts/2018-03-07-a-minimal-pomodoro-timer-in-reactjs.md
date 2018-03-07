@@ -1,6 +1,8 @@
 ---
 layout: post
-title: Introduction
+title: A Minimal Pomodoro Timer In ReactJS
+date: 2018-03-06 00:12:10 +0530
+categories: reactjs javascript tutorial 
 ---
 
 *The Strange Case of Dr. Jekyll and Mr. Hyde* tells the story of a lawyer investigating the connection of two persons, Dr. Henry Jekyll and Mr. Edward Hyde. Chief among the novel's supporting cast is a man by the name of Mr. Poole, Dr. Jekyll's loyal butler.
