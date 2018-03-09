@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    
+      Bubble Sorting In JavaScript &middot; Aerosailor
+    
+  </title>
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="Aerosailor" href="/atom.xml">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,800|Lato:300' rel='stylesheet' type='text/css'>
+</head>
+
+	<body>
+		<div class="line-container">
+			<svg class="animated-lines" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"></svg>
+		</div>
+		<div class="container content">
+			<header>
+	<div class="row align-items-center">
+		<div class="col">
+			<h1 class="masthead-title">
+				<a class="brand" href="/" title="Home">Aerosailor</a>
+			</h1>
+		</div>
+		<div class="col-6 vertical-align-one">
+			<nav>
+				<ul class="clearfix vertical-align-two hover-saber">
+					<li class="active">
+						<a href="/" data-cont="Home">Home</a>
+					</li>
+					<li>
+						<a href="/blog/" data-cont="Blog">Blog</a>
+					</li>
+					<li>
+						<a href="/tutorials/" data-cont="Tutorials">Tutorials</a>
+					</li>
+					<li>
+						<a href="/lab/" data-cont="Lab">Lab</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="col">
+			<span class="search">
+				<a href=""></a>
+			</span>
+			<!-- <span class="localization">
+				<a href="">EN</a>&middot;
+				<a href="">DE</a>
+			</span> -->
+		</div>
+	</div>
+</header>
+			<article>
+	<article class="post">
+  <h1 class="post-title">Bubble Sorting In JavaScript</h1>
+  <time datetime="2018-03-07T00:00:00+05:30" class="post-date">07 Mar 2018</time>
+  <p><img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Bubblesort-edited-color.svg" alt="placeholder" title="Bubble sort depcition image" /></p>
+
+<div class="message">
+	Bubble sort feels intuitive as you walk through the array, you swap only if the next number is larger. 
+</div>
+
+<h4 id="basic-principal">Basic Principal</h4>
+
+<ul>
+  <li>Take a randomly sorted array</li>
+  <li>We are going to compare first with second, and we will swap them if second is smaller than first.</li>
+  <li>Then we will compare second with third and perform the swap again if third is smaller than second.</li>
+  <li>This continues until we have react the end.</li>
+  <li>It would be nice if we could determine if none of the item swapped in the run.</li>
+  <li>We maintain a flag to keep track of the sort state of the list.</li>
+</ul>
+
+<h4 id="complexity">Complexity</h4>
+<ul>
+  <li>Time complexity for both worst-case and average is О(n<sup>2</sup>)</li>
+  <li>Best case time complexity is O(n), is the only significant advantage.</li>
+</ul>
+
+<h4 id="code">Code</h4>
+
+<p>A loop that runs through all the elements of the array for each of the array item. That’s a O(N<sup>2</sup>) complexity of time.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js">  <span class="kd">var</span> <span class="nx">cards</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+      <span class="nx">swapped</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nx">swap</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">array</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">temp</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="nx">index</span><span class="p">];</span>
+        <span class="nx">array</span><span class="p">[</span><span class="nx">index</span><span class="p">]</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="nx">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+        <span class="nx">array</span><span class="p">[</span><span class="nx">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nx">temp</span><span class="p">;</span>
+      <span class="p">};</span>
+  
+  <span class="k">do</span> <span class="p">{</span>
+    <span class="nx">swapped</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Rows -&gt; '</span> <span class="o">+</span> <span class="nx">cards</span><span class="p">);</span>
+    <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">cards</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">cards</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nx">cards</span><span class="p">[</span><span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Swapping -&gt; ('</span> <span class="o">+</span> <span class="nx">cards</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">+</span><span class="s1">','</span> <span class="o">+</span> <span class="nx">cards</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span><span class="s1">')'</span><span class="p">);</span> 
+        <span class="nx">swap</span><span class="p">(</span><span class="nx">cards</span><span class="p">,</span> <span class="nx">i</span><span class="p">);</span>
+        <span class="nx">swapped</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span> <span class="k">while</span><span class="p">(</span><span class="nx">swapped</span><span class="p">);</span>
+ <span class="p">}</span></code></pre></figure>
+
+<p>Run this example</p>
+
+<hr />
+
+<p>Want to see something else added? <a href="https://github.com/poole/poole/issues/new">Open an issue.</a></p>
+
+
+</article>
+
+
+
+</article>
+			<footer>
+	<div class="row">
+		<div class="col">
+			<div class="row">
+				<div class="col profile"></div>
+				<div class="col aboutme">
+					<h4>Hello,</h4>		
+					<p>I am Meher. I work at PubMatic. I develop scalable & maintainable JavaScript applications using modern design practices and by leveraging various JS frameworks.</p>
+					<ul class="socializer">
+						<li><a class="in" href="http://instagram.com/meherranjan"></a></li>
+						<li><a class="fb" href="http://facebook.com/meherranjan"></a></li>
+						<li><a class="li" href="http://linkedin.com/meherranjan"></a></li>
+						<li><a class="sp" href="http://spotify.com/meherranjan"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col location">
+			<span class="addr">Pune, India</span>
+			<span class="pin"></span>
+		</div>
+	</div>
+	<!-- <small>
+		&copy;
+		<time datetime="2018-03-09T21:01:31+05:30">2018</time>. All rights reserved.
+	</small> -->
+</footer>
+		</div>
+
+		<script src="/scripts/bezier.js"></script>
+		
+	</body>
+</html>
