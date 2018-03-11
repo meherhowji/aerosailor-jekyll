@@ -3,7 +3,7 @@ layout: post
 title: Bubble Sorting In JavaScript
 ---
 
-![placeholder](https://upload.wikimedia.org/wikipedia/commons/8/83/Bubblesort-edited-color.svg "Bubble sort depcition image")
+![placeholder](https://upload.wikimedia.org/wikipedia/commons/8/83/Bubblesort-edited-color.svg "Bubble sort depiction image")
 
 <div class="message">
 	Bubble sort feels intuitive as you walk through the array, you swap only if the next number is larger. 
@@ -12,11 +12,12 @@ title: Bubble Sorting In JavaScript
 #### Basic Principal
 
  * Take a randomly sorted array
- * We are going to compare first with second, and we will swap them if second is smaller than first.
+ * We are going to compare each pair of items, and we will swap them if second is smaller than first.
  * Then we will compare second with third and perform the swap again if third is smaller than second.
- * This continues until we have react the end.
- * It would be nice if we could determine if none of the item swapped in the run.
- * We maintain a flag to keep track of the sort state of the list. 
+ * This continues until we have reached the end.
+ * We maintain a flag to keep track of the sort state of the list and save some iterations.
+ * This is how each iteration looks like: ![placeholder]( https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif "Bubble sort visualised")
+
 
 #### Complexity
 * Time complexity for both worst-case and average is О(n<sup>2</sup>)
