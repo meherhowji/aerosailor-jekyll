@@ -62,14 +62,13 @@
 	<article class="post">
   <h1 class="post-title">Bubble Sorting In JavaScript</h1>
   <time datetime="2018-03-07T00:00:00+05:30" class="post-date">07 Mar 2018</time>
-  <p><img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Bubblesort-edited-color.svg" alt="placeholder" title="Bubble sort depiction image" /></p>
+  <p><img src="/public/sorting/bubble-sort-visual.png" alt="Bubble Sort Visual" title="Bubble sort depiction image" /></p>
 
 <div class="message">
 	Bubble sort feels intuitive as you walk through the array, you swap only if the next number is larger. 
 </div>
 
 <h4 id="basic-principal">Basic Principal</h4>
-
 <ul>
   <li>Take a randomly sorted array</li>
   <li>We are going to compare each pair of items, and we will swap them if second is smaller than first.</li>
@@ -82,43 +81,45 @@
 <h4 id="complexity">Complexity</h4>
 <ul>
   <li>Time complexity for both worst-case and average is О(n<sup>2</sup>)</li>
-  <li>Best case time complexity is O(n), is the only significant advantage.</li>
+  <li>Best case time complexity is Ω(n), is the only significant advantage.</li>
+  <li>Space complexity is O(1).</li>
 </ul>
 
-<h4 id="code">Code</h4>
+<h4 id="implementation">Implementation</h4>
+<p>Try the below example in <a href="http://jsbin.com/jirate/2/edit?js,console">JS Bin</a></p>
 
-<p>A loop that runs through all the elements of the array for each of the array item. That’s a O(N<sup>2</sup>) complexity of time.</p>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">cards</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="nx">swapped</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js">  <span class="kd">var</span> <span class="nx">cards</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
-      <span class="nx">swapped</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
-      <span class="nx">swap</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">array</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">temp</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="nx">index</span><span class="p">];</span>
-        <span class="nx">array</span><span class="p">[</span><span class="nx">index</span><span class="p">]</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="nx">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
-        <span class="nx">array</span><span class="p">[</span><span class="nx">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nx">temp</span><span class="p">;</span>
-      <span class="p">};</span>
-  
-  <span class="k">do</span> <span class="p">{</span>
-    <span class="nx">swapped</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Rows -&gt; '</span> <span class="o">+</span> <span class="nx">cards</span><span class="p">);</span>
-    <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">cards</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">if</span> <span class="p">(</span><span class="nx">cards</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nx">cards</span><span class="p">[</span><span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Swapping -&gt; ('</span> <span class="o">+</span> <span class="nx">cards</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">+</span><span class="s1">','</span> <span class="o">+</span> <span class="nx">cards</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span><span class="s1">')'</span><span class="p">);</span> 
-        <span class="nx">swap</span><span class="p">(</span><span class="nx">cards</span><span class="p">,</span> <span class="nx">i</span><span class="p">);</span>
-        <span class="nx">swapped</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-      <span class="p">}</span>
+<span class="k">do</span> <span class="p">{</span>
+  <span class="nx">swapped</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">cards</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">cards</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nx">cards</span><span class="p">[</span><span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">temp</span> <span class="o">=</span> <span class="nx">cards</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+      <span class="nx">cards</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">cards</span><span class="p">[</span><span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+      <span class="nx">cards</span><span class="p">[</span><span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nx">temp</span><span class="p">;</span>
+      <span class="nx">swapped</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
     <span class="p">}</span>
-  <span class="p">}</span> <span class="k">while</span><span class="p">(</span><span class="nx">swapped</span><span class="p">);</span>
- <span class="p">}</span></code></pre></figure>
-
-<p>Run this example</p>
-
-<hr />
-
-<p>Want to see something else added? <a href="https://github.com/poole/poole/issues/new">Open an issue.</a></p>
+  <span class="p">}</span>
+<span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nx">swapped</span><span class="p">);</span></code></pre></figure>
 
 
 </article>
 
+
+<aside class="related">
+  <h3>Related posts</h3>
+  <ul class="related-posts">
+    
+      <li>
+        <a href="/blog/selection-sort-in-javascript/">
+          Selection Sorting In JavaScript
+          <small><time datetime="2018-03-11T00:00:00+05:30">11 Mar 2018</time></small>
+        </a>
+      </li>
+    
+  </ul>
+</aside>
 
 
 </article>
@@ -146,7 +147,7 @@
 	</div>
 	<!-- <small>
 		&copy;
-		<time datetime="2018-03-11T12:58:28+05:30">2018</time>. All rights reserved.
+		<time datetime="2018-03-11T16:21:10+05:30">2018</time>. All rights reserved.
 	</small> -->
 </footer>
 		</div>
