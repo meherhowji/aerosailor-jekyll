@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bubble Sorting In JavaScript
+title: Bubble Sort In JavaScript
 ---
 
 ![Bubble Sort Visual](/public/sorting/bubble-sort-visual.png "Bubble sort depiction image")

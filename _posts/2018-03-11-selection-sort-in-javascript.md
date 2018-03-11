@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Selection Sorting In JavaScript
+title: Selection Sort In JavaScript
 ---
 
 ![Selection Sort](/public/sorting/selection-sort-visual.png "Selection sort depiction image")
@@ -17,7 +17,7 @@ title: Selection Sorting In JavaScript
 * Space complexity is O(1).
 
 #### Implementation
-Try the below example in <a href="http://jsbin.com/jirate/2/edit?js,console">JS Bin</a>
+Try the below example in <a href="http://jsbin.com/xedekoy/3/edit?js,console">JS Bin</a>
 
 {% highlight js %}
 
