@@ -50,14 +50,13 @@
 	transform: $transform;
 }
 .hover-saber a{
+	position: relative;
+	color: transparent !important;
 	text-transform: uppercase;
 	text-align: center;
 	text-decoration: none;
 	color: $gray-4;
-}
-.hover-saber a{
-	position: relative;
-	color: transparent !important;
+	padding: 5px;
 
 	&:after, &:before {
 		content: attr(data-cont);
