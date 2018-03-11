@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Aerosailor</title>
- <link href="http://aerosailor.com/atom.xml" rel="self"/>
- <link href="http://aerosailor.com/"/>
- <updated>2018-03-11T18:02:11+05:30</updated>
- <id>http://aerosailor.com</id>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2018-03-11T21:27:47+05:30</updated>
+ <id>http://localhost:4000</id>
  <author>
    <name>Meher Ranjan Howji</name>
    <email>mail@aerosailor.com</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Selection Sorting In JavaScript</title>
-   <link href="http://aerosailor.com/blog/selection-sort-in-javascript/"/>
+   <link href="http://localhost:4000/blog/selection-sort-in-javascript/"/>
    <updated>2018-03-11T00:00:00+05:30</updated>
-   <id>http://aerosailor.com/blog/selection-sort-in-javascript</id>
+   <id>http://localhost:4000/blog/selection-sort-in-javascript</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/public/sorting/selection-sort-visual.png&quot; alt=&quot;Selection Sort&quot; title=&quot;Selection sort depiction image&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;basic-principal&quot;&gt;Basic Principal&lt;/h4&gt;
@@ -60,9 +60,9 @@
  
  <entry>
    <title>Bubble Sorting In JavaScript</title>
-   <link href="http://aerosailor.com/blog/bubble-sort-in-javascript/"/>
+   <link href="http://localhost:4000/blog/bubble-sort-in-javascript/"/>
    <updated>2018-03-07T00:00:00+05:30</updated>
-   <id>http://aerosailor.com/blog/bubble-sort-in-javascript</id>
+   <id>http://localhost:4000/blog/bubble-sort-in-javascript</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/public/sorting/bubble-sort-visual.png&quot; alt=&quot;Bubble Sort Visual&quot; title=&quot;Bubble sort depiction image&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;message&quot;&gt;

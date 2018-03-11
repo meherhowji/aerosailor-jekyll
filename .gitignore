@@ -2,6 +2,7 @@
 _gh_pages
 .ruby-version
 .sass-cache
+assets
 
 # Numerous always-ignore extensions
 *.diff
