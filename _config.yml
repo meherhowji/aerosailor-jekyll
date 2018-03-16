@@ -16,7 +16,7 @@ sass:
   style:            :compressed
 
 fonts:
-  url: https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,800|Lato:300
+  url: https://fonts.googleapis.com/css?family=Montserrat:300,700|Lato:300
 
 # About/contact
 author:
