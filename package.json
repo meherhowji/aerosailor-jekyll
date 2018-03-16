@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "deploy":"./deploy.sh && git checkout gh-pages && git push live gh-pages"
+        "deploy":"jekyll build && ./deploy.sh && git checkout gh-pages && git push live gh-pages"
     },
     "dependencies": {
         "bootstrap": "4.0.0-beta.3"
