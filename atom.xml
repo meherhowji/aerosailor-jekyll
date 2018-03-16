@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Aerosailo</title>
+ <title>Aerosailor</title>
  <link href="http://aerosailor.com/atom.xml" rel="self"/>
  <link href="http://aerosailor.com/"/>
- <updated>2018-03-16T17:38:39+05:30</updated>
+ <updated>2018-03-16T22:26:53+05:30</updated>
  <id>http://aerosailor.com</id>
  <author>
    <name>Meher Ranjan Howji</name>
