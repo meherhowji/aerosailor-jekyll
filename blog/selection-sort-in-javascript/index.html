@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    
+      Selection Sort In JavaScript &middot; Aerosailo
+    
+  </title>
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="Aerosailo" href="/atom.xml">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,800|Lato:300' rel='stylesheet' type='text/css'>
+</head>
+
+	<body>
+		<div class="line-container">
+			<svg class="animated-lines" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"></svg>
+		</div>
+		<div class="container content">
+			<header>
+	<div class="row align-items-center">
+		<div class="col">
+			<h1 class="masthead-title">
+				<a class="brand" href="/" title="Home">Aerosailo</a>
+			</h1>
+		</div>
+		<div class="col-6 vertical-align-one">
+			<nav>
+				<ul class="clearfix vertical-align-two hover-saber">
+					<li class="active">
+						<a href="/" data-cont="Home">Home</a>
+					</li>
+					<li>
+						<a href="/blog/" data-cont="Blog">Blog</a>
+					</li>
+					<li>
+						<a href="/tutorials/" data-cont="Tutorials">Tutorials</a>
+					</li>
+					<li>
+						<a href="/lab/" data-cont="Lab">Lab</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="col">
+			<span class="search">
+				<a href=""></a>
+			</span>
+			<!-- <span class="localization">
+				<a href="">EN</a>&middot;
+				<a href="">DE</a>
+			</span> -->
+		</div>
+	</div>
+</header>
+			<article>
+	<article class="post">
+  <h1 class="post-title">Selection Sort In JavaScript</h1>
+  <time datetime="2018-03-11T00:00:00+05:30" class="post-date">11 Mar 2018</time>
+  <p><img src="/public/sorting/selection-sort-visual.png" alt="Selection Sort" title="Selection sort depiction image" /></p>
+
+<h4 id="basic-principal">Basic Principal</h4>
+<ul>
+  <li>Take a randomly sorted array</li>
+  <li>We then mark the first element as smallest.</li>
+  <li>We traverse the array and if we encounter any smaller value, then we mark it as the smallest.</li>
+  <li>The smallest value in the traversal is moved to the left.</li>
+  <li>We continue doing this until the end of</li>
+</ul>
+
+<h4 id="complexity">Complexity</h4>
+<ul>
+  <li>Time complexity for worst-case, average &amp; best case is О(n<sup>2</sup>)</li>
+  <li>Space complexity is O(1).</li>
+</ul>
+
+<h4 id="implementation">Implementation</h4>
+<p>Try the below example in <a href="http://jsbin.com/xedekoy/3/edit?js,console">JS Bin</a></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+    <span class="nx">swap</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">array</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">j</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">temp</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+      <span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="nx">j</span><span class="p">];</span>
+      <span class="nx">array</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="nx">temp</span><span class="p">;</span>
+    <span class="p">},</span>
+    <span class="nx">smallest</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">list</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> 
+  <span class="nx">smallest</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">list</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">list</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nx">list</span><span class="p">[</span><span class="nx">smallest</span><span class="p">])</span> <span class="p">{</span>
+      <span class="nx">smallest</span> <span class="o">=</span> <span class="nx">j</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="nx">swap</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">smallest</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+
+</article>
+
+
+<aside class="related">
+  <h3>Related posts</h3>
+  <ul class="related-posts">
+    
+      <li>
+        <a href="/blog/insertion-sort-in-javascript/">
+          Insertion Sort In JavaScript
+          <small><time datetime="2018-03-11T00:00:00+05:30">11 Mar 2018</time></small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/blog/bubble-sort-in-javascript/">
+          Bubble Sort In JavaScript
+          <small><time datetime="2018-03-07T00:00:00+05:30">07 Mar 2018</time></small>
+        </a>
+      </li>
+    
+  </ul>
+</aside>
+
+
+</article>
+			<footer>
+	<div class="row">
+		<div class="col">
+			<div class="row">
+				<div class="col profile"></div>
+				<div class="col aboutme">
+					<h4>Hello,</h4>		
+					<p>I am Meher. I work at PubMatic. I develop scalable & maintainable JavaScript applications using modern design practices and by leveraging various JS frameworks.</p>
+					<ul class="socializer">
+						<li><a class="in" href="http://instagram.com/meherranjan"></a></li>
+						<li><a class="fb" href="http://facebook.com/meherranjan"></a></li>
+						<li><a class="li" href="http://linkedin.com/meherranjan"></a></li>
+						<li><a class="sp" href="http://spotify.com/meherranjan"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col location">
+			<span class="addr">Pune, India</span>
+			<span class="pin"></span>
+		</div>
+	</div>
+	<!-- <small>
+		&copy;
+		<time datetime="2018-03-16T17:38:39+05:30">2018</time>. All rights reserved.
+	</small> -->
+</footer>
+		</div>
+
+		<script src="/scripts/bezier.js"></script>
+		
+	</body>
+</html>
