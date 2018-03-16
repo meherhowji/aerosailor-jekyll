@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "deploy":"./deploy.sh"
+        "deploy":"./deploy.sh && git push live gh-pages"
     },
     "dependencies": {
         "bootstrap": "4.0.0-beta.3"

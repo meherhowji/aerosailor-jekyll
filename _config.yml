@@ -2,7 +2,7 @@
 permalink:           /blog/:categories/:title/
 
 # Setup
-title:               Aerosailo
+title:               Aerosailor
 url:                 http://aerosailor.com
 baseurl:             ""
 
