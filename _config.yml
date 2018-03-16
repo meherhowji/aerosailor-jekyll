@@ -4,7 +4,6 @@ permalink:           /blog/:categories/:title/
 # Setup
 title:               Aerosailor
 url:                 http://aerosailor.com
-paginate:            1
 baseurl:             ""
 
 # Assets
@@ -37,4 +36,4 @@ plugins:
   - jekyll-paginate
   - jekyll-gist
 
-exclude: []
+exclude: [package.json, deploy.sh, yarn.lock, README.md, LICENSE.md]
