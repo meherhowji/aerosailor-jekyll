@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Insertion Sort &ndash; 52 Weeks Of DSA"
+categories: [Algorithms]
 excerpt_separator: <!--more-->
 ---
 
