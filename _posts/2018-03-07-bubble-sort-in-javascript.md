@@ -1,14 +1,10 @@
 ---
 layout: post
-title: Bubble Sort In JavaScript
+title: 52 Weeks Of Algorithms - Bubble Sort
+excerpt_separator: <!--more-->
 ---
-
-![Bubble Sort Visual](/public/sorting/bubble-sort-visual.png "Bubble sort depiction image")
-
-<div class="message">
-	Bubble sort feels intuitive as you walk through the array, you swap only if the next number is larger. 
-</div>
-
+![Bubble Sort](/public/sorting/bubble-sort-visual.jpg "Bubbles in a glass of water"){: .post-hero}
+<!--more-->
 #### Basic Principal
  * Take a randomly sorted array
  * We are going to compare each pair of items, and we will swap them if second is smaller than first.

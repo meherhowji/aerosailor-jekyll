@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Selection Sort In JavaScript
+title: 52 Weeks Of Algorithms - Selection Sort
+excerpt_separator: <!--more-->
 ---
 
-![Selection Sort](/public/sorting/selection-sort-visual.png "Selection sort depiction image")
-
+![Selection Sort](/public/sorting/selection-sort-visual.jpg "Multiple yatches docked at coast."){: .post-hero}
+<!--more-->
 #### Basic Principal
  * Take a randomly sorted array
  * We then mark the first element as smallest.
