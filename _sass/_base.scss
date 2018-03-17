@@ -1,88 +1,95 @@
 // Body resets
 //
 // Update the foundational and global aspects of the page.
-
 * {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-  font-family: $root-font-family;
-  font-size: $root-font-size;
-  line-height: $root-line-height;
-
-  @media (min-width: $large-breakpoint) {
-    font-size: $large-font-size;
-  }
+    font-family: $root-font-family;
+    font-size: $root-font-size;
+    line-height: $root-line-height;
+    @media (min-width: $large-breakpoint) {
+        font-size: $large-font-size;
+    }
 }
 
 body {
-  color: $body-color;
-  background-color: $body-bg;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+    color: $body-color;
+    background-color: $body-bg;
+    font-family: zero-book !important;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
 
 @font-face {
-  font-family: 'Deftone-Stylus';
-    src:  url('./public/font/Deftone-Stylus.ttf.woff') format('woff'),
-    url('./public/font/Deftone-Stylus.ttf.svg#Deftone-Stylus') format('svg'),
-    url('./public/font/Deftone-Stylus.ttf.eot'),
-    url('./public/font/Deftone-Stylus.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal;
+    font-family: "zero-book";
+    src: url("./public/font/zero-book.woff2") format("woff2"), url("./public/font/zero-book.woff") format("woff"), url("./public/font/zero-book.otf") format("opentype");
     font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "zero-bold";
+    src: url("./public/font/zero-bold.woff2") format("woff2"), url("./public/font/zero-bold.woff") format("woff"), url("./public/font/zero-bold.otf") format("opentype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "zero-black";
+    src: url("./public/font/zero-black.woff2") format("woff2"), url("./public/font/zero-black.woff") format("woff"), url("./public/font/zero-black.otf") format("opentype");
+    font-style: normal;
+    font-weight: 400;
 }
 
 // No `:visited` state is required by default (browsers will use `a`)
 a {
-  color: $link-color;
-  text-decoration: none;
-
-  // `:focus` is linked to `:hover` for basic accessibility
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
-
-  strong {
-    color: inherit;
-  }
+    color: $link-color;
+    text-decoration: none; // `:focus` is linked to `:hover` for basic accessibility
+    &:hover,
+    &:focus {
+        text-decoration: none !important;
+    }
+    strong {
+        color: inherit;
+    }
 }
 
 img {
-  display: block;
-  max-width: 100%;
-  margin: 0 0 1rem;
-  border-radius: 5px;
+    display: block;
+    max-width: 100%;
+    margin: 0 0 1rem;
+    border-radius: 5px;
 }
 
 table {
-  margin-bottom: 1rem;
-  width: 100%;
-  font-size: 85%;
-  border: 1px solid #e5e5e5;
-  border-collapse: collapse;
+    margin-bottom: 1rem;
+    width: 100%;
+    font-size: 85%;
+    border: 1px solid #e5e5e5;
+    border-collapse: collapse;
 }
 
 td,
 th {
-  padding: .25rem .5rem;
-  border: 1px solid #e5e5e5;
+    padding: .25rem .5rem;
+    border: 1px solid #e5e5e5;
 }
 
 th {
-  text-align: left;
+    text-align: left;
 }
 
 tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
-  background-color: #f9f9f9;
+    background-color: #f9f9f9;
 }

@@ -15,12 +15,12 @@ body {
 	&:after {
 	  content: '';
 	  position: absolute;
-	  left: 0;
+	  left: -5px;
 	  top: -25px;
 	  width: 105%;
 	  height: 225px;
-	  background: #ecf0f1;
-	  opacity: 0.5;
+	  background: #58B19F;
+	  opacity: 1;
 	  z-index: -100000000;
 	  transform: rotate(2deg);
 	}
@@ -30,7 +30,7 @@ body {
 	width: 105%;
     height: 225px;
     position: absolute;
-    left: 0;
+    left: -5px;
     top: -25px;
     overflow: hidden;
     transform: rotate(2deg);
@@ -40,7 +40,7 @@ body {
 	}
 	path {
 		fill: none;
-		stroke: #70c050;
+		stroke: #87D1C3;
 		opacity: 0.5;
 		stroke-width: 0.5px;
 		vector-effect: non-scaling-stroke;
@@ -54,24 +54,23 @@ header {
 		position: relative;
 		margin-top: 0;
 		margin-bottom: 0;
-		color: $gray-5;
-		font-family: 'Deftone-Stylus', 'Montserrat', sans-serif;
-		font-weight: 300;
+		color:rgba(0,0,0,0);
 		a.brand {
 			position: relative;
 			color: inherit;
 			text-transform: capitalize;
 			text-decoration: none;
-			&:after {
-				content: '';
-				background: url(./public/hill.png) center/65% no-repeat;
-				position: absolute;
-				right: -65px;
-				top: 0;
-				width: 65px;
-				height: 100%;
-				opacity: 0.8;
-			}
+			background: url(./public/logo.svg) center/100% no-repeat;
+			// &:after {
+			// 	content: '';
+			// 	background: url(./public/hill.png) center/65% no-repeat;
+			// 	position: absolute;
+			// 	right: -65px;
+			// 	top: 0;
+			// 	width: 65px;
+			// 	height: 100%;
+			// 	opacity: 0.8;
+			// }
 		}
 		> span {
 			margin-left: 15px; 

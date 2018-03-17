@@ -55,24 +55,24 @@
 	text-transform: uppercase;
 	text-align: center;
 	text-decoration: none;
-	color: $gray-4;
+	color: white;
 	padding: 5px;
 
 	&:after, &:before {
 		content: attr(data-cont);
 		position: absolute;
-		top: 0;
-		left: 0;
+		top: 5px;
+		left: 5px;
 		@include transform(scale(1));
 		@include transition(1s all);
 	}
 	&:after {
-		color: $gray-4;
+		color: white;
 		@include clip-path(polygon(100% 100%, 100% 0, -35% 0, 0 100%));
 		@include animation(volta .5s);
 	}
 	&:before {
-		color: $gray-4;
+		color: white;
 		@include clip-path(polygon(0 100%, -35% 0, 0 0, 0 100%));
 		@include transform(scale(1.025));
 	}
