@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Insertion Sort In JavaScript
+title: "52 Weeks Of Algorithms - Insertion Sort"
+excerpt_separator: <!--more-->
 ---
 
-![Insertion Sort](/public/sorting/insertion-sort-visual.png "Insertion sort depiction image")
-
+![Insertion Sort](/public/sorting/insertion-sort-visual.jpg "A lady keeping a document in the drawer"){: .post-hero}
+<!--more-->
 #### Basic Principal
  * Take a randomly sorted array
  * We then mark the first element as sorted.

@@ -2,66 +2,96 @@
 //
 // Each post is wrapped in `.post` and is used on default and post layouts. Each
 // page is wrapped in `.page` and is only used on the page layout.
-
 .page,
 .post {
-  margin-bottom: 4em;
-
-  li + li {
-    margin-top: .25rem;
-  }
+    margin-bottom: 4em;
+    margin-top: 4em;
+    .post-hero {
+        height: 420px;
+        width: auto;
+        margin: auto;
+        margin-top: 4rem;
+    }
+    li+li {
+        margin-top: .25rem;
+    }
 }
 
 // Blog post or page title
 .page-title,
 .post-title,
 .post-title a {
-  color: #303030;
+    color: #303030;
+    font-family: zero-black, sans-serif;
+    text-align: center;
 }
+
 .page-title,
 .post-title {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 // Meta data line below post title
 .post-date {
-  display: block;
-  margin-top: -.5rem;
-  margin-bottom: 1rem;
-  color: #9a9a9a;
+    display: block;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: #232323;
+    font-size: 0.65rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
 }
-
 
 // Related posts
 .related {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  margin-bottom: 2rem;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.posts {
+    h3 {
+        font-family: zero-black;
+        font-size: 175%;
+    }
 }
 
 .related-posts {
-  padding-left: 0;
-  list-style: none;
-
-  h3 {
-    margin-top: 0;
-  }
-
-  li {
-    small {
-      font-size: 75%;
-      color: #999;
+    padding-left: 0;
+    list-style: none;
+    h3 {
+        margin-top: 0;
     }
-
-    a:hover {
-      color: #268bd2;
-      text-decoration: none;
-
-      small {
-        color: inherit;
-      }
+    li {
+        small {
+            font-size: 75%;
+            color: #999;
+        }
+        a:hover {
+            color: #268bd2;
+            text-decoration: none;
+            small {
+                color: inherit;
+            }
+        }
     }
-  }
+}
+
+.sharepost {
+	margin-bottom: 2rem;
+    .at-share-btn-elements {
+		text-align: center;
+		a {
+			background-color: white !important;
+			svg {
+				fill: #333 !important;
+			}
+		}
+        a+a {
+			margin-left: 1rem;
+        }
+    }
 }
