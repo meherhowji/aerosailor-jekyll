@@ -2,11 +2,44 @@
 layout: default
 comments: true 
 ---
+<article class="row">
+	<article class="post-prev col-2">
+		{% if page.previous.url %}
+			<a class="post-navigator" href="{{ page.previous.url }}">
+				<span class="svg-cont">
+					<svg class="chevron chevron-prev" viewBox="0 0 1024 1024" width="100%" height="100%">
+						<path class="path1" d="M476.455 806.696l-381.164-381.164q-14.621-14.621-14.621-35.293t14.621-34.789 35.293-14.117 34.789 14.117l342.846 343.35 349.4-349.4q14.621-14.117 35.293-14.117t34.789 14.117 14.117 34.789-14.117 34.789l-381.164 381.164q-19.159 19.159-38.318 19.159t-31.764-12.605z"></path>
+					</svg>
+				</span>
+				<span class="post-nav">PREV</span>
+				<span class="prev">
+					{{ page.previous.title }}
+				</span>
+			</a>
+		{% endif %}
+	</article>
 
-<article class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date: "%b %-d, %Y" }}</time>
-  {{ content }}
+	<article class="post col-8">
+		<h1 class="post-title">{{ page.title }}</h1>
+		<time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date: "%b %-d, %Y" }}</time>
+		{{ content }}
+	</article>
+
+	<article class="post-next col-2">
+		{% if page.next.url %}
+			<a class="post-navigator" href="{{ page.next.url }}">
+				<span class="svg-cont">
+					<svg class="chevron chevron-next" viewBox="0 0 1024 1024" width="100%" height="100%">
+						<path class="path1" d="M476.455 806.696l-381.164-381.164q-14.621-14.621-14.621-35.293t14.621-34.789 35.293-14.117 34.789 14.117l342.846 343.35 349.4-349.4q14.621-14.117 35.293-14.117t34.789 14.117 14.117 34.789-14.117 34.789l-381.164 381.164q-19.159 19.159-38.318 19.159t-31.764-12.605z"></path>
+					</svg>
+				</span>
+				<span class="post-nav">NEXT</span>
+				<span class="next">
+					{{ page.next.title }}
+				</span>
+			</a>
+		{% endif %}
+	</article>
 </article>
 
 <aside class="sharepost">
@@ -14,19 +47,26 @@ comments: true
 </aside>
 
 {% if site.related_posts != empty %}
-<aside class="related">
-  <h3>Related posts</h3>
-  <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
-      <li>
-        <a href="{{ site.baseurl }}{{ post.url }}">
-          {{ post.title }}
-          <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-</aside>
+	<aside class="related">
+		<h3>Related Posts</h3>
+		<div class="row related-post">
+			<div class="col-10 offset-md-1">
+				<div class="row">
+					{% for post in site.related_posts limit:3 %}
+					<div class="col-4">
+						<div>
+							{{ post.excerpt }}
+						</div>
+						<a href="{{ site.baseurl }}{{ post.url }}">
+							{{ post.title }}
+						</a>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</aside>
+{% endif %}
 
 <aside>
 	<div id="disqus_thread"></div>
@@ -45,4 +85,3 @@ comments: true
 	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </aside>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5aad0ac74409f0df"></script>
-{% endif %}
