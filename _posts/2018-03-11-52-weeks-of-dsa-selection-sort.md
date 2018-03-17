@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 52 Weeks Of Algorithms - Selection Sort
+title: 52 Weeks Of DSA - Selection Sort
 excerpt_separator: <!--more-->
 ---
 

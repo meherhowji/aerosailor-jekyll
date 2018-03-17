@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "52 Weeks Of Algorithms - Insertion Sort"
+title: "52 Weeks Of DSA - Insertion Sort"
 excerpt_separator: <!--more-->
 ---
 

@@ -17,6 +17,11 @@
     }
 }
 
+.post-prev, .post-next {
+	font-family: zero-black, sans-serif;
+	font-size: 1rem;
+}
+
 // Blog post or page title
 .page-title,
 .post-title,
@@ -94,4 +99,18 @@
 			margin-left: 1rem;
         }
     }
+}
+
+.chevron {
+	height: 2rem;
+	width: 2rem;
+}
+.chevron-next {
+	transform: rotate(-90deg);
+	right: 0;
+}
+
+.chevron-prev {
+	transform: rotate(90deg);
+	left: 0;
 }
