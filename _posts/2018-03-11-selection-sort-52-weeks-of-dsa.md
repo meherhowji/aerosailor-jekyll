@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 52 Weeks Of DSA - Selection Sort
+title: Selection Sort &ndash; 52 Weeks Of DSA
 excerpt_separator: <!--more-->
 ---
 

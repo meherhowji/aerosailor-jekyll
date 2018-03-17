@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 52 Weeks Of DSA - Bubble Sort
+title: Bubble Sort &ndash; 52 Weeks Of DSA
 excerpt_separator: <!--more-->
 ---
 ![Bubble Sort](/public/sorting/bubble-sort-visual.jpg "Bubbles in a glass of water"){: .post-hero}
