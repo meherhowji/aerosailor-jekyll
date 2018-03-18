@@ -1,10 +1,12 @@
 ---
 layout: post
 title: Bubble Sort &ndash; 52 Weeks Of DSA
+categories: [Algorithms]
 excerpt_separator: <!--more-->
 ---
 ![Bubble Sort](/public/sorting/bubble-sort-visual.jpg "Bubbles in a glass of water"){: .post-hero}
 <!--more-->
+<br>
 #### Basic Principal
  * Take a randomly sorted array
  * We are going to compare each pair of items, and we will swap them if second is smaller than first.
@@ -13,11 +15,13 @@ excerpt_separator: <!--more-->
  * We maintain a flag to keep track of the sort state of the list and save some iterations.
  * This is how each iteration looks like: ![placeholder]( https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif "Bubble sort visualised")
 
+<br>
 #### Complexity
 * Time complexity for both worst-case and average is О(n<sup>2</sup>)
 * Best case time complexity is Ω(n), is the only significant advantage.
 * Space complexity is O(1).
 
+<br>
 #### Implementation
 Try the below example in <a href="http://jsbin.com/jirate/2/edit?js,console">JS Bin</a>
 
