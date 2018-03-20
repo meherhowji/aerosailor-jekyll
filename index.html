@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		 Aerosailor 
+	</title>
+	<link rel="stylesheet" href="/styles.css">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+	<link rel="shortcut icon" href="/public/favicon.ico">
+	<link rel="alternate" type="application/atom+xml" title="Aerosailor" href="/atom.xml">
+	<link href='' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../node_modules/aos/dist/aos.css">
+	<script> 
+		window.onload = function () {
+			var elem = document.getElementById("aerosailor-loader");
+			elem.className = "page-appear";
+			setTimeout(function() {
+				elem.style.display = "none";
+				AOS.init();
+			}, 1200);
+		}
+	</script>
+	<!-- Begin Jekyll SEO tag v2.2.3 -->
+<title>Home | Aerosailor</title>
+<meta property="og:title" content="Home" />
+<meta name="author" content="Meher Ranjan Howji" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://aerosailor.com/" />
+<meta property="og:url" content="http://aerosailor.com/" />
+<meta property="og:site_name" content="Aerosailor" />
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"WebSite","name":"Aerosailor","headline":"Home","author":{"@type":"Person","name":"Meher Ranjan Howji"},"url":"http://aerosailor.com/"}</script>
+<!-- End Jekyll SEO tag -->
 
-  <title>
-    
-      Aerosailor
-    
-  </title>
-
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
-  <link rel="shortcut icon" href="/public/favicon.ico">
-  <link rel="alternate" type="application/atom+xml" title="Aerosailor" href="/atom.xml">
-  <link href='https://fonts.googleapis.com/css?family=Montserrat:300,700' rel='stylesheet' type='text/css'>
 </head>
-
 	<body>
+		<div id="aerosailor-loader">&nbsp;</div>
 		<div class="line-container">
 			<svg class="animated-lines" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"></svg>
 		</div>
@@ -44,6 +63,7 @@
 		<div class="col">
 			<span class="search">
 				<a href=""></a>
+				<input type="text" placeholder="i am looking for ...">
 			</span>
 			<!-- <span class="localization">
 				<a href="">EN</a>&middot;
@@ -53,52 +73,60 @@
 	</div>
 </header>
 			<article>
-	<div class="posts">
+	<div class="feature-block row">
+	<div class="col-12 feature-title" 
+		data-aos="fade-slide-right" 
+		data-aos-duration="1200" 
+		data-aos-once="true">
+		<div class="row close-lines">The &mdash;</div>
+		<div class="row close-lines">Latest</div>
+	</div>
 	
-	<h3>
-		<a href="/blog/algorithms/selection-sort-52-weeks-of-dsa/">
-			Selection Sort &ndash; 52 Weeks Of DSA
-		</a>
-	</h3>
-	<p>
-		<small>
-			<strong>March 11, 2018</strong> .  .
-			<p><p><img src="/public/sorting/selection-sort-visual.jpg" alt="Selection Sort" title="Multiple yatches docked at coast." class="post-hero" /></p>
-
-</p>
-		</small>
-	</p>
+		<div class="col-4 feature-content related-post" 
+			data-aos="fade-rise" 
+			data-aos-duration="2000" 
+			data-aos-once="true">
+			<span><strong>Mar 20, 2018</strong></span>
+			<div class="post-image"><p><img src="/public/sorting/angular-component.jpg" alt="Angular Component" title="An image of components of a camera" class="post-hero" />
+&lt;–more–&gt;</p>
+</div>
+			<div class="post-title"><a href="/blog/how-to-create-angular5-component/">How To Create An Angular 5 Component</a></div>
+		</div>
 	
-	<h3>
-		<a href="/blog/algorithms/insertion-sort-52-weeks-of-dsa/">
-			Insertion Sort &ndash; 52 Weeks Of DSA
-		</a>
-	</h3>
-	<p>
-		<small>
-			<strong>March 11, 2018</strong> .  .
-			<p><p><img src="/public/sorting/insertion-sort-visual.jpg" alt="Insertion Sort" title="A lady keeping a document in the drawer" class="post-hero" /></p>
+		<div class="col-4 feature-content related-post" 
+			data-aos="fade-rise" 
+			data-aos-duration="2000" 
+			data-aos-once="true">
+			<span><strong>Mar 11, 2018</strong></span>
+			<div class="post-image"><p><img src="/public/sorting/insertion-sort-visual.jpg" alt="Insertion Sort" title="A lady keeping a document in the drawer" class="post-hero" /></p>
 
-</p>
-		</small>
-	</p>
+</div>
+			<div class="post-title"><a href="/blog/insertion-sort-52-weeks-of-dsa/">Insertion Sort &ndash; 52 Weeks Of DSA</a></div>
+		</div>
 	
-	<h3>
-		<a href="/blog/algorithms/bubble-sort-52-weeks-of-dsa/">
-			Bubble Sort &ndash; 52 Weeks Of DSA
-		</a>
-	</h3>
-	<p>
-		<small>
-			<strong>March  7, 2018</strong> .  .
-			<p><p><img src="/public/sorting/bubble-sort-visual.jpg" alt="Bubble Sort" title="Bubbles in a glass of water" class="post-hero" /></p>
+		<div class="col-4 feature-content related-post" 
+			data-aos="fade-rise" 
+			data-aos-duration="2000" 
+			data-aos-once="true">
+			<span><strong>Mar 9, 2018</strong></span>
+			<div class="post-image"><p><img src="/public/sorting/selection-sort-visual.jpg" alt="Selection Sort" title="Multiple yatches docked at coast." class="post-hero" /></p>
 
-</p>
-		</small>
-	</p>
+</div>
+			<div class="post-title"><a href="/blog/selection-sort-52-weeks-of-dsa/">Selection Sort &ndash; 52 Weeks Of DSA</a></div>
+		</div>
 	
 </div>
 
+
+<div class="feature-block row">
+	<div class="col-12 feature-title">
+		<div class="row close-lines">Best &mdash;</div>
+		<div class="row close-lines">& Bare</div>
+	</div>
+	<div class="col-4 feature-content related-post">
+
+	</div>
+</div>
 </article>
 			<footer>
 	<div class="row">
@@ -124,12 +152,22 @@
 	</div>
 	<!-- <small>
 		&copy;
-		<time datetime="2018-03-18T10:19:31+05:30">2018</time>. All rights reserved.
+		<time datetime="2018-03-20T20:03:03+05:30">2018</time>. All rights reserved.
 	</small> -->
 </footer>
 		</div>
 
 		<script src="/scripts/bezier.js"></script>
+		<script src="../node_modules/aos/dist/aos.js"></script>
+
+		
+			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116074903-1"></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag() { dataLayer.push(arguments); }
+				gtag('js', new Date());
+				gtag('config', 'UA-116074903-1');
+			</script>
 		
 	</body>
 </html>

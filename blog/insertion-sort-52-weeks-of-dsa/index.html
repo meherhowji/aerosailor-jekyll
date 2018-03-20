@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		 Insertion Sort &ndash; 52 Weeks Of DSA &middot; Aerosailor 
+	</title>
+	<link rel="stylesheet" href="/styles.css">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+	<link rel="shortcut icon" href="/public/favicon.ico">
+	<link rel="alternate" type="application/atom+xml" title="Aerosailor" href="/atom.xml">
+	<link href='' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../node_modules/aos/dist/aos.css">
+	<script> 
+		window.onload = function () {
+			var elem = document.getElementById("aerosailor-loader");
+			elem.className = "page-appear";
+			setTimeout(function() {
+				elem.style.display = "none";
+				AOS.init();
+			}, 1200);
+		}
+	</script>
+	<!-- Begin Jekyll SEO tag v2.2.3 -->
+<title>Insertion Sort – 52 Weeks Of DSA | Aerosailor</title>
+<meta property="og:title" content="Insertion Sort – 52 Weeks Of DSA" />
+<meta name="author" content="Meher Ranjan Howji" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://aerosailor.com/blog/insertion-sort-52-weeks-of-dsa/" />
+<meta property="og:url" content="http://aerosailor.com/blog/insertion-sort-52-weeks-of-dsa/" />
+<meta property="og:site_name" content="Aerosailor" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-03-11T00:00:00+05:30" />
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"BlogPosting","headline":"Insertion Sort – 52 Weeks Of DSA","author":{"@type":"Person","name":"Meher Ranjan Howji"},"datePublished":"2018-03-11T00:00:00+05:30","dateModified":"2018-03-11T00:00:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"http://aerosailor.com/blog/insertion-sort-52-weeks-of-dsa/"},"url":"http://aerosailor.com/blog/insertion-sort-52-weeks-of-dsa/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+	<body>
+		<div id="aerosailor-loader">&nbsp;</div>
+		<div class="line-container">
+			<svg class="animated-lines" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"></svg>
+		</div>
+		<div class="container content">
+			<header>
+	<div class="row align-items-center">
+		<div class="col">
+			<h1 class="masthead-title">
+				<a class="brand" href="/" title="Home">Aerosailor</a>
+			</h1>
+		</div>
+		<div class="col-6 vertical-align-one">
+			<nav>
+				<ul class="clearfix vertical-align-two hover-saber">
+					<li class="active">
+						<a href="/" data-cont="Home">Home</a>
+					</li>
+					<li>
+						<a href="/blog/" data-cont="Blog">Blog</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="col">
+			<span class="search">
+				<a href=""></a>
+				<input type="text" placeholder="i am looking for ...">
+			</span>
+			<!-- <span class="localization">
+				<a href="">EN</a>&middot;
+				<a href="">DE</a>
+			</span> -->
+		</div>
+	</div>
+</header>
+			<article>
+	<article class="row">
+	<article class="post-prev col-2">
+		
+			<a class="post-navigator" href="/blog/selection-sort-52-weeks-of-dsa/">
+				<span class="svg-cont">
+					<svg class="chevron chevron-prev" viewBox="0 0 1024 1024" width="100%" height="100%">
+						<path class="path1" d="M476.455 806.696l-381.164-381.164q-14.621-14.621-14.621-35.293t14.621-34.789 35.293-14.117 34.789 14.117l342.846 343.35 349.4-349.4q14.621-14.117 35.293-14.117t34.789 14.117 14.117 34.789-14.117 34.789l-381.164 381.164q-19.159 19.159-38.318 19.159t-31.764-12.605z"></path>
+					</svg>
+				</span>
+				<span class="post-nav">PREV</span>
+				<span class="prev">
+					Selection Sort &ndash; 52 Weeks Of DSA
+				</span>
+			</a>
+		
+	</article>
+
+	<article class="post col-8">
+		<div class="post-categories">
+			
+				<a href="/categories/#Algorithms">Algorithms</a>
+				
+			
+		</div>
+		<h1 class="post-title">Insertion Sort &ndash; 52 Weeks Of DSA</h1>
+		<time datetime="2018-03-11T00:00:00+05:30" class="post-date">Mar 11, 2018</time>
+		<p><img src="/public/sorting/insertion-sort-visual.jpg" alt="Insertion Sort" title="A lady keeping a document in the drawer" class="post-hero" />
+<!--more--></p>
+<h4 id="basic-principal">Basic Principal</h4>
+<ul>
+  <li>Take a randomly sorted array</li>
+  <li>We then mark the first element as sorted.</li>
+  <li>We take the next element and compare it with the previous.</li>
+  <li>If the previous is larger than current then we move the previous element to the current position.</li>
+  <li>We are not swapping the values here, we are re-position the previous one place so that the current item can be inserted at the right index.</li>
+  <li>Lets take an example to understand this manoeuvre of items. Lets assume we have a list 3, 5, 1.</li>
+  <li>We first take 3 and run it against all the items in the list but in reverse order.</li>
+  <li>So for 3 will be compared with 3 and no action will be taken. In next iteration we take 5 and run a loop in reverse to compare it with 3 and because 5 &gt; 3, we again take no action. Now we take 1 and compare it against 5, as our left side value(sorted side) is larger than our current item ie 1, we move 5 to a position forward. It will make our list look like, 3, 5, 5. Now we again compare 1 against 3, so we again move 3 forward. Out list now looks like 3, 3, 5. And because we have run through our list we just move our current item to the inner index. Hence our list looks like 1, 3, 5. Take a look at the code to get even better clarity.</li>
+  <li>We traverse the array and if we encounter any smaller value, then we mark it as the smallest.</li>
+  <li>The smallest value in the traversal is moved to the left.</li>
+  <li>We continue doing this until the end of</li>
+</ul>
+
+<h4 id="complexity">Complexity</h4>
+<ul>
+  <li>Time complexity for worst-case &amp; average case is О(n<sup>2</sup>)</li>
+  <li>Best time complexity is Ω(n).</li>
+  <li>Space complexity is O(1).</li>
+</ul>
+
+<h4 id="implementation">Implementation</h4>
+<p>Try the below example in <a href="http://jsbin.com/gageqim/edit?js,console">JS Bin</a></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">j</span><span class="p">,</span> <span class="nx">current</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">array</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">current</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="nx">j</span> <span class="o">=</span> <span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nx">array</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nx">current</span><span class="p">;</span> <span class="nx">j</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">array</span> <span class="p">[</span><span class="nx">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="nx">j</span><span class="p">];</span>
+  <span class="p">}</span>
+  <span class="nx">array</span><span class="p">[</span><span class="nx">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nx">current</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+
+	</article>
+
+	<article class="post-next col-2">
+		
+			<a class="post-navigator" href="/blog/how-to-create-angular5-component/">
+				<span class="svg-cont">
+					<svg class="chevron chevron-next" viewBox="0 0 1024 1024" width="100%" height="100%">
+						<path class="path1" d="M476.455 806.696l-381.164-381.164q-14.621-14.621-14.621-35.293t14.621-34.789 35.293-14.117 34.789 14.117l342.846 343.35 349.4-349.4q14.621-14.117 35.293-14.117t34.789 14.117 14.117 34.789-14.117 34.789l-381.164 381.164q-19.159 19.159-38.318 19.159t-31.764-12.605z"></path>
+					</svg>
+				</span>
+				<span class="post-nav">NEXT</span>
+				<span class="next">
+					How To Create An Angular 5 Component
+				</span>
+			</a>
+		
+	</article>
+</article>
+
+<aside class="sharepost">
+	<div class="addthis_inline_share_toolbox"></div>
+</aside>
+
+
+	<aside class="related">
+		<h3>Related Posts</h3>
+		<div class="row related-post">
+			<div class="col-10 offset-md-1">
+				<div class="row">
+					
+					<div class="col-4">
+						<div>
+							<p><img src="/public/sorting/angular-component.jpg" alt="Angular Component" title="An image of components of a camera" class="post-hero" />
+&lt;–more–&gt;</p>
+
+						</div>
+						<a href="/blog/how-to-create-angular5-component/">
+							How To Create An Angular 5 Component
+						</a>
+					</div>
+					
+					<div class="col-4">
+						<div>
+							<p><img src="/public/sorting/selection-sort-visual.jpg" alt="Selection Sort" title="Multiple yatches docked at coast." class="post-hero" /></p>
+
+
+						</div>
+						<a href="/blog/selection-sort-52-weeks-of-dsa/">
+							Selection Sort &ndash; 52 Weeks Of DSA
+						</a>
+					</div>
+					
+					<div class="col-4">
+						<div>
+							<p><img src="/public/sorting/bubble-sort-visual.jpg" alt="Bubble Sort" title="Bubbles in a glass of water" class="post-hero" /></p>
+
+
+						</div>
+						<a href="/blog/bubble-sort-52-weeks-of-dsa/">
+							Bubble Sort &ndash; 52 Weeks Of DSA
+						</a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</aside>
+
+
+<aside>
+	<div id="disqus_thread"></div>
+	<script>
+		var disqus_config = function () {
+			this.page.url = "http://aerosailor.com";
+			this.page.identifier = "/blog/insertion-sort-52-weeks-of-dsa/";
+		};
+		(function () {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://aerosailor.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</aside>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5aad0ac74409f0df"></script>
+
+</article>
+			<footer>
+	<div class="row">
+		<div class="col">
+			<div class="row">
+				<div class="col profile"></div>
+				<div class="col aboutme">
+					<h4>Hello,</h4>		
+					<p>I am Meher. I work at PubMatic. I develop scalable & maintainable JavaScript applications using modern design practices and by leveraging various JS frameworks.</p>
+					<ul class="socializer">
+						<li><a class="in" href="http://instagram.com/meherranjan"></a></li>
+						<li><a class="fb" href="http://facebook.com/meherranjan"></a></li>
+						<li><a class="li" href="http://linkedin.com/meherranjan"></a></li>
+						<li><a class="sp" href="http://spotify.com/meherranjan"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col location">
+			<span class="addr">Pune, India</span>
+			<span class="pin"></span>
+		</div>
+	</div>
+	<!-- <small>
+		&copy;
+		<time datetime="2018-03-20T20:03:03+05:30">2018</time>. All rights reserved.
+	</small> -->
+</footer>
+		</div>
+
+		<script src="/scripts/bezier.js"></script>
+		<script src="../node_modules/aos/dist/aos.js"></script>
+
+		
+			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116074903-1"></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag() { dataLayer.push(arguments); }
+				gtag('js', new Date());
+				gtag('config', 'UA-116074903-1');
+			</script>
+		
+	</body>
+</html>
