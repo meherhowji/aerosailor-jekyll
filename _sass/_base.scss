@@ -10,8 +10,8 @@
 html,
 body {
     margin: 0;
-	padding: 0;
-	overflow-x: hidden;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 html {
@@ -29,6 +29,24 @@ body {
     font-family: zero-book !important;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+    #aerosailor-loader {
+        position: fixed;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        background-color: white;
+        z-index: 99999;
+        opacity: 1;
+        -webkit-transition: opacity 1s ease-in;
+        -moz-transition: opacity 1s ease-in;
+        -ms-transition: opacity 1s ease-in;
+        -o-transition: opacity 1s ease-in;
+        transition: opacity 1s ease-in;
+    }
+    .page-appear {
+        opacity: 0 !important;
+    }
 }
 
 @font-face {

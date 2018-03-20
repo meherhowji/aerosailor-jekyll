@@ -1,5 +1,5 @@
 # Permalinks
-permalink:           /blog/:categories/:title/
+permalink:           /blog/:title/
 
 # Setup
 title:               Aerosailor
@@ -16,7 +16,7 @@ sass:
   style:            :compressed
 
 fonts:
-  url: https://fonts.googleapis.com/css?family=Montserrat:300,700
+  # url: https://fonts.googleapis.com/css?family=Montserrat:300,700
 
 # About/contact
 author:
@@ -27,7 +27,8 @@ author:
   location:          Pune, India
 
 # Custom vars
-version:             0.1
+version:             1
+analytics_id:        UA-116074903-1
 github:
   repo:              https://github.com/meherranjan
 
@@ -35,5 +36,6 @@ github:
 plugins:
   - jekyll-paginate
   - jekyll-gist
+  - jekyll-seo-tag
 
 exclude: [package.json, deploy.sh, yarn.lock, README.md, LICENSE.md]
