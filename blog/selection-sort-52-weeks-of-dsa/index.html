@@ -10,18 +10,7 @@
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
 	<link rel="shortcut icon" href="/public/favicon.ico">
 	<link rel="alternate" type="application/atom+xml" title="Aerosailor" href="/atom.xml">
-	<link href='' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="../node_modules/aos/dist/aos.css">
-	<script> 
-		window.onload = function () {
-			var elem = document.getElementById("aerosailor-loader");
-			elem.className = "page-appear";
-			setTimeout(function() {
-				elem.style.display = "none";
-				AOS.init();
-			}, 1200);
-		}
-	</script>
+	<link rel="stylesheet" href="/node_modules/aos/dist/aos.css">
 	<!-- Begin Jekyll SEO tag v2.2.3 -->
 <title>Selection Sort – 52 Weeks Of DSA | Aerosailor</title>
 <meta property="og:title" content="Selection Sort – 52 Weeks Of DSA" />
@@ -65,7 +54,7 @@
 		<div class="col">
 			<span class="search">
 				<a href=""></a>
-				<input type="text" placeholder="i am looking for ...">
+				<!-- <input type="text" placeholder="i am looking for ..."> -->
 			</span>
 			<!-- <span class="localization">
 				<a href="">EN</a>&middot;
@@ -76,7 +65,7 @@
 </header>
 			<article>
 	<article class="row">
-	<article class="post-prev col-2">
+	<article class="post-prev col-2" data-aos="pn-slide-to-right">
 		
 			<a class="post-navigator" href="/blog/bubble-sort-52-weeks-of-dsa/">
 				<span class="svg-cont">
@@ -101,7 +90,7 @@
 		</div>
 		<h1 class="post-title">Selection Sort &ndash; 52 Weeks Of DSA</h1>
 		<time datetime="2018-03-09T00:00:00+05:30" class="post-date">Mar 9, 2018</time>
-		<p><img src="/public/sorting/selection-sort-visual.jpg" alt="Selection Sort" title="Multiple yatches docked at coast." class="post-hero" />
+		<div data-aos="pc-appear" data-aos-once="true"> <p><img src="/public/sorting/selection-sort-visual.jpg" alt="Selection Sort" title="Multiple yatches docked at coast." class="post-hero" />
 <!--more--></p>
 <h4 id="basic-principal">Basic Principal</h4>
 <ul>
@@ -139,10 +128,10 @@
   <span class="nx">swap</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">smallest</span><span class="p">);</span>
 <span class="p">}</span></code></pre></figure>
 
-
+	</div>
 	</article>
 
-	<article class="post-next col-2">
+	<article class="post-next col-2" data-aos="pn-slide-to-left">
 		
 			<a class="post-navigator" href="/blog/insertion-sort-52-weeks-of-dsa/">
 				<span class="svg-cont">
@@ -252,13 +241,14 @@
 	</div>
 	<!-- <small>
 		&copy;
-		<time datetime="2018-03-20T20:03:03+05:30">2018</time>. All rights reserved.
+		<time datetime="2018-03-20T21:11:52+05:30">2018</time>. All rights reserved.
 	</small> -->
 </footer>
 		</div>
 
 		<script src="/scripts/bezier.js"></script>
-		<script src="../node_modules/aos/dist/aos.js"></script>
+		<script src="/node_modules/aos/dist/aos.js"></script>
+		<script src="/scripts/main.js"></script>
 
 		
 			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116074903-1"></script>
