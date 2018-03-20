@@ -45,3 +45,23 @@
 		}
 	}
 }
+
+[data-aos="fade-rise"] {
+	opacity: 0;
+	transform: translateY(40px);
+	transition-property: transform, opacity;
+	&.aos-animate {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+[data-aos="fade-slide-right"] {
+	opacity: 0.3;
+	transform: translateX(-20px);
+	transition-property: transform, opacity;
+	&.aos-animate {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
