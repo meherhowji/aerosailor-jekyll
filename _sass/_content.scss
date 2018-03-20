@@ -50,6 +50,7 @@
 	opacity: 0;
 	transform: translateY(40px);
 	transition-property: transform, opacity;
+	transition-timing-function: ease-out;
 	&.aos-animate {
 		transform: translateY(0px);
 		opacity: 1;
@@ -60,6 +61,7 @@
 	opacity: 0.3;
 	transform: translateX(-20px);
 	transition-property: transform, opacity;
+	transition-timing-function: ease-out;
 	&.aos-animate {
 		transform: translateY(0px);
 		opacity: 1;

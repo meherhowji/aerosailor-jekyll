@@ -2,6 +2,7 @@
 <html lang="en">
 	{% include head.html %}
 	<body>
+		<div id="aerosailor-loader">&nbsp;</div>
 		<div class="line-container">
 			<svg class="animated-lines" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"></svg>
 		</div>
@@ -13,7 +14,6 @@
 
 		<script src="{{ site.baseurl }}/scripts/bezier.js"></script>
 		<script src="../node_modules/aos/dist/aos.js"></script>
-		<script>AOS.init();</script>
 
 		{% if site.analytics_id %}
 			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116074903-1"></script>
