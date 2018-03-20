@@ -9,19 +9,22 @@ title: Home
 		<div class="row close-lines">The &mdash;</div>
 		<div class="row close-lines">Latest</div>
 	</div>
-</div>
-<!-- <div class="posts">
-	{% for post in site.posts %}
-	<h3>
-		<a href="{{ site.baseurl }}{{ post.url }}">
-			{{ post.title }}
-		</a>
-	</h3>
-	<p>
-		<small>
-			<strong>{{ post.date | date: "%B %e, %Y"}}</strong> . {{ post.category }} .
-			<p>{{ post.excerpt }}</p>
-		</small>
-	</p>
+	{% for post in site.posts limit:3 %}
+		<div class="col-4 feature-content related-post">
+			<span><strong>{{ post.date | date: "%b %-d, %Y"}}</strong></span>
+			<div class="post-image">{{ post.excerpt }}</div>
+			<div class="post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
+		</div>
 	{% endfor %}
-</div> -->
+</div>
+
+
+<div class="feature-block row">
+	<div class="col-12 feature-title">
+		<div class="row close-lines">Best &mdash;</div>
+		<div class="row close-lines">& Bare</div>
+	</div>
+	<div class="col-4 feature-content related-post">
+
+	</div>
+</div>
