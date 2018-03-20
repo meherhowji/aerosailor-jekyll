@@ -1,7 +1,10 @@
 .featured {
-    margin-top: 4rem;
+    margin-top: 3rem;
     .feature-block {
-        margin-bottom: 5rem;
+		margin-bottom: 5rem;
+		.center {
+			justify-content: center;
+		}
         .feature-title {
             margin-bottom: 3rem;
             font-size: 48px;
@@ -63,6 +66,17 @@
 [data-aos="fade-slide-right"] {
     opacity: 0.3;
     transform: translateX(-20px);
+    transition-property: transform, opacity;
+    transition-timing-function: ease-out;
+    &.aos-animate {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+[data-aos="fade-slide-up"] {
+    opacity: 0.3;
+    transform: translateY(20px);
     transition-property: transform, opacity;
     transition-timing-function: ease-out;
     &.aos-animate {
