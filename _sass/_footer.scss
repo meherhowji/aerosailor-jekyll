@@ -9,8 +9,16 @@
 }
 
 footer {
+	position: relative;
 	font-family: zero-bold, sans-serif;
-	margin-top: 100px;
+	margin-top: 240px;
+	small {
+		font-family: zero-book, sans-serif;
+		color: #fff;
+		font-size: 0.5rem;
+		text-transform: uppercase;
+		opacity: 0.2;
+	}
 	div.location {
 		position: relative;
 		background: url(./public/location.png) center no-repeat;
@@ -38,37 +46,20 @@ footer {
 			margin-top: -13px;
 		}
 	}
-	div.profile {
-		height: 250px;
-		background: $gray-5;
-	}
 	div.aboutme {
-		background: #D0DBE2;
-		padding: 25px;
+		color: #fff;
 		h4 {
 			position: relative;
 			font-size: 1.5rem;
-			color: #212121;
 			font-weight: 800 !important;
-			text-transform: lowercase;
-			&:after {
-				content: '';
-				position: absolute;
-				left: 0;
-				top: 60%;
-				width: 100px;
-				height: 40%;
-				background: white;
-				opacity: 0.5;
-			}
 		}
 		p {
-			color: #575a5d;
-			font-family: 'Raleway', sans-serif;
-			font-size: 0.65rem;
-			font-weight: 300;
+			font-family: zero-book, sans-serif;
+			font-size: 0.75rem;
+			font-weight: 100;
 			line-height: 24px;
 			margin-bottom: 15px;
+			letter-spacing: 0.025rem;
 		}
 		.socializer {
 			list-style: none;
@@ -80,9 +71,6 @@ footer {
 				width: 24px;
 				height: 18px;
 				margin-left: 10px;
-				filter: gray;
-				-webkit-filter: grayscale(1);
-				filter: grayscale(1);
 				&:first-child {
 					margin-left: 0;
 				}

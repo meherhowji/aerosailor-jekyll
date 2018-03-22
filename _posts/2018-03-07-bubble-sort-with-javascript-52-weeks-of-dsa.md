@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bubble Sort &ndash; 52 Weeks Of DSA
+title: Bubble Sort With JavaScript &ndash; 52 Weeks Of DSA
 categories: [Algorithms]
 excerpt_separator: <!--more-->
 ---
