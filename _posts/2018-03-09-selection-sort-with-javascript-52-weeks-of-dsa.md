@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Selection Sort &ndash; 52 Weeks Of DSA
+title: Selection Sort With JavaScript &ndash; 52 Weeks Of DSA
 categories: [Algorithms]
 excerpt_separator: <!--more-->
 ---

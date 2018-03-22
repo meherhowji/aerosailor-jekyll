@@ -7,33 +7,20 @@ title: Home
 	<div class="feature-block row">
 		<div class="col-12 feature-title" 
 			data-aos="fade-slide-right" 
-			data-aos-duration="1200" 
+			data-aos-duration="1000" 
 			data-aos-once="true">
 			<div class="row close-lines">The &mdash;</div>
 			<div class="row close-lines">Latest</div>
 		</div>
-		{% for post in site.posts limit:3 %}
+		{% for post in site.posts %}
 			<div class="col-4 feature-content related-post" 
 				data-aos="fade-rise" 
-				data-aos-duration="2000" 
+				data-aos-duration="1000" 
 				data-aos-once="true">
-				<span><strong>{{ post.date | date: "%b %-d, %Y"}}</strong></span>
-				<div class="post-image">{{ post.excerpt }}</div>
+				<span>{{ post.date | date: "%b %-d, %Y"}}</span>
+				<div class="post-image"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.excerpt }}</a></div>
 				<div class="post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
 			</div>
 		{% endfor %}
 	</div>
-
-
-	<!-- <div class="feature-block row">
-		<div class="col-12 feature-title"
-			data-aos="fade-slide-up"
-			data-aos-duration="1200" 
-			data-aos-once="true">
-			<div class="row close-lines center">Resume</div>
-		</div>
-		<div class="col-4 feature-content related-post">
-
-		</div>
-	</div> -->
 </div>

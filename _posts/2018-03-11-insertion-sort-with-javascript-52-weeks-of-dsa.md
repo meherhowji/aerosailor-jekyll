@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Insertion Sort &ndash; 52 Weeks Of DSA"
+title: "Insertion Sort With JavaScript &ndash; 52 Weeks Of DSA"
 categories: [Algorithms]
 excerpt_separator: <!--more-->
 ---
