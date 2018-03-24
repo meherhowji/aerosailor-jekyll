@@ -50,24 +50,45 @@ body {
 }
 
 @font-face {
-    font-family: "zero-book";
-    src: url("./public/font/zero-book.woff2") format("woff2"), url("./public/font/zero-book.woff") format("woff"), url("./public/font/zero-book.otf") format("opentype");
+    font-family: 'zero-black';
+    src: url('./public/font/geomanist-black-webfont.eot');
+    src: url('./public/font/geomanist-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./public/font/geomanist-black-webfont.woff2') format('woff2'),
+         url('./public/font/geomanist-black-webfont.woff') format('woff'),
+         url('./public/font/geomanist-black-webfont.ttf') format('truetype'),
+         url('./public/font/geomanist-black-webfont.svg#geomanistregular') format('svg');
+    font-weight: normal;
     font-style: normal;
-    font-weight: 400;
 }
 
 @font-face {
-    font-family: "zero-bold";
-    src: url("./public/font/zero-bold.woff2") format("woff2"), url("./public/font/zero-bold.woff") format("woff"), url("./public/font/zero-bold.otf") format("opentype");
+    font-family: 'zero-bold';
+    src: url('./public/font/geomanist-bold-webfont.eot');
+    src: url('./public/font/geomanist-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./public/font/geomanist-bold-webfont.woff2') format('woff2'),
+         url('./public/font/geomanist-bold-webfont.woff') format('woff'),
+         url('./public/font/geomanist-bold-webfont.ttf') format('truetype'),
+         url('./public/font/geomanist-bold-webfont.svg#geomanistregular') format('svg');
+    font-weight: normal;
     font-style: normal;
-    font-weight: 400;
 }
 
 @font-face {
-    font-family: "zero-black";
-    src: url("./public/font/zero-black.woff2") format("woff2"), url("./public/font/zero-black.woff") format("woff"), url("./public/font/zero-black.otf") format("opentype");
+    font-family: 'zero-book';
+    src: url('./public/font/geomanist-book-webfont.eot');
+    src: url('./public/font/geomanist-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./public/font/geomanist-book-webfont.woff2') format('woff2'),
+         url('./public/font/geomanist-book-webfont.woff') format('woff'),
+         url('./public/font/geomanist-book-webfont.ttf') format('truetype'),
+         url('./public/font/geomanist-book-webfont.svg#geomanistregular') format('svg');
+    font-weight: normal;
     font-style: normal;
-    font-weight: 400;
+}
+
+@font-face {
+    font-family:"Roboto Mono";
+    src:url("./public/font/RobotoMono.woff2") format("woff2"),url("./public/font/RobotoMono.woff") format("woff"),url("./public/font/RobotoMono.otf") format("opentype");
+    font-style:normal;font-weight:400;
 }
 
 // No `:visited` state is required by default (browsers will use `a`)
@@ -111,4 +132,8 @@ th {
 tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
     background-color: #f9f9f9;
+}
+
+code {
+	font-family: 'Roboto Mono', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 }
