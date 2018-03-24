@@ -1,10 +1,44 @@
 .featured {
     margin-top: 3rem;
+    .sidebar {
+        font-family: zero-bold;
+        color: #2d3e4f !important;
+        font-size: 0.8rem;
+        .popular-tags, .featured-posts {
+            .title {
+                margin-bottom: 1rem;
+            }
+            .content {
+				margin-bottom: 3rem;
+				h5 {
+					font-size: 1.2rem;
+					font-family: zero-black;
+				}
+                h4 {
+					display: inline;
+					a {
+						margin-bottom: 0.5rem;
+						margin-right: 0.5rem;
+						background-color: #2D3E4F;
+						border-radius: .50rem;
+						font-size: 60%;
+						padding: .25em 0.8em;
+						opacity: 0.9;
+						transition: opacity 1s;
+						&:hover {
+						transition: opacity 1s;
+						opacity: 1;
+						}
+					}
+                }
+            }
+        }
+    }
     .feature-block {
-		margin-bottom: 3rem;
-		.center {
-			justify-content: center;
-		}
+        margin-bottom: 3rem;
+        .center {
+            justify-content: center;
+        }
         .feature-title {
             margin-bottom: 3rem;
             font-size: 48px;
@@ -16,8 +50,8 @@
             }
         }
         .feature-content {
-			cursor: pointer;
-			margin-bottom: 4rem;
+            cursor: pointer;
+            margin-bottom: 4rem;
             a {
                 font-family: zero-bold, sans-serif;
                 font-weight: 700;
@@ -29,35 +63,35 @@
                 font-weight: 300;
                 text-transform: uppercase;
                 letter-spacing: 2px;
-				font-size: 0.6rem;
-				color: #34485d;
+                font-size: 0.6rem;
+                color: #34485d;
             }
             .post-image {
                 opacity: 0.9;
                 margin-top: 10px;
                 transition: opacity 1s;
                 overflow: hidden;
-                height: 200px;
+                height: 230px;
                 margin-bottom: 15px;
                 &:hover {
                     opacity: 1;
                     transition: opacity 1s;
-				}
-				&.thin {
-					height: 50px !important;
-				}
+                }
+                &.thin {
+                    height: 50px !important;
+                }
                 img {
                     border-radius: 0;
                 }
             }
             .post-title {
-				a {
-					color: #2d3e4f;
-				}
-				&.sizeup {
-					font-size: 1.5rem;
-					margin-bottom: 40px;
-				}
+                a {
+                    color: #2d3e4f;
+                }
+                &.sizeup {
+                    font-size: 1.5rem;
+                    margin-bottom: 40px;
+                }
             }
         }
     }
