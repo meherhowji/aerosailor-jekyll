@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "deploy": "jekyll build && ./deploy.sh && git checkout gh-pages && git push live gh-pages"
+        "deploy": "jekyll build && ./deploy.sh && git checkout gh-pages && git push live gh-pages && git checkout master"
     },
     "dependencies": {
         "aos": "^2.2.0",

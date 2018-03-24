@@ -4,32 +4,41 @@
         font-family: zero-book;
         color: #2d3e4f !important;
         font-size: 0.8rem;
-        .popular-tags, .featured-posts {
+        .popular-tags,
+        .featured-posts {
             .title {
                 margin-bottom: 1rem;
+                font-family: zero-book;
+                font-size: 1rem;
+                letter-spacing: 2px;
             }
             .content {
-				margin-bottom: 3rem;
-				h5 {
-					font-size: 1.2rem;
-					font-family: zero-bold;
-				}
+                margin-bottom: 4rem;
+                h5 {
+                    font-size: 1rem;
+                    font-family: zero-medium;
+                    color: #2d3e4f;
+                    letter-spacing: 0.02rem;
+                }
                 h4 {
-					display: inline;
-					a {
-						margin-bottom: 0.5rem;
-						margin-right: 0.5rem;
-						background-color: #2D3E4F;
-						border-radius: .50rem;
-						font-size: 60%;
-						padding: .25em 0.8em;
-						opacity: 0.9;
-						transition: opacity 1s;
-						&:hover {
-						transition: opacity 1s;
-						opacity: 1;
-						}
-					}
+                    display: inline;
+                    a {
+                        margin-bottom: 0.5rem;
+                        margin-right: 0.5rem;
+                        background-color: #2D3E4F;
+                        border-radius: 0;
+                        font-size: 55%;
+                        padding: 0.4rem 1rem;
+                        opacity: 0.9;
+                        transition: opacity 1s;
+                        letter-spacing: 0.8px;
+                        font-family: zero-medium;
+                        font-weight: 300;
+                        &:hover {
+                            transition: opacity 1s;
+                            opacity: 1;
+                        }
+                    }
                 }
             }
         }
@@ -51,12 +60,12 @@
         }
         .feature-content {
             cursor: pointer;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
             a {
-                font-family: zero-book, sans-serif;
-                font-weight: 700;
-                font-size: 1.35rem;
+                font-size: 1.8rem;
                 letter-spacing: 0.5px;
+                line-height: 2.2rem;
+                font-family: zero-bold;
             }
             span {
                 font-family: zero-book;
@@ -85,6 +94,7 @@
                 }
             }
             .post-title {
+                margin-top: 0.5rem;
                 a {
                     color: #2d3e4f;
                 }

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How To Create A Web Component Using Angular Element"
+title: "Create Web Component Using Angular Elements"
 categories: [Angular]
 featured: true
 excerpt_separator: <!--more-->

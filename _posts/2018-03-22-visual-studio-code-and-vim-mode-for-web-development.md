@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How I Use Visual Studio Code with Vim For Web Development"
+title: "Visual Studio Code and Vim Mode For Web Development"
 categories: [Workflow]
 excerpt_separator: <!--more-->
 ---
