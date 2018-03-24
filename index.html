@@ -46,6 +46,7 @@
 
 </head>
 	<body>
+		
 		<div id="aerosailor-loader">&nbsp;</div>
 		<div class="line-container">
 			<svg class="animated-lines" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"></svg>
@@ -101,6 +102,13 @@
 
 </a></div>
 				<span>Mar 22, 2018</span>
+				<span>&mdash;</span>
+<span class="reading-time" title="Estimated read time">
+	
+		
+			1 min read
+		
+</span>
 				<div class="post-title"><a href="/blog/visual-studio-code-and-vim-mode-for-web-development/">Visual Studio Code and Vim Mode For Web Development</a></div>
 			</div>
 			
@@ -159,6 +167,13 @@
 
 </a></div>
 				<span>Mar 20, 2018</span>
+				<span>&mdash;</span>
+<span class="reading-time" title="Estimated read time">
+	
+		
+			1 min read
+		
+</span>
 				<div class="post-title"><a href="/blog/create-web-component-using-angular-elements/">Create Web Component Using Angular Elements</a></div>
 			</div>
 			
@@ -171,6 +186,13 @@
 
 </a></div>
 				<span>Mar 11, 2018</span>
+				<span>&mdash;</span>
+<span class="reading-time" title="Estimated read time">
+	
+		
+			1 min read
+		
+</span>
 				<div class="post-title"><a href="/blog/insertion-sort-with-javascript/">Insertion Sort With JavaScript</a></div>
 			</div>
 			
@@ -183,6 +205,13 @@
 
 </a></div>
 				<span>Mar 9, 2018</span>
+				<span>&mdash;</span>
+<span class="reading-time" title="Estimated read time">
+	
+		
+			1 min read
+		
+</span>
 				<div class="post-title"><a href="/blog/selection-sort-with-javascript/">Selection Sort With JavaScript</a></div>
 			</div>
 			
@@ -195,6 +224,13 @@
 
 </a></div>
 				<span>Mar 7, 2018</span>
+				<span>&mdash;</span>
+<span class="reading-time" title="Estimated read time">
+	
+		
+			1 min read
+		
+</span>
 				<div class="post-title"><a href="/blog/bubble-sort-with-javascript/">Bubble Sort With JavaScript</a></div>
 			</div>
 			
@@ -214,7 +250,7 @@
 		</div>
 	</div>
 	<small>
-		&copy;<time datetime="2018-03-25T01:33:20+05:30">2018</time>. Aerosailor
+		&copy;<time datetime="2018-03-25T02:39:01+05:30">2018</time>. Aerosailor
 	</small>
 </footer>
 		</div>
@@ -222,7 +258,19 @@
 		<script src="/scripts/bezier.js"></script>
 		<script src="/node_modules/aos/dist/aos.js"></script>
 		<script src="/scripts/main.js"></script>
+		<script>
+			var h = document.documentElement,
+				b = document.body,
+				st = 'scrollTop',
+				sh = 'scrollHeight',
+				progress = document.querySelector('.page-progress'),
+				scroll;
 
+			document.addEventListener('scroll', function () {
+				scroll = (h[st] || b[st]) / (((h[sh] || b[sh]) - 1250) - h.clientHeight) * 100;
+				progress.style.setProperty('--scroll', scroll + '%');
+			});
+		</script>
 		
 			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116074903-1"></script>
 			<script>

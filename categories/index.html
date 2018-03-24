@@ -46,6 +46,7 @@
 
 </head>
 	<body>
+		
 		<div id="aerosailor-loader">&nbsp;</div>
 		<div class="line-container">
 			<svg class="animated-lines" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"></svg>
@@ -153,7 +154,7 @@
 		</div>
 	</div>
 	<small>
-		&copy;<time datetime="2018-03-25T01:33:20+05:30">2018</time>. Aerosailor
+		&copy;<time datetime="2018-03-25T02:39:01+05:30">2018</time>. Aerosailor
 	</small>
 </footer>
 		</div>
@@ -161,7 +162,19 @@
 		<script src="/scripts/bezier.js"></script>
 		<script src="/node_modules/aos/dist/aos.js"></script>
 		<script src="/scripts/main.js"></script>
+		<script>
+			var h = document.documentElement,
+				b = document.body,
+				st = 'scrollTop',
+				sh = 'scrollHeight',
+				progress = document.querySelector('.page-progress'),
+				scroll;
 
+			document.addEventListener('scroll', function () {
+				scroll = (h[st] || b[st]) / (((h[sh] || b[sh]) - 1250) - h.clientHeight) * 100;
+				progress.style.setProperty('--scroll', scroll + '%');
+			});
+		</script>
 		
 			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116074903-1"></script>
 			<script>
