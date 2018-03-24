@@ -1,7 +1,7 @@
 .featured {
     margin-top: 3rem;
     .sidebar {
-        font-family: zero-bold;
+        font-family: zero-book;
         color: #2d3e4f !important;
         font-size: 0.8rem;
         .popular-tags, .featured-posts {
@@ -12,7 +12,7 @@
 				margin-bottom: 3rem;
 				h5 {
 					font-size: 1.2rem;
-					font-family: zero-black;
+					font-family: zero-bold;
 				}
                 h4 {
 					display: inline;
@@ -42,21 +42,21 @@
         .feature-title {
             margin-bottom: 3rem;
             font-size: 48px;
-            font-family: zero-black;
+            font-family: zero-bold;
             letter-spacing: 2px;
             color: #2d3e4f;
             div {
-                margin-bottom: -25px;
+                margin-bottom: -30px;
             }
         }
         .feature-content {
             cursor: pointer;
             margin-bottom: 4rem;
             a {
-                font-family: zero-bold, sans-serif;
+                font-family: zero-book, sans-serif;
                 font-weight: 700;
                 font-size: 1.35rem;
-                letter-spacing: -0.5px;
+                letter-spacing: 0.5px;
             }
             span {
                 font-family: zero-book;

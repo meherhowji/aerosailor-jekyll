@@ -79,7 +79,7 @@
 .page-title,
 .post-title,
 .post-title a {
-    font-family: zero-black, sans-serif;
+    font-family: zero-bold, sans-serif;
 }
 
 .page-title,
@@ -112,13 +112,13 @@
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
     h3 {
-        font-family: zero-bold;
+        font-family: zero-book;
         text-align: center;
         font-size: 1.5rem;
         color: #232323;
     }
     .related-post {
-        font-family: zero-bold;
+        font-family: zero-book;
         font-size: 1rem;
         margin-top: 4rem;
     }
@@ -126,7 +126,7 @@
 
 .posts {
     h3 {
-        font-family: zero-black;
+        font-family: zero-bold;
         font-size: 175%;
     }
 }
