@@ -4,6 +4,7 @@ _gh_pages
 .sass-cache
 assets
 _site
+_cache
 
 # Numerous always-ignore extensions
 *.diff

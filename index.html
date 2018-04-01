@@ -19,7 +19,10 @@ title: Home
 				data-aos-once="true">
 				<div class="post-image"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.excerpt }}</a></div>
 				<span>{{ post.date | date: "%b %-d, %Y"}}</span>
-				{% include read-time.html %}
+				<span>&mdash;</span>
+				<span class="reading-time" title="Estimated Read Time">
+					{{ post.content | reading_time }}
+				</span>
 				<div class="post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
 			</div>
 			{% if forloop.first %}

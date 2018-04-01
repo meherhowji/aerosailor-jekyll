@@ -16,23 +16,6 @@
 		<script src="{{ site.baseurl }}/scripts/bezier.js"></script>
 		<script src="{{ site.baseurl }}/node_modules/aos/dist/aos.js"></script>
 		<script src="{{ site.baseurl }}/scripts/main.js"></script>
-		<script>
-			(function() {
-				var h = document.documentElement,
-					b = document.body,
-					st = 'scrollTop',
-					sh = 'scrollHeight',
-					progress = document.querySelector('.page-progress'),
-					scroll;
-				
-				if (progress) {
-					document.addEventListener('scroll', function () {
-						scroll = (h[st] || b[st]) / (((h[sh] || b[sh]) - 1250) - h.clientHeight) * 100;
-						progress.style.setProperty('--scroll', scroll + '%');
-					});
-				}
-			})();
-		</script>
 
 		{% if site.analytics_id %}
 			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116074903-1"></script>
