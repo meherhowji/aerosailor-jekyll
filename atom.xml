@@ -4,13 +4,29 @@
  <title>Aerosailor</title>
  <link href="http://aerosailor.com/atom.xml" rel="self"/>
  <link href="http://aerosailor.com/"/>
- <updated>2018-03-25T02:39:01+05:30</updated>
+ <updated>2018-04-01T19:11:06+05:30</updated>
  <id>http://aerosailor.com</id>
  <author>
    <name>Meher Ranjan Howji</name>
    <email>mail@aerosailor.com</email>
  </author>
 
+ 
+ <entry>
+   <title>A Minimal Pomodoro App In ReactJS</title>
+   <link href="http://aerosailor.com/blog/minimal-pomodoro-app-in-reactjs/"/>
+   <updated>2018-03-24T00:00:00+05:30</updated>
+   <id>http://aerosailor.com/blog/minimal-pomodoro-app-in-reactjs</id>
+   <content type="html">&lt;p class=&quot;codepen&quot; data-embed-version=&quot;2&quot; data-slug-hash=&quot;bLjgXM&quot; data-height=&quot;650&quot; data-default-tab=&quot;js,result&quot;&gt;
+  See the Pen &lt;a href=&quot;//codepen.io/pen/bLjgXM&quot;&gt;Pomodoro ReactJS&lt;/a&gt;
+  by Meher Ranjan (&lt;a href=&quot;//codepen.io/meher&quot;&gt;meher&lt;/a&gt;)
+  on &lt;a href=&quot;//codepen.io&quot;&gt;CodePen&lt;/a&gt;.
+&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;!--more--&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Visual Studio Code and Vim Mode For Web Development</title>
