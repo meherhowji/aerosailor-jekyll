@@ -10,28 +10,28 @@ excerpt_separator: <!--more-->
 
 React JS is one of my favorite JavaScript framework, my most favorite part is how view and controller are designed, they stay nicely together like young siblings. A general try out app for many developers is a todo app but I think a Pomodoro App is an equal competitor but packs less user stories and hence simple enough to execute quickly.
 
-### User Stories
-* A user can start and stop timer by clicking on the respective buttons.
-* A user can update the time settings so that a custom timer can be started.
+##### I was trying to accomplish these use cases, simple enough.
+* A user can start and stop timer by button actions.
+* A user can set a custom the time settings.
 
-### Code's Birdview
+### Code Birdview
 {% highlight js %}
 class Pomodoro extends React.Component {
 	constructor() {
 		this.state = {
-			//time components
+		  //time components
 		}
 	}
 
 	beginTimer() {}
+	runner() {}
 	resetTimer() {}
 	updateNewTime() {}
 	chooseSetter() {}
 	formatTime() {}
-	runner() {}
 
 	render(){
-		//template and events
+	  //template and events
 	}
 }
 {% endhighlight %}
