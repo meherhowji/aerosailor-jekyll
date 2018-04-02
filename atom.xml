@@ -4,7 +4,7 @@
  <title>Aerosailor</title>
  <link href="http://aerosailor.com/atom.xml" rel="self"/>
  <link href="http://aerosailor.com/"/>
- <updated>2018-04-01T19:14:43+05:30</updated>
+ <updated>2018-04-03T00:25:41+05:30</updated>
  <id>http://aerosailor.com</id>
  <author>
    <name>Meher Ranjan Howji</name>
@@ -25,6 +25,48 @@
 &lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
 
 &lt;!--more--&gt;
+
+&lt;p&gt;React JS is one of my favorite JavaScript framework, my most favorite part is how view and controller are designed, they stay nicely together like young siblings. A general try out app for many developers is a todo app but I think a Pomodoro App is an equal competitor but packs less user stories and hence simple enough to execute quickly.&lt;/p&gt;
+
+&lt;h5 id=&quot;i-was-trying-to-accomplish-these-use-cases-simple-enough&quot;&gt;I was trying to accomplish these use cases, simple enough.&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;A user can start and stop timer by button actions.&lt;/li&gt;
+  &lt;li&gt;A user can set a custom the time settings.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;code-birdview&quot;&gt;Code Birdview&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Pomodoro&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		  &lt;span class=&quot;c1&quot;&gt;//time components&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;nx&quot;&gt;beginTimer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;runner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;resetTimer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;updateNewTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;chooseSetter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;formatTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+
+	&lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+	  &lt;span class=&quot;c1&quot;&gt;//template and events&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;BeginTimer&lt;/strong&gt; checks whether the timer is running, if not then initiates a set interval.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Runner&lt;/strong&gt; is invoked at every second, updating state and various time components.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;ResetTimer&lt;/strong&gt; clears the interval and sets the newly set second as the new timer value.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;UpdateNewTime&lt;/strong&gt; updates the timer value to new one set by the user. The new timer value is loaded when the &lt;strong&gt;resettimer&lt;/strong&gt; is clicked by the user.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;ChooseSetter&lt;/strong&gt; determines which component of the time user us trying to update, accordingly appropriate seconds are removed.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;FormatTime&lt;/strong&gt; is used to update the time components in the state object all the time. Because the app uses only seconds for operations, we need this utility.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Have a look at the codepen editor to go through the code. I am sure there would be scope of improvements and optimization. My idea was to play around with React in a simple fun way.&lt;/p&gt;
+
+&lt;p&gt;Share or leave a comment if you like the Pomodoro app.&lt;/p&gt;
 </content>
  </entry>
  
