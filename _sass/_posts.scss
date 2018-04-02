@@ -87,9 +87,20 @@
     margin-top: 0;
 }
 
-.post-content-image > p {
-	margin-top: 3rem;
-	margin-bottom: 4rem;
+.post-content-image {
+	font-family: zero-regular;
+	line-height: 1.6rem;
+	h3 {
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+	}
+	p {
+		margin-top: 3rem;
+		margin-bottom: 2rem;
+	}
+	.highlight {
+		margin-bottom: 2rem;
+	}
 }
 
 // Meta data line below post title
