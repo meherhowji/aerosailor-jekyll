@@ -6,7 +6,7 @@
         "url": "https://github.com/meherranjan/aerosailor"
     },
     "scripts": {
-        "deploy": "jekyll build && ./deploy.sh && git checkout production && git push live production && git checkout master"
+        "deploy": "jekyll build && ./deploy.sh && git checkout production && git push live production && git checkout master && npm i"
     },
     "dependencies": {
         "aos": "^2.2.0",
