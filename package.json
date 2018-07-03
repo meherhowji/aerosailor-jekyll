@@ -1,12 +1,16 @@
 {
+    "version": "1.0.0",
+    "license": "CC-BY-NC-4.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/meherranjan/aerosailor"
+    },
     "scripts": {
-        "deploy": "jekyll build && ./deploy.sh && git checkout gh-pages && git push live gh-pages && git checkout master"
+        "deploy": "jekyll build && ./deploy.sh && git checkout production && git push live production && git checkout master && npm i"
     },
     "dependencies": {
         "aos": "^2.2.0",
-        "bootstrap": "4.0.0-beta.3"
-    },
-    "devDependencies": {
+        "bootstrap": "4.0.0-beta.3",
         "jquery": "3.0.0",
         "popper.js": "^1.12.9"
     }

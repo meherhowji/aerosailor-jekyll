@@ -50,7 +50,7 @@
         .feature-title {
             margin-bottom: 3rem;
             font-size: 48px;
-            font-family: zero-bold;
+            font-family: zero-medium;
             letter-spacing: 2px;
             color: #2d3e4f;
             div {
@@ -64,7 +64,7 @@
                 font-size: 1.8rem;
                 letter-spacing: 0.5px;
                 line-height: 2.2rem;
-                font-family: zero-bold;
+                font-family: zero-medium;
             }
             span {
                 font-family: zero-book;
@@ -75,14 +75,14 @@
                 color: #34485d;
             }
             .post-image {
-                opacity: 0.9;
+                opacity: 1;
                 margin-top: 10px;
                 transition: opacity 1s;
                 overflow: hidden;
                 height: 230px;
                 margin-bottom: 15px;
                 &:hover {
-                    opacity: 1;
+                    opacity: 0.95;
                     transition: opacity 1s;
                 }
                 &.thin {
