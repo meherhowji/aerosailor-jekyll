@@ -38,4 +38,5 @@ plugins:
   - jekyll-gist
   - jekyll-seo-tag
 
-exclude: [package.json, deploy.sh, yarn.lock, README.md, LICENSE.md]
+exclude: [package.json, deploy.sh, yarn.lock, README.md, LICENSE.md, scripts]
+keep_files: [scripts/bundle.js]
