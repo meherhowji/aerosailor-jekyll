@@ -121,7 +121,11 @@
     padding-bottom: 2rem;
     margin-bottom: 2rem;
     border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	.related-post-banner {
+		height: 160px;
+		overflow: hidden;
+	}
     h3 {
         font-family: zero-book;
         text-align: center;
@@ -131,7 +135,10 @@
     .related-post {
         font-family: zero-book;
         font-size: 1rem;
-        margin-top: 4rem;
+		margin-top: 4rem;
+		a {
+			margin-top: 4px;
+		}
     }
 }
 
