@@ -1,10 +1,10 @@
 <div id="sigmoidplot"></div>
 <script>
-const root = document.querySelector("#sigmoidplot");
+const sp = document.querySelector("#sigmoidplot");
 window.addEventListener('load', function () {
 	functionPlot({
 		title: 'y = 1 / (1 + exp(-x))',
-		target: root,
+		target: sp,
 		width: 730,
 		tip: {
 			renderer: function() {}

@@ -26,14 +26,14 @@ A neuron has 3 parts; soma, dendrite and axon. Soma is the cell body contains al
 When a neuron is stimulated enough it sends out an electrical impulses down the axon. A neuron is negatively charged when resting and the membranes around it are positive. The potent difference is around -70mW. The movement of charge from the membranes to the cell body is key to the electricial activity in the neurons. Not all the events cause the flow of ions along the axons, such events that do, create enough Action Potential. When an external event creates enough stimulus to cross the potential from -70mW to **-55mW**, and then it rises slightly over 40mW. And this creates a biological chain reaction down the axon and an output is received. 
 Now, we understood a threshold(certain events) trigger the action potential. It can be seen as a function that returns true or false. A neuron either fires or doesn't. Now the condition, for simplicity sake assume it to be random number. Think of a mad neuron that fires randomly.
 
-
 ## Activation Function
 
 So **activation function** precisely is a non linear function which decides whether the output of the neuron should be forwarded/propagated-forward or not. Without an activation function it is impossible to solve a non-linear problem.
 Linear equations are those that have constant change in x & y. Eg miles and km conversion. In other words, functions that would make up a straight line on a cartesian plane.
 
 ## Perceptron
-Its the simplest neural network, with just one single neuron. It is based on feed forward model so when input is fed to the network, some processeing is performed and an output is returned. Lets look at the steps: 
+Its the simplest neural network, with just one single neuron. It is based on feed forward model so when input is fed to the network, some processeing is performed and an output is returned. Lets look at the steps:
+
 #### Feeding Input 
 Lets use a simple function, sin(x), as the input to our perceptron.
 {% highlight js %}
@@ -82,4 +82,6 @@ console.log(output)
 {% endhighlight %}
 
 ### Cost Function
-We have our neuron making guesses but they are just some random values, how do we correct it. Before that we need to find out how far are we from our target value. A cost function is what answers that. 
+We have our neuron making guesses but they are just some random values, how do we correct it. Before that we need to find out how far are we from our target value. A cost function is what answers that.
+
+{% include cost-pred-plot.html %}
