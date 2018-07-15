@@ -164,3 +164,26 @@
         }
     }
 }
+
+
+// graphs - function-plot
+#sigmoidplot {
+	g.y.axis, g.x.axis {
+		opacity: 0.5;
+		text {
+			font-size: 9px;
+			font-weight: bold;
+		}
+	}
+	g.y.axis > .tick:nth-child(even), 
+	g.x.axis > .tick:nth-child(even), 
+	{
+		display: none; 
+	}
+	.content > path {
+		opacity: 0.1;
+	}
+	.content .graph path {
+		stroke-width: 20;
+	}
+}

@@ -3,13 +3,15 @@ layout: post
 title: "A Neural Network in JavaScript"
 categories: [machine learning, neuron]
 excerpt_separator: <!--more-->
+d3js:
+- true
+
 ---
 
 ![image tooltip here](/public/neuron.jpg)
 <!--more-->
 
 # A Simple Neuron in JavaScript 
-
 
 A neural network or a neuron we are going to program performs precisely similar to biological functioning unit and it's for the same reason we need to get back to our biology class. I hope by the end of this blog post you will feel neural network to be more fascinating than brain-fucking.
 
@@ -63,8 +65,7 @@ let sigmoidFn = sum => {
 }
 {% endhighlight %}
 
-{% svg sigmoid.svg %}
-
+{% include sigmoid-plot.html %}
 
 #### Output
 This is the guess of our single neuron and its far from accurate because we haven't trained it yet.
