@@ -4,13 +4,154 @@
  <title>Aerosailor</title>
  <link href="http://aerosailor.com/atom.xml" rel="self"/>
  <link href="http://aerosailor.com/"/>
- <updated>2018-06-28T23:01:57+05:30</updated>
+ <updated>2018-07-23T23:06:52+05:30</updated>
  <id>http://aerosailor.com</id>
  <author>
    <name>Meher Ranjan Howji</name>
    <email>mail@aerosailor.com</email>
  </author>
 
+ 
+ <entry>
+   <title>A Neural Network in JavaScript</title>
+   <link href="http://aerosailor.com/blog/a-neural-network-in-javascript/"/>
+   <updated>2018-07-09T00:00:00+05:30</updated>
+   <id>http://aerosailor.com/blog/a-neural-network-in-javascript</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/public/neuron.jpg&quot; alt=&quot;image tooltip here&quot; /&gt;
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;a-simple-neuron-in-javascript&quot;&gt;A Simple Neuron in JavaScript&lt;/h1&gt;
+
+&lt;p&gt;A neural network or a neuron we are going to program performs precisely similar to biological functioning unit and it’s for the same reason we need to get back to our biology class. I hope by the end of this blog post you will feel neural network to be more fascinating than brain-fucking.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-a-neuron&quot;&gt;What is a neuron?&lt;/h2&gt;
+&lt;p&gt;A neuron is essentially a structural and primary unit of nervous system. They are the longest living cells in your body and in particular many research indicates that the nerve cells or neuron in are cerebral cortex live as long as we do. They are irreplaceable. They consume over 25% of calories you ingest.
+Now those were some cool facts about the neurons where is the part that makes me write my own neuron. Well, there is still a long way but stay with me for some another while and I promise once we reach the zone, I call it the creative zone, there is nothing that will distract you.&lt;/p&gt;
+
+&lt;h2 id=&quot;structure-of-a-neuron&quot;&gt;Structure of a neuron&lt;/h2&gt;
+&lt;p&gt;A neuron has 3 parts; soma, dendrite and axon. Soma is the cell body contains all the regular cell stuff like DNA, RNA, Mitochondria, nucleus etc. Dendrites are the listeners, they take inputs from other neurons or cells and pass it on to the cell body. The axons transmit electrical impulses to the other cells. Essentially a neuron will be a function but we can see input-output is slowly entering the picture.&lt;/p&gt;
+
+&lt;h2 id=&quot;action-potential&quot;&gt;Action Potential&lt;/h2&gt;
+&lt;p&gt;When a neuron is stimulated enough it sends out an electrical impulses down the axon. A neuron is negatively charged when resting and the membranes around it are positive. The potent difference is around -70mW. The movement of charge from the membranes to the cell body is key to the electricial activity in the neurons. Not all the events cause the flow of ions along the axons, such events that do, create enough Action Potential. When an external event creates enough stimulus to cross the potential from -70mW to &lt;strong&gt;-55mW&lt;/strong&gt;, and then it rises slightly over 40mW. And this creates a biological chain reaction down the axon and an output is received. 
+Now, we understood a threshold(certain events) trigger the action potential. It can be seen as a function that returns true or false. A neuron either fires or doesn’t. Now the condition, for simplicity sake assume it to be random number. Think of a mad neuron that fires randomly.&lt;/p&gt;
+
+&lt;h2 id=&quot;activation-function&quot;&gt;Activation Function&lt;/h2&gt;
+
+&lt;p&gt;So &lt;strong&gt;activation function&lt;/strong&gt; precisely is a non linear function which decides whether the output of the neuron should be forwarded/propagated-forward or not. Without an activation function it is impossible to solve a non-linear problem.
+Linear equations are those that have constant change in x &amp;amp; y. Eg miles and km conversion. In other words, functions that would make up a straight line on a cartesian plane.&lt;/p&gt;
+
+&lt;h2 id=&quot;perceptron&quot;&gt;Perceptron&lt;/h2&gt;
+&lt;p&gt;Its the simplest neural network, with just one single neuron. It is based on feed forward model so when input is fed to the network, some processeing is performed and an output is returned. Lets look at the steps:&lt;/p&gt;
+
+&lt;h4 id=&quot;feeding-input&quot;&gt;Feeding Input&lt;/h4&gt;
+&lt;p&gt;Lets use a simple function, sin(x), as the input to our perceptron.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// sin(0) = 0&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// sin(30) = 0.5&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// sin(60) = 0.866&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// sin(90) = 1&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;45&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;adding-weights&quot;&gt;Adding Weights&lt;/h4&gt;
+&lt;p&gt;Every input that passes through neuron must be weighted.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;weight&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;passing-through-activation-function&quot;&gt;Passing through activation function&lt;/h4&gt;
+&lt;p&gt;Our activation function is very simple at its best. Its limits our output within a range and returns binary output, either 0 or 1. Following is a very simple step function which is like a switch with 2 states; on or off. We have many such other functions that can gives us a ranged output. Another very popular such function is Sigmoid, it features a S-shaped curved.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// step function&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stepFn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// sigmoid&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sigmoidFn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;div id=&quot;sigmoidplot&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+const sp = document.querySelector(&quot;#sigmoidplot&quot;);
+window.addEventListener('load', function () {
+	functionPlot({
+		title: 'y = 1 / (1 + exp(-x))',
+		target: sp,
+		width: 730,
+		tip: {
+			renderer: function() {}
+		},
+		xAxis: {
+			domain: [-3, 3]
+		},
+		yAxis: {
+			domain: [-3, 3]
+		},
+		grid: false,
+		data: [
+			{
+				fn: &quot;(1/(1 + exp(-x)))&quot;,
+			}
+		],
+		disableZoom: true,
+	});
+});
+&lt;/script&gt;
+
+&lt;h4 id=&quot;output&quot;&gt;Output&lt;/h4&gt;
+&lt;p&gt;This is the guess of our single neuron and its far from accurate because we haven’t trained it yet.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;45&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;weight&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;weight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;activationFunction&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;activationFunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;cost-function&quot;&gt;Cost Function&lt;/h3&gt;
+&lt;p&gt;We have our neuron making guesses but they are just some random values, how do we correct it. Before that we need to find out how far are we from our target value. A cost function is what answers that.&lt;/p&gt;
+
+&lt;div id=&quot;costpredplot&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+const cpp = document.querySelector(&quot;#costpredplot&quot;);
+window.addEventListener('load', function () {
+	functionPlot({
+		title: 'y = (x - 5) ^ 2',
+		target: cpp,
+		width: 730,
+		tip: {
+			renderer: function() {}
+		},
+		xAxis: {
+			domain: [-8, 20],
+			label: 'prediction'
+		},
+		yAxis: {
+			domain: [-2, 10],
+			label: 'cost function'
+		},
+		grid: false,
+		data: [
+			{
+				fn: &quot;(x - 2) ^ 2&quot;,
+				derivative: {
+					fn: '2 * (x - 2)',
+					x0: 2,
+					updateOnMouseMove: true
+				}
+			}
+		],
+		disableZoom: true,
+	});
+});
+&lt;/script&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>A Minimal Pomodoro App In ReactJS</title>
