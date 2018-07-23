@@ -15,7 +15,7 @@ sass:
     - node_modules
   style:            :compressed
 
-fonts:
+# fonts:
   # url: https://fonts.googleapis.com/css?family=Montserrat:300,700
 
 # About/contact
@@ -23,7 +23,7 @@ author:
   name:              Meher Ranjan Howji
   url:               https://aeosailor.com
   email:             mail@aerosailor.com
-  aboutme:           I am Meher Howji. I work with Credit Suisse on frontend technologies. I am using React, Redux and Foundation currently and have used Angular in the past & extremely enjoyed working.
+  aboutme:           I am Meher Howji. I work with Credit Suisse in Pune. I work on frontend technologies, ReactJS, Redux, Angular, React Native, Bootstrap & Foundation.
   location:          Pune, India
 
 # Custom vars
@@ -37,6 +37,8 @@ plugins:
   - jekyll-paginate
   - jekyll-gist
   - jekyll-seo-tag
+  - jekyll-admin
 
 exclude: [package.json, deploy.sh, yarn.lock, README.md, LICENSE.md, scripts]
 keep_files: [scripts/bundle.js]
+livereload: true

@@ -4,7 +4,7 @@ module.exports = {
     path: __dirname + '/_site/scripts/',
     filename: 'bundle.js'
   },
-  mode: 'development',
+  mode: 'production',
   module: {
     rules: [{
       test: /\.jsx?$/,
