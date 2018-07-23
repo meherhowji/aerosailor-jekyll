@@ -1,0 +1,27 @@
+<div id="sigmoidplot"></div>
+<script>
+const sp = document.querySelector("#sigmoidplot");
+window.addEventListener('load', function () {
+	functionPlot({
+		title: 'y = 1 / (1 + exp(-x))',
+		target: sp,
+		width: 730,
+		tip: {
+			renderer: function() {}
+		},
+		xAxis: {
+			domain: [-3, 3]
+		},
+		yAxis: {
+			domain: [-3, 3]
+		},
+		grid: false,
+		data: [
+			{
+				fn: "(1/(1 + exp(-x)))",
+			}
+		],
+		disableZoom: true,
+	});
+});
+</script>

@@ -1,0 +1,34 @@
+<div id="costpredplot"></div>
+<script>
+const cpp = document.querySelector("#costpredplot");
+window.addEventListener('load', function () {
+	functionPlot({
+		title: 'y = (x - 5) ^ 2',
+		target: cpp,
+		width: 730,
+		tip: {
+			renderer: function() {}
+		},
+		xAxis: {
+			domain: [-8, 20],
+			label: 'prediction'
+		},
+		yAxis: {
+			domain: [-2, 10],
+			label: 'cost function'
+		},
+		grid: false,
+		data: [
+			{
+				fn: "(x - 2) ^ 2",
+				derivative: {
+					fn: '2 * (x - 2)',
+					x0: 2,
+					updateOnMouseMove: true
+				}
+			}
+		],
+		disableZoom: true,
+	});
+});
+</script>

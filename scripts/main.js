@@ -1,3 +1,6 @@
+import AOS from 'aos';
+import './bezier.js'
+
 (function (doc) {
 	var elem = doc.getElementById("aerosailor-loader"),
 		hasLoaded = window.location.pathname !== '/' && sessionStorage.aerosailor_loaded === 'true';

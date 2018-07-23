@@ -66,7 +66,7 @@ comments: true
 				<div class="row">
 					{% for post in site.related_posts limit:3 %}
 					<div class="col-4">
-						<div>
+						<div class="related-post-banner">
 							{{ post.excerpt }}
 						</div>
 						<a href="{{ site.baseurl }}{{ post.url }}">
@@ -97,6 +97,14 @@ comments: true
 	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </aside>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5aad0ac74409f0df"></script>
-{% if page.content contains 'p class="codepen" ' %}
+
+<!-- condition page level scripts -->
+										<!--  -->
+{% if page.codepen %}
 	<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+{% endif %}
+
+{% if page.d3js %}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/function-plot/1.18.1/function-plot.js"></script>
 {% endif %}

@@ -121,7 +121,11 @@
     padding-bottom: 2rem;
     margin-bottom: 2rem;
     border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	.related-post-banner {
+		height: 160px;
+		overflow: hidden;
+	}
     h3 {
         font-family: zero-book;
         text-align: center;
@@ -131,7 +135,10 @@
     .related-post {
         font-family: zero-book;
         font-size: 1rem;
-        margin-top: 4rem;
+		margin-top: 4rem;
+		a {
+			margin-top: 4px;
+		}
     }
 }
 
@@ -156,4 +163,38 @@
 			margin-left: 1rem;
         }
     }
+}
+
+
+// graphs - function-plot
+#sigmoidplot {
+	g.y.axis, g.x.axis {
+		opacity: 0.5;
+		text {
+			font-size: 9px;
+			font-weight: bold;
+		}
+	}
+	g.y.axis > .tick:nth-child(even), 
+	g.x.axis > .tick:nth-child(even), 
+	{
+		display: none; 
+	}
+	.content > path {
+		opacity: 0.1;
+	}
+	.content .graph path {
+		stroke-width: 20;
+	}
+}
+
+#costpredplot {
+	.content .graph path{
+		stroke-width: 2;
+	}
+	g.y.axis > .tick:nth-child(odd), 
+	g.x.axis > .tick:nth-child(odd), 
+	{
+		display: none; 
+	}
 }
