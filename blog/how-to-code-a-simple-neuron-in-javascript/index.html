@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		 How to Code a Simple Neuron in JavaScript &middot; Aerosailor 
+	</title>
+
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/public/favicon/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/public/favicon/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/public/favicon/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/favicon/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/public/favicon/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/public/favicon/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/public/favicon/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/public/favicon/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="/public/favicon/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="/public/favicon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="/public/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/public/favicon/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="/public/favicon/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="Aerosailor" />
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="/public/favicon/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="/public/favicon/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="/public/favicon/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="/public/favicon/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="/public/favicon/mstile-310x310.png" />
+
+	<link rel="stylesheet" href="/styles.css">
+	<link rel="alternate" type="application/atom+xml" title="Aerosailor" href="/atom.xml">
+	<link rel="stylesheet" href="/node_modules/aos/dist/aos.css">
+
+	<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>How to Code a Simple Neuron in JavaScript | Aerosailor</title>
+<meta name="generator" content="Jekyll v3.8.3" />
+<meta property="og:title" content="How to Code a Simple Neuron in JavaScript" />
+<meta name="author" content="Meher Ranjan Howji" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://aerosailor.com/blog/how-to-code-a-simple-neuron-in-javascript/" />
+<meta property="og:url" content="http://aerosailor.com/blog/how-to-code-a-simple-neuron-in-javascript/" />
+<meta property="og:site_name" content="Aerosailor" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-07-09T00:00:00+05:30" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Meher Ranjan Howji"},"@type":"BlogPosting","url":"http://aerosailor.com/blog/how-to-code-a-simple-neuron-in-javascript/","headline":"How to Code a Simple Neuron in JavaScript","dateModified":"2018-07-09T00:00:00+05:30","datePublished":"2018-07-09T00:00:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"http://aerosailor.com/blog/how-to-code-a-simple-neuron-in-javascript/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+	<body>
+		<div class="page-progress"></div>
+		<div id="aerosailor-loader"> </div>
+		<div class="line-container">
+			<svg class="animated-lines" version="1.1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100"></svg>
+		</div>
+		<div class="container content">
+			<header>
+	<div class="row align-items-center">
+		<div class="col-lg-3 col-sm-12">
+			<h1 class="masthead-title text-center">
+				<a class="brand" href="/" title="Home">Aerosailor</a>
+			</h1>
+		</div>
+		<div class="col-lg-6 d-none d-lg-block vertical-align-one">
+			<!-- <nav>
+				<ul class="clearfix vertical-align-two hover-saber">
+					<li class="active">
+						<a href="/" data-cont="Home">Home</a>
+					</li>
+					<li>
+						<a href="/blog/" data-cont="Blog">Blog</a>
+					</li>
+				</ul>
+			</nav> -->
+		</div>
+		<div class="col-lg-3 d-none d-lg-block">
+			<!-- <span class="search"> -->
+				<!-- <a href=""></a> -->
+				<!-- <input type="text" placeholder="i am looking for ..."> -->
+			<!-- </span>
+			<span class="localization">
+				<a href="">EN</a>&middot;<a href="">DE</a>
+			</span> -->
+		</div>
+	</div>
+</header>
+			<article>
+	<article class="row">
+	<article class="post-prev col-2" data-aos="pn-slide-to-right">
+		
+			<a class="post-navigator" href="/blog/minimal-pomodoro-app-in-reactjs/">
+				<span class="svg-cont">
+					<svg class="chevron chevron-prev" viewbox="0 0 1024 1024" width="100%" height="100%">
+						<path class="path1" d="M476.455 806.696l-381.164-381.164q-14.621-14.621-14.621-35.293t14.621-34.789 35.293-14.117 34.789 14.117l342.846 343.35 349.4-349.4q14.621-14.117 35.293-14.117t34.789 14.117 14.117 34.789-14.117 34.789l-381.164 381.164q-19.159 19.159-38.318 19.159t-31.764-12.605z"></path>
+					</svg>
+				</span>
+				<span class="post-nav">PREV</span>
+				<span class="prev">
+					A Minimal Pomodoro App In ReactJS
+				</span>
+			</a>
+		
+	</article>
+
+	<article class="post col-8">
+		<div class="post-categories">
+			
+				<a href="/categories/#machine%20learning">machine learning</a>
+				   
+			
+				<a href="/categories/#neuron">neuron</a>
+				
+			
+		</div>
+		<h1 class="post-title">How to Code a Simple Neuron in JavaScript</h1>
+		<time datetime="2018-07-09T00:00:00+05:30" class="post-date">
+			<span>Jul 9, 2018 </span>
+			<span>—</span>
+			<span class="reading-time" title="Estimated Read Time">
+				6  minutes read
+			</span>
+		</time>
+		<div data-aos="pc-appear" data-aos-once="true" class="post-content-image">
+<p><img src="/public/neuron.jpg" alt="image tooltip here"></p>
+
+<!--more-->
+
+<p>We see around ourselves surrounded by some very common and strange use cases of machine learning in our digital ecosystem. From movie recommendation to facial recognition, some very common apps that we use deploy such algorithms to help us deliver a better environment. A very smallest unit of such an algorithm is a Neuron. A neural network is a collection of neurons. You can find many libraries that give you ease of creation of network with just few lines of code.</p>
+
+<p>However writing your own neural is definitely not that much amount of code either. We write a thousand line of code in a month or more, how long is just a hundrend! Not much trust me. And we will break that 100 line into groups so that its even more easier to understand. A neuron has a life cycle and its phases will help us modularise our code . I hope by the end of this blog post you will feel neural network to be more fascinating than mind-bending.</p>
+
+<h2 id="what-is-a-neuron">What is a neuron?</h2>
+<p>A neural network or a neuron we are going to program performs very much similar to a biological functioning neuron. A biological neuron is essentially a structural and the primary unit of nervous system. They are the longest living cells in your body and in particular many research indicates that the nerve cells or neuron in our cerebral cortex live as long as we do. They are irreplaceable. They consume over 25% of calories you take in a day.</p>
+
+<p>A neuron has 3 parts; soma, dendrite and axon. Soma is the cell body contains all the regular cell stuff like DNA, RNA, Mitochondria, nucleus etc. Dendrites are the listeners, they take inputs from other neurons or cells and pass it on to the cell body. And the axons transmit electrical impulses to the other cells. That is the general structure and data flow.</p>
+
+<h2 id="action-potential">Action Potential</h2>
+<p>So when a neuron is stimulated enough it sends out an electrical impulses. A neuron is negatively charged when is resting and the membranes around it are positive. The movement of charge from the membranes to the cell body is key to the electricial activity in the neurons. Not all the events cause the flow of ions along the axons, such events that do, create enough Action Potential.</p>
+
+<p>The potential difference of neuron and the membrane is around -70mW. When an external event creates enough stimulus to cross the potential from -70mW to <strong>-55mW</strong>,  and when it further crosses till 40mW, a biological chain reaction is created and impulse is sent down the axon and an output is received. <img class="emoji" title=":sleeping:" alt=":sleeping:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f634.png" height="20" width="20"></p>
+
+<p>Now, we understood a threshold(certain events) trigger the action potential. And the threshold at its simplest form looks like a switch. A neuron either fires or doesn’t to look at it another way. Therefore, threshold condition can be safely assumed as a random number.</p>
+
+<h2 id="activation-function">Activation Function</h2>
+
+<p>So <strong>activation function</strong> precisely is a non linear function which decides whether the output of the neuron should be forwarded/propagated-forward or not. Without an activation function it is impossible to solve a non-linear problem.
+Linear equations are those that have constant change in x &amp; y. Eg miles and km conversion. In other words, functions that would make up a straight line on a cartesian plane.</p>
+
+<h2 id="perceptron">Perceptron</h2>
+<p>Its the simplest neural network, with just one single neuron. It is based on feed forward model so when input is fed to the network, some processeing is performed and an output is returned. Lets look at the steps:</p>
+
+<h4 id="feeding-input">Feeding Input</h4>
+<p>Lets use a simple function, sin(x), as the input to our perceptron.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// sin(0) = 0</span>
+<span class="c1">// sin(30) = 0.5</span>
+<span class="c1">// sin(60) = 0.866</span>
+<span class="c1">// sin(90) = 1</span>
+
+<span class="kd">let</span> <span class="nx">input</span> <span class="o">=</span> <span class="p">[</span><span class="mi">45</span><span class="p">];</span></code></pre></figure>
+
+<h4 id="adding-weights">Adding Weights</h4>
+<p>Every input that passes through neuron must be weighted.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">weight</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.3</span> <span class="o">-</span> <span class="mf">0.1</span><span class="p">;</span></code></pre></figure>
+
+<h4 id="passing-through-activation-function">Passing through activation function</h4>
+<p>Our activation function is very simple at its best. Its limits our output within a range and returns binary output, either 0 or 1. Following is a very simple step function which is like a switch with 2 states; on or off. We have many such other functions that can gives us a ranged output. Another very popular such function is Sigmoid, it features a S-shaped curved.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// step function</span>
+<span class="kd">let</span> <span class="nx">stepFn</span> <span class="o">=</span> <span class="nx">sum</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="nx">sum</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">?</span> <span class="mi">1</span> <span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// sigmoid</span>
+<span class="kd">let</span> <span class="nx">sigmoidFn</span> <span class="o">=</span> <span class="nx">sum</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">exp</span><span class="p">(</span><span class="o">-</span><span class="nx">sum</span><span class="p">));</span>
+<span class="p">}</span></code></pre></figure>
+
+<div id="sigmoidplot"></div>
+<script>
+const sp = document.querySelector("#sigmoidplot");
+window.addEventListener('load', function () {
+	functionPlot({
+		title: 'y = 1 / (1 + exp(-x))',
+		target: sp,
+		width: 730,
+		tip: {
+			renderer: function() {}
+		},
+		xAxis: {
+			domain: [-3, 3]
+		},
+		yAxis: {
+			domain: [-3, 3]
+		},
+		grid: false,
+		data: [
+			{
+				fn: "(1/(1 + exp(-x)))",
+			}
+		],
+		disableZoom: true,
+	});
+});
+</script>
+
+<h4 id="output">Output</h4>
+<p>This is the guess of our single neuron and its far from accurate because we haven’t trained it yet.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">input</span> <span class="o">=</span> <span class="mi">45</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">weight</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.3</span> <span class="o">-</span> <span class="mf">0.1</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">sum</span> <span class="o">=</span> <span class="nx">input</span> <span class="o">*</span> <span class="nx">weight</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">activationFunction</span> <span class="o">=</span> <span class="nx">sum</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="nx">sum</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">?</span> <span class="mi">1</span> <span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">output</span> <span class="o">=</span> <span class="nx">activationFunction</span><span class="p">(</span><span class="nx">sum</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">output</span><span class="p">)</span></code></pre></figure>
+
+<h3 id="cost-function">Cost Function</h3>
+<p>We have our neuron making guesses but they are just some random values, how do we correct it. Before that we need to find out how far are we from our target value. A cost function is what answers that.</p>
+
+<div id="costpredplot"></div>
+<script>
+const cpp = document.querySelector("#costpredplot");
+window.addEventListener('load', function () {
+	functionPlot({
+		title: 'y = (x - 5) ^ 2',
+		target: cpp,
+		width: 730,
+		tip: {
+			renderer: function() {}
+		},
+		xAxis: {
+			domain: [-8, 20],
+			label: 'prediction'
+		},
+		yAxis: {
+			domain: [-2, 10],
+			label: 'cost function'
+		},
+		grid: false,
+		data: [
+			{
+				fn: "(x - 2) ^ 2",
+				derivative: {
+					fn: '2 * (x - 2)',
+					x0: 2,
+					updateOnMouseMove: true
+				}
+			}
+		],
+		disableZoom: true,
+	});
+});
+</script>
+
+</div>
+	</article>
+
+	<article class="post-next col-2" data-aos="pn-slide-to-left">
+		
+	</article>
+</article>
+
+<aside class="sharepost">
+	<div class="addthis_inline_share_toolbox"></div>
+</aside>
+
+
+	<aside class="related">
+		<h3>Related Posts</h3>
+		<div class="row related-post">
+			<div class="col-10 offset-md-1">
+				<div class="row">
+					
+					<div class="col-4">
+						<div class="related-post-banner">
+							<p class="codepen" data-embed-version="2" data-slug-hash="bLjgXM" data-height="650" data-default-tab="js,result">
+  See the Pen <a href="//codepen.io/pen/bLjgXM">Pomodoro ReactJS</a>
+  by Meher Ranjan (<a href="//codepen.io/meher">meher</a>)
+  on <a href="//codepen.io">CodePen</a>.
+</p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+
+						</div>
+						<a href="/blog/minimal-pomodoro-app-in-reactjs/">
+							A Minimal Pomodoro App In ReactJS
+						</a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</aside>
+
+
+<aside>
+	<div id="disqus_thread"></div>
+	<script>
+		var disqus_config = function () {
+			this.page.url = "http://aerosailor.com";
+			this.page.identifier = "/blog/how-to-code-a-simple-neuron-in-javascript/";
+		};
+		(function () {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://aerosailor.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+</aside>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5aad0ac74409f0df"></script>
+
+<!-- condition page level scripts -->
+										<!--  -->
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/function-plot/1.18.1/function-plot.js"></script>
+
+</article>
+			<footer>
+	<div class="row">
+		<div class="col-6 aboutme">
+			<h4>Hello</h4>		
+			<p>I am Meher Howji. I work with Credit Suisse in Pune. I work on frontend technologies, ReactJS, Redux, Angular, React Native, Bootstrap &amp; Foundation.</p>
+		</div>
+		<div class="col-4 location offset-2">
+			<span class="addr">Pune, India</span>
+			<span class="pin"></span>
+		</div>
+	</div>
+	<small>
+		©<time datetime="2018-07-28T15:09:59+05:30">2018</time>. Aerosailor
+	</small>
+</footer>
+		</div>
+
+		<script src="/scripts/bundle.js"></script>
+
+		
+			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116074903-1"></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag() { dataLayer.push(arguments); }
+				gtag('js', new Date());
+				gtag('config', 'UA-116074903-1');
+			</script>
+		
+	</body>
+</html>
