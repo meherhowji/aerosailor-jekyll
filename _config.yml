@@ -38,7 +38,8 @@ plugins:
   - jekyll-gist
   - jekyll-seo-tag
   - jekyll-admin
+  - jemoji
 
 exclude: [package.json, deploy.sh, yarn.lock, README.md, LICENSE.md, scripts]
-keep_files: [scripts/bundle.js]
+keep_files: [scripts/bundle.js, public/assets/emoji]
 livereload: true
