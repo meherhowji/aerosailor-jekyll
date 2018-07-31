@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Aerosailor</title>
- <link href="http://aerosailor.com/atom.xml" rel="self"/>
- <link href="http://aerosailor.com/"/>
- <updated>2018-07-28T15:09:59+05:30</updated>
- <id>http://aerosailor.com</id>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2018-07-31T23:47:53+05:30</updated>
+ <id>http://localhost:4000</id>
  <author>
    <name>Meher Ranjan Howji</name>
    <email>mail@aerosailor.com</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>How to Code a Simple Neuron in JavaScript</title>
-   <link href="http://aerosailor.com/blog/how-to-code-a-simple-neuron-in-javascript/"/>
+   <link href="http://localhost:4000/blog/how-to-code-a-simple-neuron-in-javascript/"/>
    <updated>2018-07-09T00:00:00+05:30</updated>
-   <id>http://aerosailor.com/blog/how-to-code-a-simple-neuron-in-javascript</id>
+   <id>http://localhost:4000/blog/how-to-code-a-simple-neuron-in-javascript</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/public/neuron.jpg&quot; alt=&quot;image tooltip here&quot; /&gt;&lt;/p&gt;
 
 &lt;!--more--&gt;
@@ -157,9 +157,9 @@ window.addEventListener('load', function () {
  
  <entry>
    <title>A Minimal Pomodoro App In ReactJS</title>
-   <link href="http://aerosailor.com/blog/minimal-pomodoro-app-in-reactjs/"/>
+   <link href="http://localhost:4000/blog/minimal-pomodoro-app-in-reactjs/"/>
    <updated>2018-03-24T00:00:00+05:30</updated>
-   <id>http://aerosailor.com/blog/minimal-pomodoro-app-in-reactjs</id>
+   <id>http://localhost:4000/blog/minimal-pomodoro-app-in-reactjs</id>
    <content type="html">&lt;p class=&quot;codepen&quot; data-embed-version=&quot;2&quot; data-slug-hash=&quot;bLjgXM&quot; data-height=&quot;650&quot; data-default-tab=&quot;js,result&quot;&gt;
   See the Pen &lt;a href=&quot;//codepen.io/pen/bLjgXM&quot;&gt;Pomodoro ReactJS&lt;/a&gt;
   by Meher Ranjan (&lt;a href=&quot;//codepen.io/meher&quot;&gt;meher&lt;/a&gt;)
