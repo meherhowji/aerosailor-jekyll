@@ -1,9 +1,10 @@
 ---
-title: How to Code a Simple Neuron in JavaScript
+title: 'Machine Learning: Coding a Neuron in JavaScript'
 layout: post
 categories:
 - machine learning
 - neuron
+- artificial intelligence
 excerpt_separator: "<!--more-->"
 d3js:
 - true
