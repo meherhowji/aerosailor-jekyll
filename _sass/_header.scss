@@ -159,10 +159,14 @@ header {
       transform: rotate(0deg);
       height: $svg-mobile-height;
       left: 0;
+      display: none;
     }
     header {
 	  height: $svg-mobile-height;
 	  padding-top: 25px;
+      .masthead-title {
+        font-size: 3.2rem;
+      }
     }
   }
 }
