@@ -1,0 +1,21 @@
+<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg">
+ <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+ <desc>Created with Sketch.</desc>
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="482" width="642" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g fill-rule="evenodd" fill="none" id="Page-1">
+   <g stroke="null" fill="#000000" id="Logo">
+    <g stroke="null" id="Group">
+     <polygon stroke="null" points="133.7438201904297,241.18255615234375 0,472.1834411621094 114.30247497558594,472.1834411621094 190.8950653076172,339.8898620605469 " id="Path"/>
+     <polygon stroke="null" points="537.440673828125,311.9216613769531 495.1737060546875,381.0455322265625 549.449951171875,474.8077697753906 637.0264892578125,474.8077697753906 " id="Path"/>
+     <polygon stroke="null" points="443.4247131347656,324.4656982421875 329.65838623046875,128 238.22174072265625,285.9343566894531 161.62916564941406,418.234619140625 127.33038330078125,477.461669921875 532.0064086914062,477.461669921875 497.7076416015625,418.234619140625 " id="Path"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

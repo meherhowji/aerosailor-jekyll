@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>
-		 Machine Learning: Coding a Neuron in JavaScript &middot; Aerosailor 
+		 Machine Learning: Coding a Neuron in JavaScript - Part 1 &middot; Aerosailor 
 	</title>
 
 	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/public/favicon/apple-touch-icon-57x57.png" />
@@ -33,26 +33,26 @@
 	<link rel="stylesheet" href="/node_modules/aos/dist/aos.css">
 
 	<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Machine Learning: Coding a Neuron in JavaScript | Aerosailor</title>
+<title>Machine Learning: Coding a Neuron in JavaScript - Part 1 | Aerosailor</title>
 <meta name="generator" content="Jekyll v3.8.3" />
-<meta property="og:title" content="Machine Learning: Coding a Neuron in JavaScript" />
+<meta property="og:title" content="Machine Learning: Coding a Neuron in JavaScript - Part 1" />
 <meta name="author" content="Meher Ranjan Howji" />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="http://aerosailor.com/blog/machine-learning-coding-a-neuron-in-javascript/" />
-<meta property="og:url" content="http://aerosailor.com/blog/machine-learning-coding-a-neuron-in-javascript/" />
+<link rel="canonical" href="http://localhost:4000/blog/machine-learning-coding-a-neuron-in-javascript/" />
+<meta property="og:url" content="http://localhost:4000/blog/machine-learning-coding-a-neuron-in-javascript/" />
 <meta property="og:site_name" content="Aerosailor" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-07-09T00:00:00+05:30" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Meher Ranjan Howji"},"@type":"BlogPosting","url":"http://aerosailor.com/blog/machine-learning-coding-a-neuron-in-javascript/","headline":"Machine Learning: Coding a Neuron in JavaScript","dateModified":"2018-07-09T00:00:00+05:30","datePublished":"2018-07-09T00:00:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"http://aerosailor.com/blog/machine-learning-coding-a-neuron-in-javascript/"},"@context":"http://schema.org"}</script>
+{"author":{"@type":"Person","name":"Meher Ranjan Howji"},"@type":"BlogPosting","url":"http://localhost:4000/blog/machine-learning-coding-a-neuron-in-javascript/","headline":"Machine Learning: Coding a Neuron in JavaScript - Part 1","dateModified":"2018-07-09T00:00:00+05:30","datePublished":"2018-07-09T00:00:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/machine-learning-coding-a-neuron-in-javascript/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
 	<body>
 		<div class="page-progress"></div>
-		<div id="aerosailor-loader"> </div>
+		<div id="aerosailor-loader">&nbsp;</div>
 		<div class="line-container">
-			<svg class="animated-lines" version="1.1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100"></svg>
+			<svg class="animated-lines" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"></svg>
 		</div>
 		<div class="container content">
 			<header>
@@ -91,7 +91,7 @@
 		
 			<a class="post-navigator" href="/blog/minimal-pomodoro-app-in-reactjs/">
 				<span class="svg-cont">
-					<svg class="chevron chevron-prev" viewbox="0 0 1024 1024" width="100%" height="100%">
+					<svg class="chevron chevron-prev" viewBox="0 0 1024 1024" width="100%" height="100%">
 						<path class="path1" d="M476.455 806.696l-381.164-381.164q-14.621-14.621-14.621-35.293t14.621-34.789 35.293-14.117 34.789 14.117l342.846 343.35 349.4-349.4q14.621-14.117 35.293-14.117t34.789 14.117 14.117 34.789-14.117 34.789l-381.164 381.164q-19.159 19.159-38.318 19.159t-31.764-12.605z"></path>
 					</svg>
 				</span>
@@ -103,35 +103,36 @@
 		
 	</article>
 
-	<article class="post col-8">
+	<article class="post col-lg-8 col-sm-12 col-md-8">
 		<div class="post-categories">
 			
-				<a href="/categories/#machine%20learning">machine learning</a>
-				   
+				<a href="/categories/#machine learning">machine learning</a>
+				 &nbsp; 
 			
 				<a href="/categories/#neuron">neuron</a>
-				   
+				 &nbsp; 
 			
-				<a href="/categories/#artificial%20intelligence">artificial intelligence</a>
+				<a href="/categories/#artificial intelligence">artificial intelligence</a>
 				
 			
 		</div>
-		<h1 class="post-title">Machine Learning: Coding a Neuron in JavaScript</h1>
+		<h1 class="post-title">Machine Learning: Coding a Neuron in JavaScript - Part 1</h1>
 		<time datetime="2018-07-09T00:00:00+05:30" class="post-date">
-			<span>Jul 9, 2018 </span>
-			<span>—</span>
-			<span class="reading-time" title="Estimated Read Time">
-				6  minutes read
-			</span>
+			<div class="post-details-meta">
+				<span>Jul 9, 2018 </span>
+				<span>&mdash;</span>
+				<span class="reading-time" title="Estimated Read Time">
+                    7  minutes read
+                </span>
+			</div>
 		</time>
-		<div data-aos="pc-appear" data-aos-once="true" class="post-content-image">
-<p><img src="/public/neuron.jpg" alt="image tooltip here"></p>
+		<div data-aos="pc-appear" data-aos-once="true" class="post-content-image"><p><img src="/public/neuron.jpg" alt="image tooltip here" /></p>
 
 <!--more-->
 
-<p>We see around ourselves surrounded by some very common and strange use cases of machine learning in our digital ecosystem. From movie recommendation to facial recognition, some very common apps that we use deploy such algorithms to help us deliver a better environment. A very smallest unit of such an algorithm is a Neuron. A neural network is a collection of neurons. You can find many libraries that give you ease of creation of network with just few lines of code.</p>
+<p>We see around ourselves surrounded by some very common and strange use cases of machine learning in our digital ecosystem. From movie recommendation to facial recognition, some very common apps that we use deploy such algorithms to help us deliver a better technological ecosystem. A very smallest unit of such an algorithm is a Neuron. A neural network is a collection of neurons. You can find many libraries that give you power to create a neural network with just few lines of code.</p>
 
-<p>However writing your own neural is definitely not that much amount of code either. We write a thousand line of code in a month or more, how long is just a hundrend! Not much trust me. And we will break that 100 line into groups so that its even more easier to understand. A neuron has a life cycle and its phases will help us modularise our code . I hope by the end of this blog post you will feel neural network to be more fascinating than mind-bending.</p>
+<p>However writing your own neural network is definitely not that much amount of code either, trust me with this. We write a thousand line of code in a month or more, how long is just a hundred! Not much trust me. And we will break that 100 line into groups so that its even more easier to understand. A neuron has a life cycle and its phases will help us modularise our code . I hope by the end of this blog post you will feel neural network to be more fascinating than mind-bending.</p>
 
 <h2 id="what-is-a-neuron">What is a neuron?</h2>
 <p>A neural network or a neuron we are going to program performs very much similar to a biological functioning neuron. A biological neuron is essentially a structural and the primary unit of nervous system. They are the longest living cells in your body and in particular many research indicates that the nerve cells or neuron in our cerebral cortex live as long as we do. They are irreplaceable. They consume over 25% of calories you take in a day.</p>
@@ -141,14 +142,29 @@
 <h2 id="action-potential">Action Potential</h2>
 <p>So when a neuron is stimulated enough it sends out an electrical impulses. A neuron is negatively charged when is resting and the membranes around it are positive. The movement of charge from the membranes to the cell body is key to the electricial activity in the neurons. Not all the events cause the flow of ions along the axons, such events that do, create enough Action Potential.</p>
 
-<p>The potential difference of neuron and the membrane is around -70mW. When an external event creates enough stimulus to cross the potential from -70mW to <strong>-55mW</strong>,  and when it further crosses till 40mW, a biological chain reaction is created and impulse is sent down the axon and an output is received. <img class="emoji" title=":sleeping:" alt=":sleeping:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f634.png" height="20" width="20"></p>
+<p>The potential difference of neuron and the membrane is around -70mW. When an external event creates enough stimulus to cross the potential from -70mW to <strong>-55mW</strong>,  and when it further crosses till 40mW, a biological chain reaction is created and impulse is sent down the axon and an output is received.</p>
 
 <p>Now, we understood a threshold(certain events) trigger the action potential. And the threshold at its simplest form looks like a switch. A neuron either fires or doesn’t to look at it another way. Therefore, threshold condition can be safely assumed as a random number.</p>
+
+<h2 id="why-did-i-read-all-that">Why Did I Read All That?</h2>
+<p>Analysis! Before we jump into coding aren’t we as a programmer supposed to perform an analysis to 
+break down problem into simple parts. This process not only brings clarity but also helps identify any unknowns that we encounter. 
+A neuron is supposed to behave intelligent when grouped together.
+Biological neuron is the only source of truth for us when we it comes to intelligence. Where else do we look?
+Many phenomena that a biological neuron performs are named similarly in our mathematical neuron and understanding latter definitely gives a good jumping off point for one to start learning.</p>
+
+<p>Now putting our neuron ride in next gear we are going to take a moment and define certain key terms that will help us
+build our neuron. Don’t be surprised to find a one-on-one mapping between the computational and the biological neuron.</p>
 
 <h2 id="activation-function">Activation Function</h2>
 
 <p>So <strong>activation function</strong> precisely is a non linear function which decides whether the output of the neuron should be forwarded/propagated-forward or not. Without an activation function it is impossible to solve a non-linear problem.
 Linear equations are those that have constant change in x &amp; y. Eg miles and km conversion. In other words, functions that would make up a straight line on a cartesian plane.</p>
+
+<p>Essentially this function determines whether the neuron will fire or not. Remember action potential? 
+In a real world, visualising this function can be very abstract(physical + chemical + physcological)
+The way I see it is, lets say you got a gift from a friend, probability is you’ll like and may not too. What determines that you will like and not cannot be factored or even listed down. 
+This is a very profound idea. There are several types of activation function and they all do something different that each other.</p>
 
 <h2 id="perceptron">Perceptron</h2>
 <p>Its the simplest neural network, with just one single neuron. It is based on feed forward model so when input is fed to the network, some processeing is performed and an output is returned. Lets look at the steps:</p>
@@ -265,6 +281,18 @@ window.addEventListener('load', function () {
 
 	<article class="post-next col-2" data-aos="pn-slide-to-left">
 		
+			<a class="post-navigator" href="/blog/elm-foundation/">
+				<span class="svg-cont">
+					<svg class="chevron chevron-next" viewBox="0 0 1024 1024" width="100%" height="100%">
+						<path class="path1" d="M476.455 806.696l-381.164-381.164q-14.621-14.621-14.621-35.293t14.621-34.789 35.293-14.117 34.789 14.117l342.846 343.35 349.4-349.4q14.621-14.117 35.293-14.117t34.789 14.117 14.117 34.789-14.117 34.789l-381.164 381.164q-19.159 19.159-38.318 19.159t-31.764-12.605z"></path>
+					</svg>
+				</span>
+				<span class="post-nav">NEXT</span>
+				<span class="next">
+					Building an Elm Library for Foundation CSS Framework
+				</span>
+			</a>
+		
 	</article>
 </article>
 
@@ -276,16 +304,23 @@ window.addEventListener('load', function () {
 	<aside class="related">
 		<h3>Related Posts</h3>
 		<div class="row related-post">
-			<div class="col-10 offset-md-1">
+			<div class="col-lg-10 col-md-10 col-sm-12 offset-md-1">
 				<div class="row">
 					
-					<div class="col-4">
+					<div class="col-lg-4 col-md-4 col-sm-12">
 						<div class="related-post-banner">
-							<p class="codepen" data-embed-version="2" data-slug-hash="bLjgXM" data-height="650" data-default-tab="js,result">
-  See the Pen <a href="//codepen.io/pen/bLjgXM">Pomodoro ReactJS</a>
-  by Meher Ranjan (<a href="//codepen.io/meher">meher</a>)
-  on <a href="//codepen.io">CodePen</a>.
-</p>
+							<p><img src="/public/elm.png" alt="Elm Logo" /></p>
+
+
+						</div>
+						<a href="/blog/elm-foundation/">
+							Building an Elm Library for Foundation CSS Framework
+						</a>
+					</div>
+					
+					<div class="col-lg-4 col-md-4 col-sm-12">
+						<div class="related-post-banner">
+							<p class="codepen" data-embed-version="2" data-slug-hash="bLjgXM" data-height="650" data-default-tab="js,result"></p>
 <script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 
@@ -305,7 +340,7 @@ window.addEventListener('load', function () {
 	<div id="disqus_thread"></div>
 	<script>
 		var disqus_config = function () {
-			this.page.url = "http://aerosailor.com";
+			this.page.url = "http://localhost:4000";
 			this.page.identifier = "/blog/machine-learning-coding-a-neuron-in-javascript/";
 		};
 		(function () {
@@ -315,8 +350,7 @@ window.addEventListener('load', function () {
 			(d.head || d.body).appendChild(s);
 		})();
 	</script>
-	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </aside>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5aad0ac74409f0df"></script>
 
@@ -331,17 +365,17 @@ window.addEventListener('load', function () {
 </article>
 			<footer>
 	<div class="row">
-		<div class="col-6 aboutme">
+		<div class="col-lg-6 col-md-6 col-sm-12 aboutme">
 			<h4>Hello</h4>		
-			<p>I am Meher Howji. I work with Credit Suisse in Pune. I work on frontend technologies, ReactJS, Redux, Angular, React Native, Bootstrap &amp; Foundation.</p>
+			<p>I am Meher Howji. I work with Credit Suisse in Pune. I work on frontend technologies, ReactJS, Redux, Angular, React Native, Bootstrap & Foundation.</p>
 		</div>
-		<div class="col-4 location offset-2">
+		<div class="col-lg-4 col-md-4 location offset-2">
 			<span class="addr">Pune, India</span>
 			<span class="pin"></span>
 		</div>
 	</div>
 	<small>
-		©<time datetime="2018-08-02T23:10:50+05:30">2018</time>. Aerosailor
+		&copy;<time datetime="2018-10-10T10:48:23+05:30">2018</time>. Aerosailor
 	</small>
 </footer>
 		</div>

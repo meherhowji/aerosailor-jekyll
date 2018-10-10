@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Aerosailor</title>
- <link href="http://aerosailor.com/atom.xml" rel="self"/>
- <link href="http://aerosailor.com/"/>
- <updated>2018-08-02T23:10:50+05:30</updated>
- <id>http://aerosailor.com</id>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2018-10-10T10:48:23+05:30</updated>
+ <id>http://localhost:4000</id>
  <author>
    <name>Meher Ranjan Howji</name>
    <email>mail@aerosailor.com</email>
@@ -13,17 +13,60 @@
 
  
  <entry>
-   <title>Machine Learning: Coding a Neuron in JavaScript</title>
-   <link href="http://aerosailor.com/blog/machine-learning-coding-a-neuron-in-javascript/"/>
+   <title>Building an Elm Library for Foundation CSS Framework</title>
+   <link href="http://localhost:4000/blog/elm-foundation/"/>
+   <updated>2018-10-09T00:00:00+05:30</updated>
+   <id>http://localhost:4000/blog/elm-foundation</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/public/elm.png&quot; alt=&quot;Elm Logo&quot; /&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;elm&quot;&gt;Elm&lt;/h2&gt;
+&lt;p&gt;Elm is a functional language that compiles to JavaScript. If you are used to using a tech stack that involved Webpack, 
+Redux, npm/yarn, React, Immutable.js &amp;amp; TypeScript, then you would be shocked to death to know that Elm takes care of all
+that. Look at the following infographic that I crafted for innovation lab in Credit Suisse.&lt;/p&gt;
+
+&lt;p&gt;I have recently used Foundation in one of my projects and I saw an opportunity to write a Foundation library for Elm. The most 
+popular Elm library at the moment is elm-mdl, however it is not actively maintained. Foundation 6 is packed with the most
+advanced CSS framework in the web, Grid XY. I am beginning to start porting the grid XY feature to Elm.&lt;/p&gt;
+
+&lt;p&gt;Following is a little sneak peek of what the Elm code will look like compared to the actual HTML that we write to achive the same.
+If you like what I am doing, please feel free to contribute and send me suggestions. 
+I wouldn’t mind at all if you give some stars to the project.&lt;/p&gt;
+
+&lt;p&gt;Grid XY in HTML / CSS&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;container fluid&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;grid-x margin-x&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;cell&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Hello Elm! --&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Grid XY in Elm. Clear &amp;amp; Concise!&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elm&quot; data-lang=&quot;elm&quot;&gt;&lt;span class=&quot;n&quot;&gt;view&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Model&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Html&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Msg&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;view&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;grid&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;container&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Fluid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;direction&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gutter&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Margin&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;cell&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Machine Learning: Coding a Neuron in JavaScript - Part 1</title>
+   <link href="http://localhost:4000/blog/machine-learning-coding-a-neuron-in-javascript/"/>
    <updated>2018-07-09T00:00:00+05:30</updated>
-   <id>http://aerosailor.com/blog/machine-learning-coding-a-neuron-in-javascript</id>
+   <id>http://localhost:4000/blog/machine-learning-coding-a-neuron-in-javascript</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/public/neuron.jpg&quot; alt=&quot;image tooltip here&quot; /&gt;&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;p&gt;We see around ourselves surrounded by some very common and strange use cases of machine learning in our digital ecosystem. From movie recommendation to facial recognition, some very common apps that we use deploy such algorithms to help us deliver a better environment. A very smallest unit of such an algorithm is a Neuron. A neural network is a collection of neurons. You can find many libraries that give you ease of creation of network with just few lines of code.&lt;/p&gt;
+&lt;p&gt;We see around ourselves surrounded by some very common and strange use cases of machine learning in our digital ecosystem. From movie recommendation to facial recognition, some very common apps that we use deploy such algorithms to help us deliver a better technological ecosystem. A very smallest unit of such an algorithm is a Neuron. A neural network is a collection of neurons. You can find many libraries that give you power to create a neural network with just few lines of code.&lt;/p&gt;
 
-&lt;p&gt;However writing your own neural is definitely not that much amount of code either. We write a thousand line of code in a month or more, how long is just a hundrend! Not much trust me. And we will break that 100 line into groups so that its even more easier to understand. A neuron has a life cycle and its phases will help us modularise our code . I hope by the end of this blog post you will feel neural network to be more fascinating than mind-bending.&lt;/p&gt;
+&lt;p&gt;However writing your own neural network is definitely not that much amount of code either, trust me with this. We write a thousand line of code in a month or more, how long is just a hundred! Not much trust me. And we will break that 100 line into groups so that its even more easier to understand. A neuron has a life cycle and its phases will help us modularise our code . I hope by the end of this blog post you will feel neural network to be more fascinating than mind-bending.&lt;/p&gt;
 
 &lt;h2 id=&quot;what-is-a-neuron&quot;&gt;What is a neuron?&lt;/h2&gt;
 &lt;p&gt;A neural network or a neuron we are going to program performs very much similar to a biological functioning neuron. A biological neuron is essentially a structural and the primary unit of nervous system. They are the longest living cells in your body and in particular many research indicates that the nerve cells or neuron in our cerebral cortex live as long as we do. They are irreplaceable. They consume over 25% of calories you take in a day.&lt;/p&gt;
@@ -33,14 +76,29 @@
 &lt;h2 id=&quot;action-potential&quot;&gt;Action Potential&lt;/h2&gt;
 &lt;p&gt;So when a neuron is stimulated enough it sends out an electrical impulses. A neuron is negatively charged when is resting and the membranes around it are positive. The movement of charge from the membranes to the cell body is key to the electricial activity in the neurons. Not all the events cause the flow of ions along the axons, such events that do, create enough Action Potential.&lt;/p&gt;
 
-&lt;p&gt;The potential difference of neuron and the membrane is around -70mW. When an external event creates enough stimulus to cross the potential from -70mW to &lt;strong&gt;-55mW&lt;/strong&gt;,  and when it further crosses till 40mW, a biological chain reaction is created and impulse is sent down the axon and an output is received. :sleeping:&lt;/p&gt;
+&lt;p&gt;The potential difference of neuron and the membrane is around -70mW. When an external event creates enough stimulus to cross the potential from -70mW to &lt;strong&gt;-55mW&lt;/strong&gt;,  and when it further crosses till 40mW, a biological chain reaction is created and impulse is sent down the axon and an output is received.&lt;/p&gt;
 
 &lt;p&gt;Now, we understood a threshold(certain events) trigger the action potential. And the threshold at its simplest form looks like a switch. A neuron either fires or doesn’t to look at it another way. Therefore, threshold condition can be safely assumed as a random number.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-did-i-read-all-that&quot;&gt;Why Did I Read All That?&lt;/h2&gt;
+&lt;p&gt;Analysis! Before we jump into coding aren’t we as a programmer supposed to perform an analysis to 
+break down problem into simple parts. This process not only brings clarity but also helps identify any unknowns that we encounter. 
+A neuron is supposed to behave intelligent when grouped together.
+Biological neuron is the only source of truth for us when we it comes to intelligence. Where else do we look?
+Many phenomena that a biological neuron performs are named similarly in our mathematical neuron and understanding latter definitely gives a good jumping off point for one to start learning.&lt;/p&gt;
+
+&lt;p&gt;Now putting our neuron ride in next gear we are going to take a moment and define certain key terms that will help us
+build our neuron. Don’t be surprised to find a one-on-one mapping between the computational and the biological neuron.&lt;/p&gt;
 
 &lt;h2 id=&quot;activation-function&quot;&gt;Activation Function&lt;/h2&gt;
 
 &lt;p&gt;So &lt;strong&gt;activation function&lt;/strong&gt; precisely is a non linear function which decides whether the output of the neuron should be forwarded/propagated-forward or not. Without an activation function it is impossible to solve a non-linear problem.
 Linear equations are those that have constant change in x &amp;amp; y. Eg miles and km conversion. In other words, functions that would make up a straight line on a cartesian plane.&lt;/p&gt;
+
+&lt;p&gt;Essentially this function determines whether the neuron will fire or not. Remember action potential? 
+In a real world, visualising this function can be very abstract(physical + chemical + physcological)
+The way I see it is, lets say you got a gift from a friend, probability is you’ll like and may not too. What determines that you will like and not cannot be factored or even listed down. 
+This is a very profound idea. There are several types of activation function and they all do something different that each other.&lt;/p&gt;
 
 &lt;h2 id=&quot;perceptron&quot;&gt;Perceptron&lt;/h2&gt;
 &lt;p&gt;Its the simplest neural network, with just one single neuron. It is based on feed forward model so when input is fed to the network, some processeing is performed and an output is returned. Lets look at the steps:&lt;/p&gt;
@@ -157,14 +215,10 @@ window.addEventListener('load', function () {
  
  <entry>
    <title>A Minimal Pomodoro App In ReactJS</title>
-   <link href="http://aerosailor.com/blog/minimal-pomodoro-app-in-reactjs/"/>
+   <link href="http://localhost:4000/blog/minimal-pomodoro-app-in-reactjs/"/>
    <updated>2018-03-24T00:00:00+05:30</updated>
-   <id>http://aerosailor.com/blog/minimal-pomodoro-app-in-reactjs</id>
-   <content type="html">&lt;p class=&quot;codepen&quot; data-embed-version=&quot;2&quot; data-slug-hash=&quot;bLjgXM&quot; data-height=&quot;650&quot; data-default-tab=&quot;js,result&quot;&gt;
-  See the Pen &lt;a href=&quot;//codepen.io/pen/bLjgXM&quot;&gt;Pomodoro ReactJS&lt;/a&gt;
-  by Meher Ranjan (&lt;a href=&quot;//codepen.io/meher&quot;&gt;meher&lt;/a&gt;)
-  on &lt;a href=&quot;//codepen.io&quot;&gt;CodePen&lt;/a&gt;.
-&lt;/p&gt;
+   <id>http://localhost:4000/blog/minimal-pomodoro-app-in-reactjs</id>
+   <content type="html">&lt;p class=&quot;codepen&quot; data-embed-version=&quot;2&quot; data-slug-hash=&quot;bLjgXM&quot; data-height=&quot;650&quot; data-default-tab=&quot;js,result&quot;&gt;&lt;/p&gt;
 &lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
 
 &lt;!--more--&gt;

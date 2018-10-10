@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		 Building an Elm Library for Foundation CSS Framework &middot; Aerosailor 
+	</title>
+
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/public/favicon/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/public/favicon/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/public/favicon/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/favicon/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/public/favicon/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/public/favicon/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/public/favicon/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/public/favicon/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="/public/favicon/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="/public/favicon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="/public/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/public/favicon/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="/public/favicon/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="Aerosailor" />
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="/public/favicon/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="/public/favicon/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="/public/favicon/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="/public/favicon/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="/public/favicon/mstile-310x310.png" />
+
+	<link rel="stylesheet" href="/styles.css">
+	<link rel="alternate" type="application/atom+xml" title="Aerosailor" href="/atom.xml">
+	<link rel="stylesheet" href="/node_modules/aos/dist/aos.css">
+
+	<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Building an Elm Library for Foundation CSS Framework | Aerosailor</title>
+<meta name="generator" content="Jekyll v3.8.3" />
+<meta property="og:title" content="Building an Elm Library for Foundation CSS Framework" />
+<meta name="author" content="Meher Ranjan Howji" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/blog/elm-foundation/" />
+<meta property="og:url" content="http://localhost:4000/blog/elm-foundation/" />
+<meta property="og:site_name" content="Aerosailor" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-10-09T00:00:00+05:30" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Meher Ranjan Howji"},"@type":"BlogPosting","url":"http://localhost:4000/blog/elm-foundation/","headline":"Building an Elm Library for Foundation CSS Framework","dateModified":"2018-10-09T00:00:00+05:30","datePublished":"2018-10-09T00:00:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/elm-foundation/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+	<body>
+		<div class="page-progress"></div>
+		<div id="aerosailor-loader">&nbsp;</div>
+		<div class="line-container">
+			<svg class="animated-lines" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"></svg>
+		</div>
+		<div class="container content">
+			<header>
+	<div class="row align-items-center">
+		<div class="col-lg-3 col-sm-12">
+			<h1 class="masthead-title text-center">
+				<a class="brand" href="/" title="Home">Aerosailor</a>
+			</h1>
+		</div>
+		<div class="col-lg-6 d-none d-lg-block vertical-align-one">
+			<!-- <nav>
+				<ul class="clearfix vertical-align-two hover-saber">
+					<li class="active">
+						<a href="/" data-cont="Home">Home</a>
+					</li>
+					<li>
+						<a href="/blog/" data-cont="Blog">Blog</a>
+					</li>
+				</ul>
+			</nav> -->
+		</div>
+		<div class="col-lg-3 d-none d-lg-block">
+			<!-- <span class="search"> -->
+				<!-- <a href=""></a> -->
+				<!-- <input type="text" placeholder="i am looking for ..."> -->
+			<!-- </span>
+			<span class="localization">
+				<a href="">EN</a>&middot;<a href="">DE</a>
+			</span> -->
+		</div>
+	</div>
+</header>
+			<article>
+	<article class="row">
+	<article class="post-prev col-2" data-aos="pn-slide-to-right">
+		
+			<a class="post-navigator" href="/blog/machine-learning-coding-a-neuron-in-javascript/">
+				<span class="svg-cont">
+					<svg class="chevron chevron-prev" viewBox="0 0 1024 1024" width="100%" height="100%">
+						<path class="path1" d="M476.455 806.696l-381.164-381.164q-14.621-14.621-14.621-35.293t14.621-34.789 35.293-14.117 34.789 14.117l342.846 343.35 349.4-349.4q14.621-14.117 35.293-14.117t34.789 14.117 14.117 34.789-14.117 34.789l-381.164 381.164q-19.159 19.159-38.318 19.159t-31.764-12.605z"></path>
+					</svg>
+				</span>
+				<span class="post-nav">PREV</span>
+				<span class="prev">
+					Machine Learning: Coding a Neuron in JavaScript - Part 1
+				</span>
+			</a>
+		
+	</article>
+
+	<article class="post col-lg-8 col-sm-12 col-md-8">
+		<div class="post-categories">
+			
+				<a href="/categories/#elm">elm</a>
+				 &nbsp; 
+			
+				<a href="/categories/#functional programming">functional programming</a>
+				 &nbsp; 
+			
+				<a href="/categories/#foundation6">foundation6</a>
+				
+			
+		</div>
+		<h1 class="post-title">Building an Elm Library for Foundation CSS Framework</h1>
+		<time datetime="2018-10-09T00:00:00+05:30" class="post-date">
+			<div class="post-details-meta">
+				<span>Oct 9, 2018 </span>
+				<span>&mdash;</span>
+				<span class="reading-time" title="Estimated Read Time">
+                    1  minute read
+                </span>
+			</div>
+		</time>
+		<div data-aos="pc-appear" data-aos-once="true" class="post-content-image"><p><img src="/public/elm.png" alt="Elm Logo" /></p>
+
+<!--more-->
+
+<h2 id="elm">Elm</h2>
+<p>Elm is a functional language that compiles to JavaScript. If you are used to using a tech stack that involved Webpack, 
+Redux, npm/yarn, React, Immutable.js &amp; TypeScript, then you would be shocked to death to know that Elm takes care of all
+that. Look at the following infographic that I crafted for innovation lab in Credit Suisse.</p>
+
+<p>I have recently used Foundation in one of my projects and I saw an opportunity to write a Foundation library for Elm. The most 
+popular Elm library at the moment is elm-mdl, however it is not actively maintained. Foundation 6 is packed with the most
+advanced CSS framework in the web, Grid XY. I am beginning to start porting the grid XY feature to Elm.</p>
+
+<p>Following is a little sneak peek of what the Elm code will look like compared to the actual HTML that we write to achive the same.
+If you like what I am doing, please feel free to contribute and send me suggestions. 
+I wouldn’t mind at all if you give some stars to the project.</p>
+
+<p>Grid XY in HTML / CSS</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container fluid"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-x margin-x"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cell"</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- Hello Elm! --&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>Grid XY in Elm. Clear &amp; Concise!</p>
+
+<figure class="highlight"><pre><code class="language-elm" data-lang="elm"><span class="n">view</span> <span class="p">:</span> <span class="kt">Model</span> <span class="o">-&gt;</span> <span class="kt">Html</span> <span class="kt">Msg</span>
+<span class="n">view</span> <span class="n">model</span> <span class="o">=</span>
+            <span class="n">grid</span>
+                <span class="p">[</span> <span class="n">container</span> <span class="kt">Fluid</span><span class="o">,</span> <span class="n">direction</span> <span class="kt">X</span><span class="o">,</span> <span class="n">gutter</span> <span class="kt">Margin</span> <span class="p">]</span>
+                <span class="p">[</span> <span class="n">cell</span> <span class="p">[]</span> <span class="p">[</span> <span class="n">text</span> <span class="s">"</span><span class="s2">cell"</span> <span class="p">]</span> <span class="p">]</span></code></pre></figure>
+
+</div>
+	</article>
+
+	<article class="post-next col-2" data-aos="pn-slide-to-left">
+		
+	</article>
+</article>
+
+<aside class="sharepost">
+	<div class="addthis_inline_share_toolbox"></div>
+</aside>
+
+
+	<aside class="related">
+		<h3>Related Posts</h3>
+		<div class="row related-post">
+			<div class="col-lg-10 col-md-10 col-sm-12 offset-md-1">
+				<div class="row">
+					
+					<div class="col-lg-4 col-md-4 col-sm-12">
+						<div class="related-post-banner">
+							<p><img src="/public/neuron.jpg" alt="image tooltip here" /></p>
+
+
+						</div>
+						<a href="/blog/machine-learning-coding-a-neuron-in-javascript/">
+							Machine Learning: Coding a Neuron in JavaScript - Part 1
+						</a>
+					</div>
+					
+					<div class="col-lg-4 col-md-4 col-sm-12">
+						<div class="related-post-banner">
+							<p class="codepen" data-embed-version="2" data-slug-hash="bLjgXM" data-height="650" data-default-tab="js,result"></p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+
+						</div>
+						<a href="/blog/minimal-pomodoro-app-in-reactjs/">
+							A Minimal Pomodoro App In ReactJS
+						</a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</aside>
+
+
+<aside>
+	<div id="disqus_thread"></div>
+	<script>
+		var disqus_config = function () {
+			this.page.url = "http://localhost:4000";
+			this.page.identifier = "/blog/elm-foundation/";
+		};
+		(function () {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://aerosailor.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</aside>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5aad0ac74409f0df"></script>
+
+<!-- condition page level scripts -->
+										<!--  -->
+
+
+
+</article>
+			<footer>
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-sm-12 aboutme">
+			<h4>Hello</h4>		
+			<p>I am Meher Howji. I work with Credit Suisse in Pune. I work on frontend technologies, ReactJS, Redux, Angular, React Native, Bootstrap & Foundation.</p>
+		</div>
+		<div class="col-lg-4 col-md-4 location offset-2">
+			<span class="addr">Pune, India</span>
+			<span class="pin"></span>
+		</div>
+	</div>
+	<small>
+		&copy;<time datetime="2018-10-10T10:48:23+05:30">2018</time>. Aerosailor
+	</small>
+</footer>
+		</div>
+
+		<script src="/scripts/bundle.js"></script>
+
+		
+			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116074903-1"></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag() { dataLayer.push(arguments); }
+				gtag('js', new Date());
+				gtag('config', 'UA-116074903-1');
+			</script>
+		
+	</body>
+</html>
