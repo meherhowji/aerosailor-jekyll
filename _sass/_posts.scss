@@ -90,6 +90,9 @@
 .post-content-image {
 	font-family: zero-regular;
 	line-height: 1.6rem;
+	&>p:first-child {
+		display: none;
+	}
 	h3 {
 		margin-top: 2rem;
 		margin-bottom: 1rem;
