@@ -48,10 +48,3 @@ view model =
                 [ cell [] [ text "cell" ] ]
 {% endhighlight %}
 
-
-## Elm Good Parts
-![An Infographic on Elm Performance Comparison & Strengths](/public/elm-good-parts.png)
-
-## Elm Best Parts
-![An Infographic on How Elm Replaces Existing Webapps Stack](/public/elm-best-parts.png)
-
