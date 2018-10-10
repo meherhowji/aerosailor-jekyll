@@ -144,11 +144,7 @@ module Jekyll
         else
           # Build embed
           <<~HTML
-          <p class="codepen" #{render_data_attributes()}>
-            See the Pen <a href=\"#{pen_url}\">#{title}</a>
-            by #{author_name} (<a href=\"//codepen.io/#{user}\">#{user}</a>)
-            on <a href=\"//codepen.io\">CodePen</a>.
-          </p>
+          <p class="codepen" #{render_data_attributes()}></p>
           <script async src=\"https://production-assets.codepen.io/assets/embed/ei.js\"></script>
           HTML
         end

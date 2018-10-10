@@ -154,15 +154,31 @@ header {
       transform: rotate(0deg);
       height: $svg-mobile-height;
     }
+    &:after {
+      content: '';
+      margin-top: -16rem;
+      height: 16rem;
+    }
     .line-container {
       width: 100%;
       transform: rotate(0deg);
       height: $svg-mobile-height;
       left: 0;
+      display: none;
     }
     header {
 	  height: $svg-mobile-height;
 	  padding-top: 25px;
+      .masthead-title {
+        font-size: 3.2rem;
+      }
+    }
+
+    footer {
+      padding: 1.5rem;
+      .location {
+        display: none;
+      }
     }
   }
 }

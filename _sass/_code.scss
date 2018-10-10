@@ -163,3 +163,17 @@ pre code {
 .highlight .vi {
     color: #fff
 }
+
+.highlight .language-elm {
+   span {
+       &.n{
+           color: #c680ff
+       }
+       &.kt {
+           color: #58b765
+       }
+       &.s2 {
+           color: #ffffff
+       }
+   }
+}

@@ -11,7 +11,7 @@
     },
     "dependencies": {
         "aos": "^2.2.0",
-        "bootstrap": "4.0.0-beta.3",
+        "bootstrap": "4.1.2",
         "d3": "^3.5.17",
         "function-plot": "^1.18.1",
         "jquery": "3.0.0",

@@ -90,6 +90,7 @@
                 }
                 img {
                     border-radius: 0;
+                    width: 100%;
                 }
             }
             .post-title {
@@ -167,5 +168,11 @@
     transition-timing-function: ease-out;
     &.aos-animate {
         opacity: 1;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .featured .feature-block .feature-content span {
+        font-size: 0.8rem;
     }
 }

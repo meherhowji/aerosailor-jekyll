@@ -1,11 +1,11 @@
 ---
-title: 'Machine Learning: Coding a Neuron in JavaScript'
+title: 'Machine Learning: Coding a Neuron in JavaScript - Part 1'
 layout: post
 categories:
 - machine learning
 - neuron
 - artificial intelligence
-excerpt_separator: "<!--more-->"
+excerpt_separator: "<!--more-->" 
 d3js:
 - true
 ---
@@ -14,9 +14,9 @@ d3js:
 
 <!--more-->
 
-We see around ourselves surrounded by some very common and strange use cases of machine learning in our digital ecosystem. From movie recommendation to facial recognition, some very common apps that we use deploy such algorithms to help us deliver a better environment. A very smallest unit of such an algorithm is a Neuron. A neural network is a collection of neurons. You can find many libraries that give you ease of creation of network with just few lines of code. 
+We see around ourselves surrounded by some very common and strange use cases of machine learning in our digital ecosystem. From movie recommendation to facial recognition, some very common apps that we use deploy such algorithms to help us deliver a better technological ecosystem. A very smallest unit of such an algorithm is a Neuron. A neural network is a collection of neurons. You can find many libraries that give you power to create a neural network with just few lines of code.
 
-However writing your own neural is definitely not that much amount of code either. We write a thousand line of code in a month or more, how long is just a hundrend! Not much trust me. And we will break that 100 line into groups so that its even more easier to understand. A neuron has a life cycle and its phases will help us modularise our code . I hope by the end of this blog post you will feel neural network to be more fascinating than mind-bending. 
+However writing your own neural network is definitely not that much amount of code either, trust me with this. We write a thousand line of code in a month or more, how long is just a hundred! Not much trust me. And we will break that 100 line into groups so that its even more easier to understand. A neuron has a life cycle and its phases will help us modularise our code . I hope by the end of this blog post you will feel neural network to be more fascinating than mind-bending. 
 
 
 ## What is a neuron?
@@ -27,14 +27,31 @@ A neuron has 3 parts; soma, dendrite and axon. Soma is the cell body contains al
 ## Action Potential
 So when a neuron is stimulated enough it sends out an electrical impulses. A neuron is negatively charged when is resting and the membranes around it are positive. The movement of charge from the membranes to the cell body is key to the electricial activity in the neurons. Not all the events cause the flow of ions along the axons, such events that do, create enough Action Potential. 
 
-The potential difference of neuron and the membrane is around -70mW. When an external event creates enough stimulus to cross the potential from -70mW to **-55mW**,  and when it further crosses till 40mW, a biological chain reaction is created and impulse is sent down the axon and an output is received. :sleeping:
+The potential difference of neuron and the membrane is around -70mW. When an external event creates enough stimulus to cross the potential from -70mW to **-55mW**,  and when it further crosses till 40mW, a biological chain reaction is created and impulse is sent down the axon and an output is received.
 
-Now, we understood a threshold(certain events) trigger the action potential. And the threshold at its simplest form looks like a switch. A neuron either fires or doesn't to look at it another way. Therefore, threshold condition can be safely assumed as a random number. 
+Now, we understood a threshold(certain events) trigger the action potential. And the threshold at its simplest form looks like a switch. A neuron either fires or doesn't to look at it another way. Therefore, threshold condition can be safely assumed as a random number.
+
+## Why Did I Read All That?
+Analysis! Before we jump into coding aren't we as a programmer supposed to perform an analysis to 
+break down problem into simple parts. This process not only brings clarity but also helps identify any unknowns that we encounter. 
+A neuron is supposed to behave intelligent when grouped together.
+Biological neuron is the only source of truth for us when we it comes to intelligence. Where else do we look?
+Many phenomena that a biological neuron performs are named similarly in our mathematical neuron and understanding latter definitely gives a good jumping off point for one to start learning.
+
+Now putting our neuron ride in next gear we are going to take a moment and define certain key terms that will help us
+build our neuron. Don't be surprised to find a one-on-one mapping between the computational and the biological neuron.
+
 
 ## Activation Function
 
 So **activation function** precisely is a non linear function which decides whether the output of the neuron should be forwarded/propagated-forward or not. Without an activation function it is impossible to solve a non-linear problem.
-Linear equations are those that have constant change in x & y. Eg miles and km conversion. In other words, functions that would make up a straight line on a cartesian plane.
+Linear equations are those that have constant change in x & y. Eg miles and km conversion. In other words, functions that would make up a straight line on a cartesian plane. 
+
+Essentially this function determines whether the neuron will fire or not. Remember action potential? 
+In a real world, visualising this function can be very abstract(physical + chemical + physcological)
+The way I see it is, lets say you got a gift from a friend, probability is you'll like and may not too. What determines that you will like and not cannot be factored or even listed down. 
+This is a very profound idea. There are several types of activation function and they all do something different that each other.
+
 
 ## Perceptron
 Its the simplest neural network, with just one single neuron. It is based on feed forward model so when input is fed to the network, some processeing is performed and an output is returned. Lets look at the steps:

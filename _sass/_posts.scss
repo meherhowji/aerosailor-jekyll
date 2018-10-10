@@ -90,6 +90,9 @@
 .post-content-image {
 	font-family: zero-regular;
 	line-height: 1.6rem;
+	&>p:first-child {
+		display: none;
+	}
 	h3 {
 		margin-top: 2rem;
 		margin-bottom: 1rem;
@@ -202,5 +205,24 @@
 	g.x.axis > .tick:nth-child(odd), 
 	{
 		display: none; 
+	}
+}
+
+@media (max-width: 767.98px) {
+	.featured .feature-block .feature-content span {
+		font-size: 0.8rem;
+	}
+	.post-prev, .post-next {
+		display: none;
+	}
+	.post {
+		margin-top: 2rem;
+	}
+	.page .post-categories a, .post .post-categories a {
+		font-size: 0.6rem;
+	}
+	.post-details-meta {
+		text-align: left;
+		margin-bottom: 0.6rem;
 	}
 }
