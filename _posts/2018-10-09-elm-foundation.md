@@ -23,8 +23,8 @@ advanced CSS framework in the web, Grid XY. And I saw an opportunity to bring th
 Following is a little sneak peek of what the Elm code will look like compared to the actual HTML that we write to
 achieve the same.  
 
-On a sidenote, I would really appreciate if you support the project. Please let me know that this project is
-useful, there is not other way for me to know. 
+On a side note, I would really appreciate if you support the project. Please let me know that this project is
+useful, there is no other way for me to know. 
 
 Look Ma! Still no love :cry:
 {% include elm-foundation-github-button.html %}
