@@ -51,7 +51,7 @@ GEM
       sass (~> 3.4)
     jekyll-seo-tag (2.5.0)
       jekyll (~> 3.3)
-    jekyll-watch (2.1.0)
+    jekyll-watch (2.1.1)
       listen (~> 3.0)
     jemoji (0.10.1)
       gemoji (~> 3.0)
@@ -122,4 +122,4 @@ DEPENDENCIES
   jemoji
 
 BUNDLED WITH
-   1.16.3
+   1.16.6
