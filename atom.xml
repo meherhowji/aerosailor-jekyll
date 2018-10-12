@@ -4,7 +4,7 @@
  <title>Aerosailor</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2018-10-10T10:50:47+05:30</updated>
+ <updated>2018-10-12T09:40:02+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Meher Ranjan Howji</name>
@@ -21,18 +21,23 @@
 
 &lt;!--more--&gt;
 
-&lt;h2 id=&quot;elm&quot;&gt;Elm&lt;/h2&gt;
 &lt;p&gt;Elm is a functional language that compiles to JavaScript. If you are used to using a tech stack that involved Webpack, 
 Redux, npm/yarn, React, Immutable.js &amp;amp; TypeScript, then you would be shocked to death to know that Elm takes care of all
-that. Look at the following infographic that I crafted for innovation lab in Credit Suisse.&lt;/p&gt;
+that.&lt;/p&gt;
 
 &lt;p&gt;I have recently used Foundation in one of my projects and I saw an opportunity to write a Foundation library for Elm. The most 
 popular Elm library at the moment is elm-mdl, however it is not actively maintained. Foundation 6 is packed with the most
-advanced CSS framework in the web, Grid XY. I am beginning to start porting the grid XY feature to Elm.&lt;/p&gt;
+advanced CSS framework in the web, Grid XY. And I saw an opportunity to bring this to the Elm community.&lt;/p&gt;
 
-&lt;p&gt;Following is a little sneak peek of what the Elm code will look like compared to the actual HTML that we write to achive the same.
-If you like what I am doing, please feel free to contribute and send me suggestions. 
-I wouldn’t mind at all if you give some stars to the project.&lt;/p&gt;
+&lt;p&gt;Following is a little sneak peek of what the Elm code will look like compared to the actual HTML that we write to
+achieve the same.&lt;/p&gt;
+
+&lt;p&gt;On a sidenote, I would really appreciate if you support the project. Please let me know that this project is
+useful, there is not other way for me to know.&lt;/p&gt;
+
+&lt;p&gt;Look Ma! Still no love :cry:&lt;/p&gt;
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=meherranjan&amp;amp;repo=elm-foundation&amp;amp;type=star&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;160px&quot; height=&quot;30px&quot;&gt;
+&lt;/iframe&gt;
 
 &lt;p&gt;Grid XY in HTML / CSS&lt;/p&gt;
 
