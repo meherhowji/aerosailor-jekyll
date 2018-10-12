@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Aerosailor</title>
- <link href="http://localhost:4000/atom.xml" rel="self"/>
- <link href="http://localhost:4000/"/>
- <updated>2018-10-12T09:40:02+05:30</updated>
- <id>http://localhost:4000</id>
+ <link href="http://aerosailor.com/atom.xml" rel="self"/>
+ <link href="http://aerosailor.com/"/>
+ <updated>2018-10-12T09:43:12+05:30</updated>
+ <id>http://aerosailor.com</id>
  <author>
    <name>Meher Ranjan Howji</name>
    <email>mail@aerosailor.com</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Building an Elm Library for Foundation CSS Framework</title>
-   <link href="http://localhost:4000/blog/elm-foundation/"/>
+   <link href="http://aerosailor.com/blog/elm-foundation/"/>
    <updated>2018-10-09T00:00:00+05:30</updated>
-   <id>http://localhost:4000/blog/elm-foundation</id>
+   <id>http://aerosailor.com/blog/elm-foundation</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/public/elm.png&quot; alt=&quot;Elm Logo&quot; /&gt;&lt;/p&gt;
 
 &lt;!--more--&gt;
@@ -62,9 +62,9 @@ useful, there is not other way for me to know.&lt;/p&gt;
  
  <entry>
    <title>Machine Learning: Coding a Neuron in JavaScript - Part 1</title>
-   <link href="http://localhost:4000/blog/machine-learning-coding-a-neuron-in-javascript/"/>
+   <link href="http://aerosailor.com/blog/machine-learning-coding-a-neuron-in-javascript/"/>
    <updated>2018-07-09T00:00:00+05:30</updated>
-   <id>http://localhost:4000/blog/machine-learning-coding-a-neuron-in-javascript</id>
+   <id>http://aerosailor.com/blog/machine-learning-coding-a-neuron-in-javascript</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/public/neuron.jpg&quot; alt=&quot;image tooltip here&quot; /&gt;&lt;/p&gt;
 
 &lt;!--more--&gt;
@@ -220,9 +220,9 @@ window.addEventListener('load', function () {
  
  <entry>
    <title>A Minimal Pomodoro App In ReactJS</title>
-   <link href="http://localhost:4000/blog/minimal-pomodoro-app-in-reactjs/"/>
+   <link href="http://aerosailor.com/blog/minimal-pomodoro-app-in-reactjs/"/>
    <updated>2018-03-24T00:00:00+05:30</updated>
-   <id>http://localhost:4000/blog/minimal-pomodoro-app-in-reactjs</id>
+   <id>http://aerosailor.com/blog/minimal-pomodoro-app-in-reactjs</id>
    <content type="html">&lt;p class=&quot;codepen&quot; data-embed-version=&quot;2&quot; data-slug-hash=&quot;bLjgXM&quot; data-height=&quot;650&quot; data-default-tab=&quot;js,result&quot;&gt;&lt;/p&gt;
 &lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
 
