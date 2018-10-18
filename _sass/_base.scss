@@ -51,67 +51,69 @@ body {
 
 @font-face {
     font-family: 'zero-black';
-    src: url('./public/font/geomanist-black-webfont.eot');
-    src: url('./public/font/geomanist-black-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./public/font/geomanist-black-webfont.woff2') format('woff2'),
-         url('./public/font/geomanist-black-webfont.woff') format('woff'),
-         url('./public/font/geomanist-black-webfont.ttf') format('truetype'),
-         url('./public/font/geomanist-black-webfont.svg#geomanistregular') format('svg');
+    src: url('./public/font/gbl.eot');
+    src: url('./public/font/gbl.eot?#iefix') format('embedded-opentype'),
+         url('./public/font/gbl.woff2') format('woff2'),
+         url('./public/font/gbl.woff') format('woff'),
+         url('./public/font/gbl.ttf') format('truetype'),
+         url('./public/font/gbl.svg#geomanistregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'zero-bold';
-    src: url('./public/font/geomanist-bold-webfont.eot');
-    src: url('./public/font/geomanist-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./public/font/geomanist-bold-webfont.woff2') format('woff2'),
-         url('./public/font/geomanist-bold-webfont.woff') format('woff'),
-         url('./public/font/geomanist-bold-webfont.ttf') format('truetype'),
-         url('./public/font/geomanist-bold-webfont.svg#geomanistregular') format('svg');
+    src: url('./public/font/gbo.eot');
+    src: url('./public/font/gbo.eot?#iefix') format('embedded-opentype'),
+         url('./public/font/gbo.woff2') format('woff2'),
+         url('./public/font/gbo.woff') format('woff'),
+         url('./public/font/gbo.ttf') format('truetype'),
+         url('./public/font/gbo.svg#geomanistregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'zero-medium';
-    src: url('./public/font/geomanist-medium-webfont.eot');
-    src: url('./public/font/geomanist-medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./public/font/geomanist-medium-webfont.woff2') format('woff2'),
-         url('./public/font/geomanist-medium-webfont.woff') format('woff'),
-         url('./public/font/geomanist-medium-webfont.ttf') format('truetype'),
-         url('./public/font/geomanist-medium-webfont.svg#geomanistregular') format('svg');
+    src: url('./public/font/gme.eot');
+    src: url('./public/font/gme.eot?#iefix') format('embedded-opentype'),
+         url('./public/font/gme.woff2') format('woff2'),
+         url('./public/font/gme.woff') format('woff'),
+         url('./public/font/gme.ttf') format('truetype'),
+         url('./public/font/gme.svg#geomanistregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'zero-book';
-    src: url('./public/font/geomanist-book-webfont.eot');
-    src: url('./public/font/geomanist-book-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./public/font/geomanist-book-webfont.woff2') format('woff2'),
-         url('./public/font/geomanist-book-webfont.woff') format('woff'),
-         url('./public/font/geomanist-book-webfont.ttf') format('truetype'),
-         url('./public/font/geomanist-book-webfont.svg#geomanistregular') format('svg');
+    src: url('./public/font/gboo.eot');
+    src: url('./public/font/gboo.eot?#iefix') format('embedded-opentype'),
+         url('./public/font/gboo.woff2') format('woff2'),
+         url('./public/font/gboo.woff') format('woff'),
+         url('./public/font/gboo.ttf') format('truetype'),
+         url('./public/font/gboo.svg#geomanistregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'zero-regular';
-    src: url('./public/font/geomanist-regular-webfont.eot');
-    src: url('./public/font/geomanist-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./public/font/geomanist-regular-webfont.woff2') format('woff2'),
-         url('./public/font/geomanist-regular-webfont.woff') format('woff'),
-         url('./public/font/geomanist-regular-webfont.ttf') format('truetype'),
-         url('./public/font/geomanist-regular-webfont.svg#geomanistregular') format('svg');
+    src: url('./public/font/gre.eot');
+    src: url('./public/font/gre.eot?#iefix') format('embedded-opentype'),
+         url('./public/font/gre.woff2') format('woff2'),
+         url('./public/font/gre.woff') format('woff'),
+         url('./public/font/gre.ttf') format('truetype'),
+         url('./public/font/gre.svg#geomanistregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family:"Roboto Mono";
-    src:url("./public/font/RobotoMono.woff2") format("woff2"),url("./public/font/RobotoMono.woff") format("woff"),url("./public/font/RobotoMono.otf") format("opentype");
+    src:url("./public/font/rm.woff2") format("woff2"),
+      url("./public/font/rm.woff") format("woff"),
+      url("./public/font/rm.otf") format("opentype");
     font-style:normal;font-weight:400;
 }
 

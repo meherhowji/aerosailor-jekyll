@@ -116,21 +116,40 @@ header {
     }
   }
   .search {
-    font-size: 55%;
     padding: 12px 0;
     float: right;
     margin-left: 10px;
     a {
-      text-decoration: none;
-      padding: 0 10px;
-      background: url(./public/search-sm.png) center/50% no-repeat;
-    }
-    a:hover input {
-      border: 1px red solid;
-      width: 100px;
-    }
-    input {
-      width: 0;
+      position: relative;
+      color: rgba(0,0,0,0);
+      &:hover input {
+        width: 100%;
+      }
+      input {
+        transition: width 0.2s ease-in;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: none;
+        border: none;
+        color: white;
+        border-bottom: 2px white solid;
+        font-size: 60%;
+        width: 0%;
+        outline: none;
+        &::placeholder {
+          color: white;
+        }
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        background: url(./public/search-sm.png) center/50% no-repeat;
+      }
     }
   }
   .vertical-align-one {

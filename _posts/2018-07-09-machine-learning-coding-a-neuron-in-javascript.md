@@ -14,57 +14,93 @@ d3js:
 
 <!--more-->
 
-We see around ourselves surrounded by some very common and strange use cases of machine learning in our digital ecosystem. From movie recommendation to facial recognition, some very common apps that we use deploy such algorithms to help us deliver a better technological ecosystem. A very smallest unit of such an algorithm is a Neuron. A neural network is a collection of neurons. You can find many libraries that give you power to create a neural network with just few lines of code.
-
-However writing your own neural network is definitely not that much amount of code either, trust me with this. We write a thousand line of code in a month or more, how long is just a hundred! Not much trust me. And we will break that 100 line into groups so that its even more easier to understand. A neuron has a life cycle and its phases will help us modularise our code . I hope by the end of this blog post you will feel neural network to be more fascinating than mind-bending. 
+We see around ourselves surrounded by some very common and strange use cases 
+of machine learning in our digital ecosystem. From movie recommendation to facial recognition, 
+some very common apps that we use deploy such algorithms to help us deliver 
+a better technological ecosystem. 
+A very smallest unit of such an algorithm is a Neuron. 
+A neural network is a collection of neurons. 
+You can find many libraries that give you power to create a neural network with just few lines of code.
+However writing your own neural network is definitely 
+not that much amount of code either, trust me with this. 
+We write a thousand line of code in a month or more, how long is just a hundred! 
+Not much trust me. We will break it down further into logical that makes it even more intuitive to grasp.
+A neuron has a life cycle and its phases will help us modularise our code.
+I hope by the end of this blog post you will feel neural network to be more fascinating than mind-bending. 
 
 
 ## What is a neuron?
-A neural network or a neuron we are going to program performs very much similar to a biological functioning neuron. A biological neuron is essentially a structural and the primary unit of nervous system. They are the longest living cells in your body and in particular many research indicates that the nerve cells or neuron in our cerebral cortex live as long as we do. They are irreplaceable. They consume over 25% of calories you take in a day. 
+A neural network or a neuron we are going to program performs very much similar to a biological functioning neuron.
+A biological neuron is a structural and the primary unit of nervous system. 
+They are the longest living cells in your body and in particular many research indicates 
+that the nerve cells or neuron in our cerebral cortex live as long as we do. 
+They are irreplaceable. They consume over 25% of calories you take in a day. 
 
-A neuron has 3 parts; soma, dendrite and axon. Soma is the cell body contains all the regular cell stuff like DNA, RNA, Mitochondria, nucleus etc. Dendrites are the listeners, they take inputs from other neurons or cells and pass it on to the cell body. And the axons transmit electrical impulses to the other cells. That is the general structure and data flow.
+A neuron has 3 parts; soma, dendrite and axon. 
+Soma is the cell body contains all the regular cell stuff like DNA, RNA, Mitochondria, nucleus etc. 
+Dendrites are the listeners, they take inputs from other neurons or cells and pass it on to the cell body. 
+And the axons transmit electrical impulses to the other cells. That is the general structure and data flow.
+
+We are looking at some defined structure now, we need to look deeper at how an electrical signal moves through this
+different structure and gets transformed. Let's read further.
 
 ## Action Potential
-So when a neuron is stimulated enough it sends out an electrical impulses. A neuron is negatively charged when is resting and the membranes around it are positive. The movement of charge from the membranes to the cell body is key to the electricial activity in the neurons. Not all the events cause the flow of ions along the axons, such events that do, create enough Action Potential. 
+So when a neuron is stimulated enough it sends out an electrical impulses. 
+A neuron is negatively charged when is resting and the membranes around it are positive. 
+The movement of charge from the membranes to the cell body is key to the electrical activity in the neurons. 
+Not all the events cause the flow of ions along the axons, 
+such events that do, create enough Action Potential. 
 
-The potential difference of neuron and the membrane is around -70mW. When an external event creates enough stimulus to cross the potential from -70mW to **-55mW**,  and when it further crosses till 40mW, a biological chain reaction is created and impulse is sent down the axon and an output is received.
+The potential difference of neuron and the membrane is around -70mW. 
+When an external event creates enough stimulus to cross the potential from -70mW to **-55mW**, and when it further crosses till 40mW, 
+a biological chain reaction is created and impulse is sent down the axon and an output is received.
 
-Now, we understood a threshold(certain events) trigger the action potential. And the threshold at its simplest form looks like a switch. A neuron either fires or doesn't to look at it another way. Therefore, threshold condition can be safely assumed as a random number.
+Now, we understood a threshold(certain events e.g. a birthday present) trigger the action potential. 
+And the threshold at its simplest form looks like a switch. A neuron either fires or does not to look at it another way. 
+Therefore, threshold condition can be safely assumed as a constant and the best value a constant can have is 1.
+Simplification a mathematical expression by the process of elimination is a good way to create a quick working demo
+and we are going to do the same.
 
-## Why Did I Read All That?
-Analysis! Before we jump into coding aren't we as a programmer supposed to perform an analysis to 
-break down problem into simple parts. This process not only brings clarity but also helps identify any unknowns that we encounter. 
-A neuron is supposed to behave intelligent when grouped together.
-Biological neuron is the only source of truth for us when we it comes to intelligence. Where else do we look?
-Many phenomena that a biological neuron performs are named similarly in our mathematical neuron and understanding latter definitely gives a good jumping off point for one to start learning.
+## Back to computational neuron...
+Analysis, it brings clarity and also helps identify unknowns that we might encounter. 
+A neuron in itself isn't that useful from the intelligence point of view. 
+However when grouped together they can be magical.
+Biological neuron is the only source of truth for us when we it comes to looking at any good source.
+Many phenomena that a biological neuron performs are named similarly in computational neuron and understanding 
+latter definitely gives a good jumping off point for learning.
 
-Now putting our neuron ride in next gear we are going to take a moment and define certain key terms that will help us
-build our neuron. Don't be surprised to find a one-on-one mapping between the computational and the biological neuron.
+Now putting our neuron ride in next gear we are going to take a moment and define certain key terms 
+that will help us build our neuron. 
+Don't be surprised to find he similarity between the computational and the biological neuron.
 
 
 ## Activation Function
 
-So **activation function** precisely is a non linear function which decides whether the output of the neuron should be forwarded/propagated-forward or not. Without an activation function it is impossible to solve a non-linear problem.
-Linear equations are those that have constant change in x & y. Eg miles and km conversion. In other words, functions that would make up a straight line on a cartesian plane. 
+**Activation function** is a non linear function which decides whether the output of the neuron should be 
+forwarded/propagated-forward or not. 
+Without an activation function it is impossible to solve a non-linear problem.
+Linear equations are those that have constant change in x & y. Eg miles and km conversion. 
+In other words, functions that would make up a straight line on a cartesian plane.
 
-Essentially this function determines whether the neuron will fire or not. Remember action potential? 
-In a real world, visualising this function can be very abstract(physical + chemical + physcological)
-The way I see it is, lets say you got a gift from a friend, probability is you'll like and may not too. What determines that you will like and not cannot be factored or even listed down. 
-This is a very profound idea. There are several types of activation function and they all do something different that each other.
+Essentially this function determines whether the neuron will fire or not. Recall action potential? 
+In a real world, visualising this function can be very abstract(physical + chemical + psychological)
+This is a very profound idea. There are several types of activation function and they all do something 
+different that each other.
 
 
-## Perceptron
-Its the simplest neural network, with just one single neuron. It is based on feed forward model so when input is fed to the network, some processeing is performed and an output is returned. Lets look at the steps:
+## Perceptron: NN with single neuron
+It's the simplest neural network, with just one single neuron. It is based on feed forward model so when input is fed to the network, some processeing is performed and an output is returned. Lets look at the steps:
 
 #### Feeding Input 
-Lets use a simple function, sin(x), as the input to our perceptron.
-{% highlight js %}
-// sin(0) = 0
-// sin(30) = 0.5
-// sin(60) = 0.866
-// sin(90) = 1
+Lets use a basic function, although sin(x) is a very good candidate with just one input, 
+however I would take a method with 2 inputs will help you find you more ways to experiment and explore further. 
+Sin(x) can be a good exercise for you to complete, share your JS code link on your comment.
 
-let input = [45];
+{% highlight js %}
+const data = (x, y) => {
+    return [x, y]
+}
+let input = data[2, 7]
 {% endhighlight %}
 
 #### Adding Weights
