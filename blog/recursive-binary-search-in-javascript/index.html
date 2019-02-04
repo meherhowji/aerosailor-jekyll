@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		 An Easy Recursive Binary Search in JavaScript &middot; Aerosailor 
+	</title>
+
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/public/favicon/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/public/favicon/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/public/favicon/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/favicon/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/public/favicon/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/public/favicon/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/public/favicon/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/public/favicon/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="/public/favicon/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="/public/favicon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="/public/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/public/favicon/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="/public/favicon/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="Aerosailor" />
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="/public/favicon/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="/public/favicon/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="/public/favicon/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="/public/favicon/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="/public/favicon/mstile-310x310.png" />
+
+	<link rel="stylesheet" href="/styles.css">
+	<link rel="alternate" type="application/atom+xml" title="Aerosailor" href="/atom.xml">
+	<link rel="stylesheet" href="/node_modules/aos/dist/aos.css">
+
+	<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>An Easy Recursive Binary Search in JavaScript | Aerosailor</title>
+<meta name="generator" content="Jekyll v3.8.4" />
+<meta property="og:title" content="An Easy Recursive Binary Search in JavaScript" />
+<meta name="author" content="Meher Ranjan Howji" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://aerosailor.com/blog/recursive-binary-search-in-javascript/" />
+<meta property="og:url" content="http://aerosailor.com/blog/recursive-binary-search-in-javascript/" />
+<meta property="og:site_name" content="Aerosailor" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-02-04T00:00:00+05:30" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Meher Ranjan Howji"},"@type":"BlogPosting","url":"http://aerosailor.com/blog/recursive-binary-search-in-javascript/","headline":"An Easy Recursive Binary Search in JavaScript","dateModified":"2019-02-04T00:00:00+05:30","datePublished":"2019-02-04T00:00:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"http://aerosailor.com/blog/recursive-binary-search-in-javascript/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+	<body>
+		<div class="page-progress"></div>
+		<div id="aerosailor-loader">&nbsp;</div>
+		<div class="line-container">
+			<svg class="animated-lines" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"></svg>
+		</div>
+		<div class="container content">
+			<header>
+	<div class="row align-items-center">
+		<div class="col-lg-3 col-sm-12">
+			<h1 class="masthead-title text-center">
+				<a class="brand" href="/" title="Home">Aerosailor</a>
+			</h1>
+		</div>
+		<div class="col-lg-7 d-none d-lg-block vertical-align-one">
+			<nav>
+				<ul class="clearfix vertical-align-two hover-saber">
+					<li class="active">
+						<a href="/" data-cont="Home">Home</a>
+					</li>
+					<li>
+						<a href="/" data-cont="Blog">Blog</a>
+					</li>
+					<li>
+						<a href="/" data-cont="Labs">Labs</a>
+					</li>
+                    <li>
+                        <a href="/" data-cont="Tutorials">Tutorials</a>
+                    </li>
+				</ul>
+			</nav>
+		</div>
+		<!--<div class="col-lg-2 d-none d-lg-block">-->
+			 <!--<span class="search">-->
+				 <!--<a href="javascript:void(0)"> Search a post-->
+				 <!--<input type="text" placeholder="">-->
+				 <!--</a>-->
+			 <!--</span>-->
+			 <!--<span class="localization">-->
+				 <!--<a href="">EN</a>&middot;<a href="">DE</a>-->
+			 <!--</span>-->
+		<!--</div>-->
+	</div>
+</header>
+			<article>
+	<article class="row">
+	<article class="post-prev col-2" data-aos="pn-slide-to-right">
+		
+			<a class="post-navigator" href="/blog/elm-foundation/">
+				<span class="svg-cont">
+					<svg class="chevron chevron-prev" viewBox="0 0 1024 1024" width="100%" height="100%">
+						<path class="path1" d="M476.455 806.696l-381.164-381.164q-14.621-14.621-14.621-35.293t14.621-34.789 35.293-14.117 34.789 14.117l342.846 343.35 349.4-349.4q14.621-14.117 35.293-14.117t34.789 14.117 14.117 34.789-14.117 34.789l-381.164 381.164q-19.159 19.159-38.318 19.159t-31.764-12.605z"></path>
+					</svg>
+				</span>
+				<span class="post-nav">PREV</span>
+				<span class="prev">
+					Building an Elm Library for Foundation CSS Framework
+				</span>
+			</a>
+		
+	</article>
+
+	<article class="post col-lg-8 col-sm-12 col-md-8">
+		<div class="post-categories">
+			
+				<a href="/categories/#recursion">recursion</a>
+				 &nbsp; 
+			
+				<a href="/categories/#javascript">javascript</a>
+				 &nbsp; 
+			
+				<a href="/categories/#algorithms">algorithms</a>
+				
+			
+		</div>
+		<h1 class="post-title">An Easy Recursive Binary Search in JavaScript</h1>
+		<time datetime="2019-02-04T00:00:00+05:30" class="post-date">
+			<div class="post-details-meta">
+				<span>Feb 4, 2019 </span>
+				<span>&mdash;</span>
+				<span class="reading-time" title="Estimated Read Time">
+                    5  minutes read
+                </span>
+			</div>
+		</time>
+		<div data-aos="pc-appear" data-aos-once="true" class="post-content-image"><p><img src="/public/recursion-hurts-me.jpg" alt="Hurt Me Neon Light" /></p>
+
+<!--more-->
+
+<p>Divide and rule has been historically the most successful tactics for many leaders of the civilization. It breaks down a complex problem set so dramatically down that at one point the rewards are exponential.</p>
+
+<p>When it comes to programming divide and rule, scares many. However, this successful tactic isn’t that difficult to master. One good way to get better at this pattern is by using it frequently in your day to day work.</p>
+
+<p>Let’s take an example, say you have an application that involves various personas for your user. A user with access that read only, read/write and no read/write.</p>
+
+<p>And we can deliver this experience by letting our navigation know which of the links to show and which ones to not show.</p>
+
+<p>Now, in a small app the navigation level might be just primary and secondary: 2 loop and you are done! Time Complexity - O(n²), not too bad and it is practical in most scenarios.</p>
+
+<p>Let’s say you have a navigation structure that goes several level deep. It becomes an interesting problem to solve when you want to code it using loops. It becomes even more exhilarating when you think of recursion as a superior candidate for this problem set.</p>
+
+<p><em>Here what a loop would look like:</em></p>
+<ul>
+  <li>Look through the JSON list (array of objects containing links)</li>
+  <li>If it contains a link then push that item to the end of your list to traverse later</li>
+  <li>If you reach end of your list, you are ready to rock!</li>
+  <li>Repeat</li>
+</ul>
+
+<p><em>Recursive Approach:</em></p>
+<ul>
+  <li>Look through the JSON list (array of objects containing links)</li>
+  <li>If you find a link, go to step #1</li>
+  <li>If you find no link, you are ready to roll.</li>
+</ul>
+
+<p>I realize I have extremely simplified the example to get a point across. Although the difference might not seem huge to many if you are new to recursion but shortly I will unfold a layer of some awesome code to help to sail through this beautiful pattern of navigation. Code ahead, careful fellas..</p>
+
+<p>Binary search is a simple &amp; powerful algorithm where we take a sorted data and make a guess of the middle item. If the guess was low, we adjust our lower index. If the guess was high, we adjust our high index. And we repeat.
+Time Complexity - O(log n)</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">const</span> <span class="nx">sortedList</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+
+<span class="kd">const</span> <span class="nx">binarySearch</span> <span class="o">=</span> <span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="nx">item</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="kd">let</span> <span class="nx">low</span> <span class="o">=</span> <span class="mi">0</span>
+	<span class="kd">let</span> <span class="nx">high</span> <span class="o">=</span> <span class="nx">list</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span>
+	<span class="kd">let</span> <span class="nx">guess</span> <span class="o">=</span> <span class="kc">null</span>
+	
+	<span class="k">while</span><span class="p">(</span><span class="nx">low</span> <span class="o">&lt;=</span> <span class="nx">high</span><span class="p">)</span> <span class="p">{</span>
+		<span class="kd">let</span> <span class="nx">mid</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">((</span><span class="nx">high</span> <span class="o">+</span> <span class="nx">low</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+		<span class="nx">guess</span> <span class="o">=</span> <span class="nx">list</span><span class="p">[</span><span class="nx">mid</span><span class="p">]</span>
+
+		<span class="k">if</span><span class="p">(</span><span class="nx">guess</span> <span class="o">===</span> <span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'The item is present at '</span> <span class="o">+</span> <span class="p">(</span><span class="nx">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s1">' position.'</span><span class="p">)</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">guess</span> <span class="o">&gt;</span> <span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">high</span> <span class="o">=</span> <span class="nx">mid</span> <span class="o">-</span> <span class="mi">1</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+			<span class="nx">low</span> <span class="o">=</span> <span class="nx">mid</span> <span class="o">+</span> <span class="mi">1</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">binarySearch</span><span class="p">(</span><span class="nx">sortedList</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span></code></pre></figure>
+
+<p>Recursive binary search is simple enough too if we just break down the problem. Every recursive function has 2 parts: base case and recursive case. The base case ensures the function doesn’t run into an infinite loop. It helps visualize the recursive case.
+Let’s see how a recursive binary search would look like:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">sortedList</span> <span class="o">=</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">106</span><span class="p">,</span> <span class="mi">217</span><span class="p">,</span> <span class="mi">228</span><span class="p">,</span> <span class="mi">299</span><span class="p">,</span> <span class="mi">310</span><span class="p">]</span>
+
+<span class="kd">const</span> <span class="nx">getMid</span> <span class="o">=</span> <span class="p">(</span><span class="nx">low</span><span class="p">,</span> <span class="nx">high</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">((</span><span class="nx">high</span> <span class="o">+</span> <span class="nx">low</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">recursiveBS</span> <span class="o">=</span> <span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="nx">item</span><span class="p">,</span> <span class="nx">low</span><span class="p">,</span> <span class="nx">high</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="p">(</span><span class="o">!</span><span class="nx">low</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">high</span> <span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nx">low</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">high</span> <span class="o">=</span> <span class="nx">list</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+	<span class="kd">let</span> <span class="nx">found</span> <span class="o">=</span> <span class="kc">false</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="nx">low</span> <span class="o">&lt;=</span> <span class="nx">high</span><span class="p">)</span> <span class="p">{</span>
+		<span class="kd">let</span> <span class="nx">mid</span> <span class="o">=</span> <span class="nx">getMid</span><span class="p">(</span><span class="nx">low</span><span class="p">,</span> <span class="nx">high</span><span class="p">),</span> 
+		    <span class="nx">guess</span> <span class="o">=</span> <span class="nx">list</span><span class="p">[</span><span class="nx">mid</span><span class="p">]</span>
+
+		<span class="k">if</span> <span class="p">(</span><span class="nx">guess</span> <span class="o">===</span> <span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="p">(</span><span class="s2">"Your item is at "</span> <span class="o">+</span> <span class="p">(</span><span class="nx">getMid</span><span class="p">(</span><span class="nx">low</span><span class="p">,</span> <span class="nx">high</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" position"</span><span class="p">)</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">guess</span> <span class="o">&gt;</span> <span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">recursiveBS</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="nx">item</span><span class="p">,</span> <span class="nx">low</span><span class="p">,</span> <span class="nx">mid</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+			<span class="nx">recursiveBS</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="nx">item</span><span class="p">,</span> <span class="nx">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">high</span><span class="p">)</span>
+		<span class="p">}</span>	
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">recursiveBS</span><span class="p">(</span><span class="nx">sortedList</span><span class="p">,</span> <span class="mi">217</span><span class="p">)</span></code></pre></figure>
+
+<p>The fundamental difference that becomes very evident is that the terminating condition in our loop becomes the base recursion case.</p>
+
+<p>All the moving parts within the loop are passed to the function to create the recursive case. There are definitely several optimizations that can be done. And if you had a good time reading, leave me a comment and let me know what improvement do you think are possible here.</p>
+</div>
+	</article>
+
+	<article class="post-next col-2" data-aos="pn-slide-to-left">
+		
+	</article>
+</article>
+
+<aside class="sharepost">
+	<div class="addthis_inline_share_toolbox"></div>
+</aside>
+
+
+	<aside class="related">
+		<h3>Related Posts</h3>
+		<div class="row related-post">
+			<div class="col-lg-10 col-md-10 col-sm-12 offset-md-1">
+				<div class="row">
+					
+					<div class="col-lg-4 col-md-4 col-sm-12">
+						<div class="related-post-banner">
+							<p><img src="/public/elm.png" alt="Elm Logo" /></p>
+
+
+						</div>
+						<a href="/blog/elm-foundation/">
+							Building an Elm Library for Foundation CSS Framework
+						</a>
+					</div>
+					
+					<div class="col-lg-4 col-md-4 col-sm-12">
+						<div class="related-post-banner">
+							<p><img src="/public/neuron.jpg" alt="image tooltip here" /></p>
+
+
+						</div>
+						<a href="/blog/machine-learning-coding-a-neuron-in-javascript/">
+							Machine Learning: Coding a Neuron in JavaScript - Part 1
+						</a>
+					</div>
+					
+					<div class="col-lg-4 col-md-4 col-sm-12">
+						<div class="related-post-banner">
+							<p class="codepen" data-embed-version="2" data-slug-hash="bLjgXM" data-height="650" data-default-tab="js,result"></p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+
+						</div>
+						<a href="/blog/minimal-pomodoro-app-in-reactjs/">
+							A Minimal Pomodoro App In ReactJS
+						</a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</aside>
+
+
+<aside>
+	<div id="disqus_thread"></div>
+	<script>
+		var disqus_config = function () {
+			this.page.url = "http://aerosailor.com";
+			this.page.identifier = "/blog/recursive-binary-search-in-javascript/";
+		};
+		(function () {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://aerosailor.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</aside>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5aad0ac74409f0df"></script>
+
+<!-- condition page level scripts -->
+										<!--  -->
+
+
+
+</article>
+			<footer>
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-sm-12 aboutme">
+			<h4>Hello</h4>		
+			<p>I am Meher Howji. I work with Credit Suisse in Pune. I work on frontend technologies, ReactJS, Redux, Angular, React Native, Bootstrap & Foundation.</p>
+		</div>
+		<div class="col-lg-4 col-md-4 location offset-2">
+			<span class="addr">Pune, India</span>
+			<span class="pin"></span>
+		</div>
+	</div>
+	<small>
+		&copy;<time datetime="2019-02-05T00:04:50+05:30">2019</time>. Aerosailor
+	</small>
+</footer>
+		</div>
+
+		<script src="/scripts/bundle.js"></script>
+
+		
+			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116074903-1"></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag() { dataLayer.push(arguments); }
+				gtag('js', new Date());
+				gtag('config', 'UA-116074903-1');
+			</script>
+		
+	</body>
+</html>
