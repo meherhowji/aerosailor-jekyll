@@ -10,22 +10,22 @@
         "deploy": "jekyll build && ./deploy.sh && git checkout production && git push live production && git checkout master && npm i"
     },
     "dependencies": {
-        "aos": "^2.2.0",
-        "bootstrap": "4.1.2",
+        "aos": "^2.3.4",
+        "bootstrap": "4.3.1",
         "d3": "^3.5.17",
-        "function-plot": "^1.18.1",
+        "function-plot": "^1.19.1",
         "jquery": "3.0.0",
-        "popper.js": "^1.12.9"
+        "popper.js": "^1.14.7"
     },
     "devDependencies": {
         "babel-core": "^6.26.3",
         "babel-loader": "^7.1.5",
         "babel-preset-es2015": "^6.24.1",
         "babel-preset-react": "^6.24.1",
-        "react": "^16.4.1",
+        "react": "^16.8.6",
         "react-addons-update": "^15.6.2",
-        "react-dom": "^16.4.1",
-        "webpack": "^4.15.1",
-        "webpack-cli": "^3.0.8"
+        "react-dom": "^16.8.6",
+        "webpack": "^4.29.6",
+        "webpack-cli": "^3.3.0"
     }
 }
